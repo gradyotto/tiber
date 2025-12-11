@@ -69,17 +69,17 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
         opacity="0.4"
       />
 
-      {/* Phoenix marker - at the top of the river */}
+      {/* Phoenix marker - middle of the river */}
       <circle
-        cx="720"
-        cy="20"
+        cx="580"
+        cy="320"
         r="8"
         fill="hsl(var(--primary))"
         opacity="0.8"
       />
       <circle
-        cx="720"
-        cy="20"
+        cx="580"
+        cy="320"
         r="14"
         stroke="hsl(var(--primary))"
         strokeWidth="1"
@@ -87,54 +87,16 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
         opacity="0.3"
       />
 
-      {/* El Segundo marker - toward the bottom */}
-      <circle
-        cx="100"
-        cy="550"
-        r="6"
-        fill="hsl(var(--primary))"
-        opacity="0.7"
-      />
-      <circle
-        cx="100"
-        cy="550"
-        r="12"
-        stroke="hsl(var(--primary))"
-        strokeWidth="1"
-        fill="none"
-        opacity="0.25"
-      />
-
-      {/* Location labels */}
+      {/* Location label */}
       <text
-        x="680"
-        y="50"
+        x="600"
+        y="325"
         fill="hsl(var(--muted-foreground))"
         fontSize="10"
         fontFamily="monospace"
         opacity="0.6"
       >
-        PHOENIX
-      </text>
-      <text
-        x="115"
-        y="555"
-        fill="hsl(var(--muted-foreground))"
-        fontSize="10"
-        fontFamily="monospace"
-        opacity="0.6"
-      >
-        EL SEGUNDO
-      </text>
-      <text
-        x="450"
-        y="350"
-        fill="hsl(var(--muted-foreground))"
-        fontSize="10"
-        fontFamily="monospace"
-        opacity="0.4"
-      >
-        TIBER RIVER
+        PHOENIX, AZ
       </text>
 
       {/* Coordinate markers - Phoenix coordinates */}
