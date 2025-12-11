@@ -25,22 +25,19 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
       </defs>
       <rect width="100%" height="100%" fill="url(#grid)" />
 
-      {/* Coastline - Italy's western coast */}
+      {/* Tiber River - More winding path from top right to bottom left */}
       <path
-        d="M 0 200 Q 100 180, 150 250 Q 200 320, 180 400 Q 160 480, 200 550 L 200 600 L 0 600 Z"
-        fill="hsl(var(--ghost))"
-        opacity="0.15"
-      />
-
-      {/* Tiber River - Main highlighted feature - flows top right to bottom left */}
-      <path
-        d="M 750 0 
-           Q 700 80, 650 120 
-           Q 580 180, 520 250 
-           Q 450 320, 380 380 
-           Q 300 450, 220 500 
-           Q 140 550, 80 580
-           Q 40 600, 0 620"
+        d="M 720 20 
+           Q 750 60, 700 100 
+           Q 640 140, 680 190 
+           Q 720 240, 650 280 
+           Q 580 320, 620 370 
+           Q 660 420, 580 460 
+           Q 500 500, 450 480 
+           Q 400 460, 350 500 
+           Q 300 540, 220 520 
+           Q 140 500, 100 550
+           Q 60 600, 20 580"
         stroke="hsl(var(--primary))"
         strokeWidth="4"
         fill="none"
@@ -51,50 +48,67 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
 
       {/* Tributary rivers */}
       <path
-        d="M 800 150 Q 720 170, 640 200"
+        d="M 800 80 Q 760 100, 710 110"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
         opacity="0.4"
       />
       <path
-        d="M 650 350 Q 550 370, 450 360"
+        d="M 750 300 Q 700 310, 640 300"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
         opacity="0.4"
       />
       <path
-        d="M 350 500 Q 280 480, 200 490"
+        d="M 400 580 Q 350 560, 300 540"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
         opacity="0.4"
       />
 
-      {/* Phoenix marker */}
+      {/* Phoenix marker - at the top of the river */}
       <circle
-        cx="380"
-        cy="380"
+        cx="720"
+        cy="20"
         r="8"
         fill="hsl(var(--primary))"
         opacity="0.8"
       />
       <circle
-        cx="380"
-        cy="380"
-        r="16"
+        cx="720"
+        cy="20"
+        r="14"
         stroke="hsl(var(--primary))"
         strokeWidth="1"
         fill="none"
-        opacity="0.4"
-        className="animate-ping"
+        opacity="0.3"
+      />
+
+      {/* El Segundo marker - toward the bottom */}
+      <circle
+        cx="100"
+        cy="550"
+        r="6"
+        fill="hsl(var(--primary))"
+        opacity="0.7"
+      />
+      <circle
+        cx="100"
+        cy="550"
+        r="12"
+        stroke="hsl(var(--primary))"
+        strokeWidth="1"
+        fill="none"
+        opacity="0.25"
       />
 
       {/* Location labels */}
       <text
-        x="400"
-        y="385"
+        x="680"
+        y="50"
         fill="hsl(var(--muted-foreground))"
         fontSize="10"
         fontFamily="monospace"
@@ -103,12 +117,22 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
         PHOENIX
       </text>
       <text
-        x="680"
-        y="30"
+        x="115"
+        y="555"
         fill="hsl(var(--muted-foreground))"
         fontSize="10"
         fontFamily="monospace"
         opacity="0.6"
+      >
+        EL SEGUNDO
+      </text>
+      <text
+        x="450"
+        y="350"
+        fill="hsl(var(--muted-foreground))"
+        fontSize="10"
+        fontFamily="monospace"
+        opacity="0.4"
       >
         TIBER RIVER
       </text>
