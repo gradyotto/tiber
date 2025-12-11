@@ -32,16 +32,15 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
         opacity="0.15"
       />
 
-      {/* Tiber River - Main highlighted feature */}
+      {/* Tiber River - Main highlighted feature - flows top right to bottom left */}
       <path
-        d="M 380 0 
-           Q 360 50, 370 100 
-           Q 390 150, 360 200 
-           Q 340 250, 380 300 
-           Q 420 350, 380 400 
-           Q 350 450, 390 500 
-           Q 410 530, 380 560
-           Q 360 580, 340 600"
+        d="M 750 0 
+           Q 700 80, 650 120 
+           Q 580 180, 520 250 
+           Q 450 320, 380 380 
+           Q 300 450, 220 500 
+           Q 140 550, 80 580
+           Q 40 600, 0 620"
         stroke="hsl(var(--primary))"
         strokeWidth="4"
         fill="none"
@@ -52,38 +51,38 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
 
       {/* Tributary rivers */}
       <path
-        d="M 500 100 Q 450 150, 370 180"
+        d="M 800 150 Q 720 170, 640 200"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
         opacity="0.4"
       />
       <path
-        d="M 550 250 Q 480 280, 400 300"
+        d="M 650 350 Q 550 370, 450 360"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
         opacity="0.4"
       />
       <path
-        d="M 250 350 Q 300 370, 360 380"
+        d="M 350 500 Q 280 480, 200 490"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
         opacity="0.4"
       />
 
-      {/* Rome marker */}
+      {/* Phoenix marker */}
       <circle
         cx="380"
-        cy="400"
+        cy="380"
         r="8"
         fill="hsl(var(--primary))"
         opacity="0.8"
       />
       <circle
         cx="380"
-        cy="400"
+        cy="380"
         r="16"
         stroke="hsl(var(--primary))"
         strokeWidth="1"
@@ -95,16 +94,16 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
       {/* Location labels */}
       <text
         x="400"
-        y="405"
+        y="385"
         fill="hsl(var(--muted-foreground))"
         fontSize="10"
         fontFamily="monospace"
         opacity="0.6"
       >
-        ROMA
+        PHOENIX
       </text>
       <text
-        x="350"
+        x="680"
         y="30"
         fill="hsl(var(--muted-foreground))"
         fontSize="10"
@@ -114,7 +113,7 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
         TIBER RIVER
       </text>
 
-      {/* Coordinate markers */}
+      {/* Coordinate markers - Phoenix coordinates */}
       <text
         x="20"
         y="30"
@@ -123,7 +122,7 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
         fontFamily="monospace"
         opacity="0.4"
       >
-        41.9028° N
+        33.4484° N
       </text>
       <text
         x="20"
@@ -133,7 +132,7 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
         fontFamily="monospace"
         opacity="0.4"
       >
-        12.4964° E
+        112.0740° W
       </text>
     </svg>
   );
