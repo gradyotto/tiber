@@ -1,4 +1,4 @@
-import TiberLogo from "./TiberLogo";
+import tiberLogo from "@/assets/tiber-logo.png";
 
 const HeroSection = () => {
   return (
@@ -47,7 +47,11 @@ const HeroSection = () => {
           
           {/* Logo */}
           <div className="relative opacity-0 animate-scale-in animate-delay-300">
-            <TiberLogo className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80" />
+            <img 
+              src={tiberLogo} 
+              alt="Tiber Logo" 
+              className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain"
+            />
             
             {/* Glow effect behind logo */}
             <div className="absolute inset-0 blur-3xl opacity-20 bg-primary -z-10 animate-glow" />
