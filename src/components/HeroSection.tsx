@@ -31,11 +31,17 @@ const HeroSection = () => {
               &gt; CRITICAL SUPPLY CHAIN INFRASTRUCTURE
             </p>
 
-            {/* CTA Button */}
-            <div className="opacity-0 animate-fade-up animate-delay-400">
-              <button className="group relative bg-primary text-primary-foreground font-mono font-bold text-sm uppercase px-8 py-4 tracking-wider transition-all duration-300 hover:bg-foreground hover:text-background">
-                <span className="relative z-10">[ INITIATE FLOW ]</span>
-              </button>
+            {/* Loading Bar */}
+            <div className="opacity-0 animate-fade-up animate-delay-400 space-y-2">
+              <div className="font-mono text-xs text-muted-foreground uppercase tracking-wider">
+                [ INITIALIZING FLOW ]
+              </div>
+              <div className="w-64 h-2 bg-ghost border border-ghost overflow-hidden">
+                <div className="h-full w-1/4 bg-primary animate-pulse" />
+              </div>
+              <div className="font-mono text-xs text-primary uppercase tracking-wider">
+                25% LOADED
+              </div>
             </div>
           </div>
         </div>
