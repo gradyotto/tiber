@@ -25,19 +25,20 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
       </defs>
       <rect width="100%" height="100%" fill="url(#grid)" />
 
-      {/* Tiber River - More winding path from top right to bottom left */}
+      {/* Tiber River - More winding path starting from outside view */}
       <path
-        d="M 720 20 
-           Q 750 60, 700 100 
-           Q 640 140, 680 190 
-           Q 720 240, 650 280 
-           Q 580 320, 620 370 
-           Q 660 420, 580 460 
-           Q 500 500, 450 480 
-           Q 400 460, 350 500 
-           Q 300 540, 220 520 
-           Q 140 500, 100 550
-           Q 60 600, 20 580"
+        d="M 900 -60 
+           Q 850 -20, 800 30
+           Q 750 80, 720 120 
+           Q 680 160, 700 210 
+           Q 720 260, 650 300 
+           Q 580 340, 620 390 
+           Q 660 440, 580 480 
+           Q 500 520, 450 500 
+           Q 400 480, 350 520 
+           Q 300 560, 220 540 
+           Q 140 520, 100 570
+           Q 60 620, -20 600"
         stroke="hsl(var(--primary))"
         strokeWidth="4"
         fill="none"
@@ -48,38 +49,38 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
 
       {/* Tributary rivers */}
       <path
-        d="M 800 80 Q 760 100, 710 110"
+        d="M 800 150 Q 760 170, 710 180"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
         opacity="0.4"
       />
       <path
-        d="M 750 300 Q 700 310, 640 300"
+        d="M 750 320 Q 700 330, 660 310"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
         opacity="0.4"
       />
       <path
-        d="M 400 580 Q 350 560, 300 540"
+        d="M 400 600 Q 350 580, 300 560"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
         opacity="0.4"
       />
 
-      {/* Phoenix marker - middle of the river */}
+      {/* Phoenix marker - on the river line */}
       <circle
-        cx="580"
-        cy="320"
+        cx="650"
+        cy="300"
         r="8"
         fill="hsl(var(--primary))"
         opacity="0.8"
       />
       <circle
-        cx="580"
-        cy="320"
+        cx="650"
+        cy="300"
         r="14"
         stroke="hsl(var(--primary))"
         strokeWidth="1"
@@ -89,8 +90,8 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
 
       {/* Location label */}
       <text
-        x="600"
-        y="325"
+        x="670"
+        y="305"
         fill="hsl(var(--muted-foreground))"
         fontSize="10"
         fontFamily="monospace"
