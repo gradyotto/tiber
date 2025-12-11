@@ -21,19 +21,19 @@ const HeroSection = () => {
             {/* Main Headline */}
             <h1 className="opacity-0 animate-fade-up">
               <span className="block font-sans font-black text-5xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none text-foreground">
-                THE CONDUIT
+                FORGING THE
               </span>
               <span className="block font-sans font-black text-5xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none text-foreground opacity-0 animate-fade-up animate-delay-100">
-                OF AMERICAN
+                AMERICAN
               </span>
               <span className="block font-sans font-black text-5xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none text-foreground opacity-0 animate-fade-up animate-delay-200">
-                INDUSTRY.
+                INDUSTRIAL BASE.
               </span>
             </h1>
 
             {/* Subtext */}
             <p className="font-mono text-sm text-primary uppercase tracking-wider opacity-0 animate-fade-up animate-delay-300">
-              &gt; CRITICAL SUPPLY CHAIN INFRASTRUCTURE
+              &gt; DEFENSE-GRADE PRECISION AT SCALE
             </p>
 
             {/* Loading Bar */}
