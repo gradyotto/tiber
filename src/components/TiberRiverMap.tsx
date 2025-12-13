@@ -95,7 +95,7 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
         fill="hsl(var(--muted-foreground))"
         fontSize="10"
         fontFamily="monospace"
-        opacity="0.6"
+        opacity="0.35"
       >
         PHOENIX, AZ
       </text>
@@ -107,7 +107,7 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
         fill="hsl(var(--muted-foreground))"
         fontSize="8"
         fontFamily="monospace"
-        opacity="0.4"
+        opacity="0.25"
       >
         33.4484° N
       </text>
@@ -117,7 +117,7 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
         fill="hsl(var(--muted-foreground))"
         fontSize="8"
         fontFamily="monospace"
-        opacity="0.4"
+        opacity="0.25"
       >
         112.0740° W
       </text>
