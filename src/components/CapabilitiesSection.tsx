@@ -1,15 +1,15 @@
-import { Calculator, Crosshair, Zap } from "lucide-react";
+import { Calculator, Layers, Zap } from "lucide-react";
 
 const capabilities = [
   {
     icon: Calculator,
-    title: "INSTANT QUOTING",
-    description: "We hold the inventory. You hold the schedule.",
+    title: "ALGORITHMIC QUOTING",
+    description: "Instant pricing. Zero friction.",
   },
   {
-    icon: Crosshair,
-    title: "5-AXIS PRECISION",
-    description: "Inconel, Titanium, Hardened Steel.",
+    icon: Layers,
+    title: "INDUSTRIAL COMPOSITES",
+    description: "Carbon Fiber Nylon. Polycarbonate. ABS.",
   },
   {
     icon: Zap,
