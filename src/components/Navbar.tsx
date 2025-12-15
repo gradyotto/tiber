@@ -27,6 +27,14 @@ const Navbar = () => {
 
       <div className="flex items-center gap-6">
         <Link 
+          to="/" 
+          className={`font-mono text-xs uppercase tracking-wider transition-colors ${
+            location.pathname === '/' ? 'text-safety' : 'text-muted-foreground hover:text-foreground'
+          }`}
+        >
+          HOME
+        </Link>
+        <Link 
           to="/about" 
           className={`font-mono text-xs uppercase tracking-wider transition-colors ${
             location.pathname === '/about' ? 'text-safety' : 'text-muted-foreground hover:text-foreground'
