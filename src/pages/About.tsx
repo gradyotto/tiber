@@ -10,14 +10,22 @@ const About = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 border-b border-ghost">
+      <section className="pt-32 pb-16 px-6 border-b border-ghost relative">
+        {/* Corner markers */}
+        <span className="corner-marker top-20 left-6">+</span>
+        <span className="corner-marker top-20 right-6">+</span>
+        
         <div className="max-w-4xl mx-auto">
-          <span className="font-mono text-xs text-safety uppercase tracking-wider">
-            // ABOUT TIBER
+          <span className="font-mono text-xs text-primary uppercase tracking-wider opacity-0 animate-fade-up">
+            &gt; ABOUT TIBER
           </span>
-          <h1 className="font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase mt-4 leading-[0.9]">
-            REBUILDING THE<br />
-            INDUSTRIAL BASE
+          <h1 className="mt-4">
+            <span className="block font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase leading-[0.9] opacity-0 animate-fade-up animate-delay-100">
+              REBUILDING THE
+            </span>
+            <span className="block font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase leading-[0.9] opacity-0 animate-fade-up animate-delay-200">
+              INDUSTRIAL BASE
+            </span>
           </h1>
         </div>
       </section>
@@ -25,9 +33,9 @@ const About = () => {
       {/* Mission Section */}
       <section className="py-16 px-6 border-b border-ghost">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-          <div>
-            <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider">
-              01 — MISSION
+          <div className="opacity-0 animate-fade-up animate-delay-300">
+            <span className="font-mono text-xs text-primary uppercase tracking-wider">
+              &gt; 01 — MISSION
             </span>
             <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
               AMERICAN DYNAMISM
@@ -52,9 +60,9 @@ const About = () => {
       {/* Origin Section */}
       <section className="py-16 px-6 border-b border-ghost">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-          <div>
-            <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider">
-              02 — ORIGIN
+          <div className="opacity-0 animate-fade-up animate-delay-300">
+            <span className="font-mono text-xs text-primary uppercase tracking-wider">
+              &gt; 02 — ORIGIN
             </span>
             <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
               BORN FROM NECESSITY
@@ -80,9 +88,9 @@ const About = () => {
       {/* Capabilities Section */}
       <section className="py-16 px-6 border-b border-ghost">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-          <div>
-            <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider">
-              03 — CAPABILITIES
+          <div className="opacity-0 animate-fade-up animate-delay-300">
+            <span className="font-mono text-xs text-primary uppercase tracking-wider">
+              &gt; 03 — CAPABILITIES
             </span>
             <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
               DEFENSE-GRADE<br />PRECISION
@@ -96,20 +104,20 @@ const About = () => {
               infrastructure applications.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
-              <div className="border border-ghost p-4">
-                <span className="font-mono text-2xl font-bold text-safety">24H</span>
+              <div className="border border-ghost p-4 card-hover">
+                <span className="font-mono text-2xl font-bold text-primary">24H</span>
                 <p className="font-mono text-xs text-muted-foreground mt-1">CAD TO PART</p>
               </div>
-              <div className="border border-ghost p-4">
-                <span className="font-mono text-2xl font-bold text-safety">0.001"</span>
+              <div className="border border-ghost p-4 card-hover">
+                <span className="font-mono text-2xl font-bold text-primary">0.001"</span>
                 <p className="font-mono text-xs text-muted-foreground mt-1">TOLERANCE</p>
               </div>
-              <div className="border border-ghost p-4">
-                <span className="font-mono text-2xl font-bold text-safety">100%</span>
+              <div className="border border-ghost p-4 card-hover">
+                <span className="font-mono text-2xl font-bold text-primary">100%</span>
                 <p className="font-mono text-xs text-muted-foreground mt-1">USA MADE</p>
               </div>
-              <div className="border border-ghost p-4">
-                <span className="font-mono text-2xl font-bold text-safety">ITAR</span>
+              <div className="border border-ghost p-4 card-hover">
+                <span className="font-mono text-2xl font-bold text-primary">ITAR</span>
                 <p className="font-mono text-xs text-muted-foreground mt-1">COMPLIANT</p>
               </div>
             </div>
@@ -118,16 +126,20 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6">
+      <section className="py-24 px-6 relative">
+        {/* Corner markers */}
+        <span className="corner-marker bottom-6 left-6">+</span>
+        <span className="corner-marker bottom-6 right-6">+</span>
+        
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-sans font-black text-3xl md:text-5xl tracking-tighter text-foreground uppercase">
+          <h2 className="font-sans font-black text-3xl md:text-5xl tracking-tighter text-foreground uppercase opacity-0 animate-fade-up">
             JOIN THE REBUILD
           </h2>
-          <p className="font-mono text-sm text-muted-foreground mt-4 max-w-xl mx-auto">
+          <p className="font-mono text-sm text-muted-foreground mt-4 max-w-xl mx-auto opacity-0 animate-fade-up animate-delay-100">
             Whether you're building the next generation of defense systems or 
             scaling critical infrastructure, Tiber is your manufacturing partner.
           </p>
-          <div className="mt-8 inline-block border border-ghost px-8 py-4 bg-ghost/20 hover:bg-ghost/40 transition-colors cursor-pointer">
+          <div className="mt-8 inline-block border border-ghost px-8 py-4 bg-ghost/20 hover:bg-primary/20 hover:border-primary/50 transition-colors cursor-pointer opacity-0 animate-fade-up animate-delay-200">
             <span className="font-mono text-xs text-foreground uppercase tracking-wider">
               [ GET A QUOTE ]
             </span>
