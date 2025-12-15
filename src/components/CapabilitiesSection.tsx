@@ -1,9 +1,9 @@
-import { Shield, Crosshair, Zap } from "lucide-react";
+import { Calculator, Crosshair, Zap } from "lucide-react";
 
 const capabilities = [
   {
-    icon: Shield,
-    title: "GUARANTEED SUPPLY",
+    icon: Calculator,
+    title: "INSTANT QUOTING",
     description: "We hold the inventory. You hold the schedule.",
   },
   {
