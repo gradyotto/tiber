@@ -42,14 +42,6 @@ const Navbar = () => {
         >
           ABOUT
         </Link>
-        <Link 
-          to="/quote" 
-          className={`font-mono text-xs uppercase tracking-wider transition-colors ${
-            location.pathname === '/quote' ? 'text-safety' : 'text-muted-foreground hover:text-foreground'
-          }`}
-        >
-          GET QUOTE
-        </Link>
         <div className="flex items-center gap-2">
           <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider">
             SYS: ONLINE
