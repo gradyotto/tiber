@@ -12,13 +12,13 @@ const roadmapSteps = [
     id: 2,
     title: "CNC MILLING & TURNING",
     description: "Precision machining capabilities for metals and advanced materials.",
-    status: "2025",
+    status: "2026",
   },
   {
     id: 3,
     title: "AUTONOMOUS FACTORY",
     description: "Lights-out manufacturing with AI-driven quality control and logistics.",
-    status: "2026",
+    status: "2027",
   },
 ];
 
@@ -207,8 +207,8 @@ const Roadmap = () => {
           <div 
             className="absolute animate-fade-up"
             style={{ 
-              top: "35%", 
-              right: "5%",
+              top: "42%", 
+              right: "8%",
               animationDelay: "500ms"
             }}
           >
@@ -232,8 +232,8 @@ const Roadmap = () => {
           <div 
             className="absolute animate-fade-up"
             style={{ 
-              top: "65%", 
-              left: "25%",
+              top: "72%", 
+              left: "35%",
               animationDelay: "700ms"
             }}
           >
