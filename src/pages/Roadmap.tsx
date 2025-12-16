@@ -176,81 +176,79 @@ const Roadmap = () => {
           />
         </svg>
 
-        {/* Waypoint Cards */}
-        <div className="relative z-10 max-w-6xl mx-auto">
-          {/* Waypoint 1 */}
-          <div 
-            className="absolute animate-fade-up"
-            style={{ 
-              top: "5%", 
-              left: "5%",
-              animationDelay: "300ms"
-            }}
-          >
-            <div className="bg-background/90 backdrop-blur-sm border border-primary p-6 max-w-xs">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="font-mono text-xs text-primary">01</span>
-                <span className="font-mono text-xs px-2 py-0.5 bg-primary text-primary-foreground">
-                  {roadmapSteps[0].status}
-                </span>
-              </div>
-              <h3 className="font-sans font-black text-lg tracking-tight uppercase text-foreground mb-2">
-                {roadmapSteps[0].title}
-              </h3>
-              <p className="font-mono text-xs text-muted-foreground">
-                {roadmapSteps[0].description}
-              </p>
+        {/* Waypoint Cards - positioned relative to section */}
+        {/* Waypoint 1 */}
+        <div 
+          className="absolute z-10 animate-fade-up"
+          style={{ 
+            top: "15%", 
+            left: "5%",
+            animationDelay: "300ms"
+          }}
+        >
+          <div className="bg-background/90 backdrop-blur-sm border border-primary p-6 max-w-xs">
+            <div className="flex items-center gap-3 mb-3">
+              <span className="font-mono text-xs text-primary">01</span>
+              <span className="font-mono text-xs px-2 py-0.5 bg-primary text-primary-foreground">
+                {roadmapSteps[0].status}
+              </span>
             </div>
+            <h3 className="font-sans font-black text-lg tracking-tight uppercase text-foreground mb-2">
+              {roadmapSteps[0].title}
+            </h3>
+            <p className="font-mono text-xs text-muted-foreground">
+              {roadmapSteps[0].description}
+            </p>
           </div>
+        </div>
 
-          {/* Waypoint 2 */}
-          <div 
-            className="absolute animate-fade-up"
-            style={{ 
-              top: "42%", 
-              right: "8%",
-              animationDelay: "500ms"
-            }}
-          >
-            <div className="bg-background/90 backdrop-blur-sm border border-ghost hover:border-primary transition-colors duration-300 p-6 max-w-xs">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="font-mono text-xs text-muted-foreground">02</span>
-                <span className="font-mono text-xs px-2 py-0.5 border border-ghost text-muted-foreground">
-                  {roadmapSteps[1].status}
-                </span>
-              </div>
-              <h3 className="font-sans font-black text-lg tracking-tight uppercase text-foreground mb-2">
-                {roadmapSteps[1].title}
-              </h3>
-              <p className="font-mono text-xs text-muted-foreground">
-                {roadmapSteps[1].description}
-              </p>
+        {/* Waypoint 2 */}
+        <div 
+          className="absolute z-10 animate-fade-up"
+          style={{ 
+            top: "40%", 
+            right: "5%",
+            animationDelay: "500ms"
+          }}
+        >
+          <div className="bg-background/90 backdrop-blur-sm border border-ghost hover:border-primary transition-colors duration-300 p-6 max-w-xs">
+            <div className="flex items-center gap-3 mb-3">
+              <span className="font-mono text-xs text-muted-foreground">02</span>
+              <span className="font-mono text-xs px-2 py-0.5 border border-ghost text-muted-foreground">
+                {roadmapSteps[1].status}
+              </span>
             </div>
+            <h3 className="font-sans font-black text-lg tracking-tight uppercase text-foreground mb-2">
+              {roadmapSteps[1].title}
+            </h3>
+            <p className="font-mono text-xs text-muted-foreground">
+              {roadmapSteps[1].description}
+            </p>
           </div>
+        </div>
 
-          {/* Waypoint 3 */}
-          <div 
-            className="absolute animate-fade-up"
-            style={{ 
-              top: "72%", 
-              left: "35%",
-              animationDelay: "700ms"
-            }}
-          >
-            <div className="bg-background/90 backdrop-blur-sm border border-ghost hover:border-primary transition-colors duration-300 p-6 max-w-xs">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="font-mono text-xs text-muted-foreground">03</span>
-                <span className="font-mono text-xs px-2 py-0.5 border border-ghost text-muted-foreground">
-                  {roadmapSteps[2].status}
-                </span>
-              </div>
-              <h3 className="font-sans font-black text-lg tracking-tight uppercase text-foreground mb-2">
-                {roadmapSteps[2].title}
-              </h3>
-              <p className="font-mono text-xs text-muted-foreground">
-                {roadmapSteps[2].description}
-              </p>
+        {/* Waypoint 3 */}
+        <div 
+          className="absolute z-10 animate-fade-up"
+          style={{ 
+            top: "70%", 
+            left: "30%",
+            animationDelay: "700ms"
+          }}
+        >
+          <div className="bg-background/90 backdrop-blur-sm border border-ghost hover:border-primary transition-colors duration-300 p-6 max-w-xs">
+            <div className="flex items-center gap-3 mb-3">
+              <span className="font-mono text-xs text-muted-foreground">03</span>
+              <span className="font-mono text-xs px-2 py-0.5 border border-ghost text-muted-foreground">
+                {roadmapSteps[2].status}
+              </span>
             </div>
+            <h3 className="font-sans font-black text-lg tracking-tight uppercase text-foreground mb-2">
+              {roadmapSteps[2].title}
+            </h3>
+            <p className="font-mono text-xs text-muted-foreground">
+              {roadmapSteps[2].description}
+            </p>
           </div>
         </div>
 
