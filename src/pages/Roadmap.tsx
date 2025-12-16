@@ -179,11 +179,12 @@ const Roadmap = () => {
         {/* Waypoint Cards - positioned relative to section */}
         {/* Waypoint 1 */}
         <div 
-          className="absolute z-10 animate-fade-up"
+          className="absolute z-10 opacity-0 animate-fade-up"
           style={{ 
             top: "15%", 
             left: "5%",
-            animationDelay: "300ms"
+            animationDelay: "300ms",
+            animationFillMode: "forwards"
           }}
         >
           <div className="bg-background/90 backdrop-blur-sm border border-primary p-6 max-w-xs">
@@ -204,11 +205,12 @@ const Roadmap = () => {
 
         {/* Waypoint 2 */}
         <div 
-          className="absolute z-10 animate-fade-up"
+          className="absolute z-10 opacity-0 animate-fade-up"
           style={{ 
             top: "40%", 
             right: "5%",
-            animationDelay: "500ms"
+            animationDelay: "500ms",
+            animationFillMode: "forwards"
           }}
         >
           <div className="bg-background/90 backdrop-blur-sm border border-ghost hover:border-primary transition-colors duration-300 p-6 max-w-xs">
@@ -229,11 +231,12 @@ const Roadmap = () => {
 
         {/* Waypoint 3 */}
         <div 
-          className="absolute z-10 animate-fade-up"
+          className="absolute z-10 opacity-0 animate-fade-up"
           style={{ 
             top: "70%", 
             left: "30%",
-            animationDelay: "700ms"
+            animationDelay: "700ms",
+            animationFillMode: "forwards"
           }}
         >
           <div className="bg-background/90 backdrop-blur-sm border border-ghost hover:border-primary transition-colors duration-300 p-6 max-w-xs">
