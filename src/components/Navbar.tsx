@@ -42,6 +42,14 @@ const Navbar = () => {
         >
           ABOUT
         </Link>
+        <Link 
+          to="/roadmap" 
+          className={`font-mono text-xs uppercase tracking-wider transition-colors ${
+            location.pathname === '/roadmap' ? 'text-safety' : 'text-muted-foreground hover:text-foreground'
+          }`}
+        >
+          ROADMAP
+        </Link>
         <div className="flex items-center gap-2">
           <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider">
             SYS: ONLINE
