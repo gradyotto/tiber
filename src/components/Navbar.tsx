@@ -50,6 +50,15 @@ const Navbar = () => {
         >
           ROADMAP
         </Link>
+        <div className="flex items-center gap-2">
+          <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider">
+            SYS: ONLINE
+          </span>
+          <div className="relative">
+            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <div className="absolute inset-0 w-2 h-2 rounded-full bg-emerald-500 animate-ping opacity-75" />
+          </div>
+        </div>
       </div>
     </nav>
   );
