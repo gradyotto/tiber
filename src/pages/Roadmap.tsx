@@ -185,12 +185,12 @@ const Roadmap = () => {
         </svg>
 
         {/* Waypoint Cards - positioned relative to section */}
-        {/* Waypoint 1 - positioned below the waypoint */}
+        {/* Waypoint 1 - outside river, bottom-left corner near top-right of waypoint */}
         <div 
           className="absolute z-10 opacity-0 animate-fade-up"
           style={{ 
-            top: "30%", 
-            left: "5%",
+            top: "5%", 
+            left: "30%",
             animationDelay: "300ms",
             animationFillMode: "forwards"
           }}
@@ -211,12 +211,12 @@ const Roadmap = () => {
           </div>
         </div>
 
-        {/* Waypoint 2 - positioned below the waypoint */}
+        {/* Waypoint 2 - inside river, top-right corner near bottom-left of waypoint */}
         <div 
           className="absolute z-10 opacity-0 animate-fade-up"
           style={{ 
-            top: "52%", 
-            right: "5%",
+            top: "53%", 
+            left: "52%",
             animationDelay: "500ms",
             animationFillMode: "forwards"
           }}
@@ -237,12 +237,12 @@ const Roadmap = () => {
           </div>
         </div>
 
-        {/* Waypoint 3 - positioned to the right of the waypoint */}
+        {/* Waypoint 3 - inside river, bottom-right corner near top-left of waypoint */}
         <div 
           className="absolute z-10 opacity-0 animate-fade-up"
           style={{ 
-            top: "75%", 
-            left: "50%",
+            top: "62%", 
+            left: "22%",
             animationDelay: "700ms",
             animationFillMode: "forwards"
           }}
