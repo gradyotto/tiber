@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import tiberLogo from "@/assets/tiber-logo.png";
 
 const Navbar = () => {
   const location = useLocation();
@@ -19,9 +20,12 @@ const Navbar = () => {
         scrolled ? "bg-void/90 backdrop-blur-sm" : "bg-transparent"
       }`}
     >
-      <div className="flex items-center gap-2">
-        <Link to="/" className="font-sans font-black text-xl tracking-tight text-foreground hover:text-safety transition-colors">
-          TIBER
+      <div className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <img src={tiberLogo} alt="Tiber Logo" className="w-8 h-8 object-contain" />
+          <span className="font-sans font-black text-xl tracking-tight text-foreground">
+            TIBER
+          </span>
         </Link>
       </div>
 
