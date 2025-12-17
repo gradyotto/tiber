@@ -73,13 +73,12 @@ const Roadmap = () => {
           {/* Main River Path - flowing S-curve from top center through the page */}
           <path
             d="M 600 -50 
-               Q 600 50, 450 150
-               Q 300 250, 300 200
-               Q 300 250, 450 300
-               Q 600 350, 900 400
-               Q 1050 450, 900 550
-               Q 750 650, 350 650
-               Q 100 650, -50 750"
+               Q 500 100, 350 180
+               Q 200 260, 350 340
+               Q 550 450, 900 400
+               Q 1100 370, 950 550
+               Q 750 700, 350 650
+               Q 100 620, -50 750"
             stroke="hsl(var(--primary))"
             strokeWidth="6"
             fill="none"
@@ -113,15 +112,15 @@ const Roadmap = () => {
 
           {/* Waypoint 1 - Industrial Additive Manufacturing */}
           <circle
-            cx="300"
-            cy="200"
+            cx="350"
+            cy="180"
             r="12"
             fill="hsl(var(--primary))"
             opacity="1"
           />
           <circle
-            cx="300"
-            cy="200"
+            cx="350"
+            cy="180"
             r="20"
             stroke="hsl(var(--primary))"
             strokeWidth="2"
@@ -130,8 +129,8 @@ const Roadmap = () => {
             className="animate-pulse"
           />
           <circle
-            cx="300"
-            cy="200"
+            cx="350"
+            cy="180"
             r="28"
             stroke="hsl(var(--primary))"
             strokeWidth="1"
