@@ -14,7 +14,7 @@ const HeroSection = () => {
         {/* Left Column - Content */}
         <div className="relative flex flex-col justify-center p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-ghost overflow-hidden">
           {/* Tiber River Map Background */}
-          <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 opacity-70">
             <TiberRiverMap className="w-full h-full" />
           </div>
           <div className="relative z-10 space-y-8">
