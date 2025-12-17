@@ -21,7 +21,7 @@ const Navbar = () => {
       }`}
     >
       <div className="flex items-center gap-3">
-        <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+        <Link to="/" className="flex items-center gap-1 hover:opacity-80 transition-opacity">
           <img src={tiberLogo} alt="Tiber Logo" className="w-8 h-8 object-contain" />
           <span className="font-sans font-black text-xl tracking-tight text-foreground">
             TIBER
