@@ -70,16 +70,16 @@ const Roadmap = () => {
           </defs>
           <rect width="100%" height="100%" fill="url(#roadmap-grid)" />
 
-          {/* Main River Path - flowing S-curve through the page */}
+          {/* Main River Path - flowing S-curve from top center through the page */}
           <path
-            d="M -50 100 
-               Q 150 100, 300 200
-               Q 450 300, 600 300
-               Q 750 300, 900 400
-               Q 1050 500, 900 600
-               Q 750 700, 600 650
-               Q 450 600, 300 700
-               Q 150 800, -50 750"
+            d="M 600 -50 
+               Q 600 50, 450 150
+               Q 300 250, 300 200
+               Q 300 250, 450 300
+               Q 600 350, 900 400
+               Q 1050 450, 900 550
+               Q 750 650, 350 650
+               Q 100 650, -50 750"
             stroke="hsl(var(--primary))"
             strokeWidth="6"
             fill="none"
@@ -163,7 +163,7 @@ const Roadmap = () => {
 
           {/* Waypoint 3 - Autonomous Factory */}
           <circle
-            cx="600"
+            cx="350"
             cy="650"
             r="12"
             fill="none"
@@ -173,7 +173,7 @@ const Roadmap = () => {
             opacity="0.5"
           />
           <circle
-            cx="600"
+            cx="350"
             cy="650"
             r="20"
             stroke="hsl(var(--primary))"
@@ -242,7 +242,7 @@ const Roadmap = () => {
           className="absolute z-10 opacity-0 animate-fade-up"
           style={{ 
             top: "62%", 
-            left: "22%",
+            left: "5%",
             animationDelay: "700ms",
             animationFillMode: "forwards"
           }}
