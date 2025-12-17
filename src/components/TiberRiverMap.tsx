@@ -92,10 +92,10 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
       <text
         x="670"
         y="305"
-        fill="hsl(var(--muted-foreground))"
-        fontSize="10"
+        fill="hsl(var(--primary))"
+        fontSize="12"
         fontFamily="monospace"
-        opacity="0.9"
+        fontWeight="bold"
       >
         PHOENIX, AZ
       </text>
