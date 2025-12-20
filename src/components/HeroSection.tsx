@@ -32,7 +32,7 @@ const HeroSection = () => {
 
             {/* Subtext */}
             <p className="font-mono text-sm text-primary uppercase tracking-wider opacity-0 animate-fade-up animate-delay-300">
-              &gt; Defense-grade precision, fast
+              &gt; Scaling Defense-Grade Precision
             </p>
 
             {/* Loading Bar */}
