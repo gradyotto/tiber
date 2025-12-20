@@ -32,7 +32,7 @@ const HeroSection = () => {
 
             {/* Subtext */}
             <p className="font-mono text-sm text-primary uppercase tracking-wider opacity-0 animate-fade-up animate-delay-300">
-              &gt; DEFENSE-GRADE PRECISION AT SCALE
+              &gt; Defense-grade precision, fast
             </p>
 
             {/* Loading Bar */}
@@ -41,7 +41,7 @@ const HeroSection = () => {
                 [ TIBER LAUNCH ]
               </div>
               <div className="w-64 h-2 bg-ghost border border-ghost overflow-hidden">
-                <div className="h-full w-1/4 bg-primary animate-pulse" />
+                <div className="h-full w-1/4 bg-primary" />
               </div>
               <div className="font-mono text-xs text-primary uppercase tracking-wider">
                 25% LOADED
