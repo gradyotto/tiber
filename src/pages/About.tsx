@@ -125,28 +125,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 px-6 relative">
-        {/* Corner markers */}
-        <span className="corner-marker bottom-6 left-6">+</span>
-        <span className="corner-marker bottom-6 right-6">+</span>
-        
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-sans font-black text-3xl md:text-5xl tracking-tighter text-foreground uppercase opacity-0 animate-fade-up">
-            JOIN THE REBUILD
-          </h2>
-          <p className="font-mono text-sm text-muted-foreground mt-4 max-w-xl mx-auto opacity-0 animate-fade-up animate-delay-100">
-            Whether you're building the next generation of defense systems or 
-            scaling critical infrastructure, Tiber is your manufacturing partner.
-          </p>
-          <div className="mt-8 inline-block border border-ghost px-8 py-4 bg-ghost/20 hover:bg-primary/20 hover:border-primary/50 transition-colors cursor-pointer opacity-0 animate-fade-up animate-delay-200">
-            <span className="font-mono text-xs text-foreground uppercase tracking-wider">
-              [ GET A QUOTE ]
-            </span>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </main>
   );
