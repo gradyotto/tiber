@@ -6,19 +6,19 @@ const roadmapSteps = [
     id: 1,
     title: "INDUSTRIAL ADDITIVE MANUFACTURING",
     description: "Defense-grade 3D printing with carbon fiber composites and high-performance polymers.",
-    status: "ACTIVE",
+    status: "LOADING",
   },
   {
     id: 2,
     title: "CNC MILLING & TURNING",
     description: "Precision machining capabilities for metals and advanced materials.",
-    status: "2026",
+    status: "2027",
   },
   {
     id: 3,
     title: "AUTONOMOUS FACTORY",
     description: "Lights-out manufacturing with AI-driven quality control and logistics.",
-    status: "2027",
+    status: "2028",
   },
 ];
 
