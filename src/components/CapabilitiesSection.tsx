@@ -24,37 +24,23 @@ const CapabilitiesSection = () => {
 
   return (
     <section className="border-t border-ghost">
-      {/* Email capture */}
-      <div className="border-b border-ghost p-8 lg:p-12 group">
-        <div className="max-w-2xl mx-auto text-center space-y-6">
-          <div className="flex items-center justify-center gap-3">
-            <Mail className="w-6 h-6 text-primary" strokeWidth={1} />
-            <h3 className="font-sans font-black text-2xl md:text-3xl tracking-tight uppercase text-foreground">
-              GET NOTIFIED
-            </h3>
-          </div>
-          <p className="font-mono text-sm md:text-base text-muted-foreground">
-            Enter your email to be notified when Tiber launches.
-          </p>
-          
-          {/* Email form */}
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto pt-2">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="EMAIL ADDRESS"
-              required
-              className="flex-1 bg-background border border-ghost px-4 py-3 font-mono text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-            />
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="px-6 py-3 bg-primary text-primary-foreground font-mono text-sm uppercase tracking-wider hover:bg-primary/90 transition-colors disabled:opacity-50"
-            >
-              {isSubmitting ? "SENDING..." : "NOTIFY ME"}
-            </button>
-          </form>
+      {/* About Header Section */}
+      <div className="py-16 px-6 border-b border-ghost relative">
+        <span className="corner-marker top-6 left-6">+</span>
+        <span className="corner-marker top-6 right-6">+</span>
+        
+        <div className="max-w-4xl mx-auto">
+          <span className="font-mono text-xs text-primary uppercase tracking-wider opacity-0 animate-fade-up">
+            &gt; ABOUT TIBER
+          </span>
+          <h2 className="mt-4">
+            <span className="block font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase leading-[0.9] opacity-0 animate-fade-up animate-delay-100">
+              REBUILDING THE
+            </span>
+            <span className="block font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase leading-[0.9] opacity-0 animate-fade-up animate-delay-200">
+              INDUSTRIAL BASE
+            </span>
+          </h2>
         </div>
       </div>
 
@@ -150,6 +136,40 @@ const CapabilitiesSection = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Email capture - now at bottom */}
+      <div className="p-8 lg:p-12 group">
+        <div className="max-w-2xl mx-auto text-center space-y-6">
+          <div className="flex items-center justify-center gap-3">
+            <Mail className="w-6 h-6 text-primary" strokeWidth={1} />
+            <h3 className="font-sans font-black text-2xl md:text-3xl tracking-tight uppercase text-foreground">
+              GET NOTIFIED
+            </h3>
+          </div>
+          <p className="font-mono text-sm md:text-base text-muted-foreground">
+            Enter your email to be notified when Tiber launches.
+          </p>
+          
+          {/* Email form */}
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto pt-2">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="EMAIL ADDRESS"
+              required
+              className="flex-1 bg-background border border-ghost px-4 py-3 font-mono text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+            />
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="px-6 py-3 bg-primary text-primary-foreground font-mono text-sm uppercase tracking-wider hover:bg-primary/90 transition-colors disabled:opacity-50"
+            >
+              {isSubmitting ? "SENDING..." : "NOTIFY ME"}
+            </button>
+          </form>
         </div>
       </div>
     </section>
