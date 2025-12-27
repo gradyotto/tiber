@@ -33,7 +33,7 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
       
       <rect width="100%" height="100%" fill="url(#grid-flow)" />
 
-      {/* Extended Tiber River - flows through entire page */}
+      {/* Extended Tiber River - flows right side initially, then left side for content sections */}
       <path
         d="M 900 -60 
            Q 850 -20, 800 30
@@ -42,20 +42,19 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
            Q 720 260, 650 300 
            Q 580 340, 620 390 
            Q 660 440, 580 480 
-           Q 500 520, 450 560
-           Q 400 600, 350 650
-           Q 300 700, 380 780
-           Q 460 860, 400 940
-           Q 340 1020, 420 1100
-           Q 500 1180, 450 1260
-           Q 400 1340, 480 1420
-           Q 560 1500, 500 1580
-           Q 440 1660, 520 1740
-           Q 600 1820, 540 1900
-           Q 480 1980, 560 2060
-           Q 640 2140, 580 2220
-           Q 520 2300, 450 2400
-           Q 380 2500, 300 2600"
+           Q 500 520, 400 560
+           Q 300 600, 200 680
+           Q 100 760, 120 840
+           Q 140 920, 100 1000
+           Q 60 1080, 100 1160
+           Q 140 1240, 80 1320
+           Q 20 1400, 60 1480
+           Q 100 1560, 50 1640
+           Q 0 1720, 40 1800
+           Q 80 1880, 30 1960
+           Q -20 2040, 20 2120
+           Q 60 2200, 10 2280
+           Q -40 2360, 0 2500"
         stroke="hsl(var(--primary))"
         strokeWidth="4"
         fill="none"
@@ -72,20 +71,19 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
            Q 720 260, 650 300 
            Q 580 340, 620 390 
            Q 660 440, 580 480 
-           Q 500 520, 450 560
-           Q 400 600, 350 650
-           Q 300 700, 380 780
-           Q 460 860, 400 940
-           Q 340 1020, 420 1100
-           Q 500 1180, 450 1260
-           Q 400 1340, 480 1420
-           Q 560 1500, 500 1580
-           Q 440 1660, 520 1740
-           Q 600 1820, 540 1900
-           Q 480 1980, 560 2060
-           Q 640 2140, 580 2220
-           Q 520 2300, 450 2400
-           Q 380 2500, 300 2600"
+           Q 500 520, 400 560
+           Q 300 600, 200 680
+           Q 100 760, 120 840
+           Q 140 920, 100 1000
+           Q 60 1080, 100 1160
+           Q 140 1240, 80 1320
+           Q 20 1400, 60 1480
+           Q 100 1560, 50 1640
+           Q 0 1720, 40 1800
+           Q 80 1880, 30 1960
+           Q -20 2040, 20 2120
+           Q 60 2200, 10 2280
+           Q -40 2360, 0 2500"
         stroke="hsl(var(--primary))"
         strokeWidth="12"
         fill="none"
@@ -110,28 +108,28 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
         opacity="0.4"
       />
       <path
-        d="M 200 700 Q 280 720, 340 690"
+        d="M 250 700 Q 180 720, 150 690"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
         opacity="0.4"
       />
       <path
-        d="M 600 1100 Q 520 1120, 450 1090"
+        d="M 120 1100 Q 180 1120, 220 1090"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
         opacity="0.4"
       />
       <path
-        d="M 300 1500 Q 380 1520, 460 1490"
+        d="M 80 1500 Q 140 1520, 180 1490"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
         opacity="0.4"
       />
       <path
-        d="M 700 1900 Q 620 1920, 560 1890"
+        d="M 60 1900 Q 120 1920, 160 1890"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
@@ -203,11 +201,11 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
         112.0740° W
       </text>
 
-      {/* Section waypoint markers along the river */}
-      <circle cx="400" cy="940" r="4" fill="hsl(var(--primary))" opacity="0.5" />
-      <circle cx="450" cy="1260" r="4" fill="hsl(var(--primary))" opacity="0.5" />
-      <circle cx="500" cy="1580" r="4" fill="hsl(var(--primary))" opacity="0.5" />
-      <circle cx="540" cy="1900" r="4" fill="hsl(var(--primary))" opacity="0.5" />
+      {/* Section waypoint markers along the river - now on left side */}
+      <circle cx="100" cy="1000" r="4" fill="hsl(var(--primary))" opacity="0.5" />
+      <circle cx="80" cy="1320" r="4" fill="hsl(var(--primary))" opacity="0.5" />
+      <circle cx="50" cy="1640" r="4" fill="hsl(var(--primary))" opacity="0.5" />
+      <circle cx="30" cy="1960" r="4" fill="hsl(var(--primary))" opacity="0.5" />
     </svg>
   );
 };
