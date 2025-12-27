@@ -43,7 +43,6 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
         strokeWidth="4"
         fill="none"
         strokeLinecap="round"
-        className="animate-pulse"
       />
 
       {/* Tributary rivers */}
