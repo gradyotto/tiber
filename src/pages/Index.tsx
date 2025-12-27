@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import CapabilitiesSection from "@/components/CapabilitiesSection";
+import RoadmapSection from "@/components/RoadmapSection";
 import Footer from "@/components/Footer";
 import TiberRiverFlow from "@/components/TiberRiverFlow";
 
@@ -12,7 +13,7 @@ const Index = () => {
       
       {/* Full-page river background */}
       <div className="absolute inset-0 opacity-60 pointer-events-none overflow-hidden">
-        <TiberRiverFlow className="w-full h-full min-h-[300vh]" />
+        <TiberRiverFlow className="w-full h-full min-h-[400vh]" />
       </div>
       
       {/* Main content */}
@@ -20,6 +21,7 @@ const Index = () => {
         <Navbar />
         <HeroSection />
         <CapabilitiesSection />
+        <RoadmapSection />
         <Footer />
       </div>
     </main>
