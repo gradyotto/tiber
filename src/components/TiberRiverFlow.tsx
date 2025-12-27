@@ -43,10 +43,9 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
            Q 580 340, 620 390 
            Q 660 440, 580 480 
            Q 500 520, 400 560
-           Q 300 600, 200 680
-           Q 100 760, 50 820
-           Q 0 880, -100 920
-           Q -200 960, -400 980"
+           Q 300 600, 180 660
+           Q 60 720, -100 760
+           Q -260 800, -450 820"
         stroke="hsl(var(--primary))"
         strokeWidth="4"
         fill="none"
@@ -64,10 +63,9 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
            Q 580 340, 620 390 
            Q 660 440, 580 480 
            Q 500 520, 400 560
-           Q 300 600, 200 680
-           Q 100 760, 50 820
-           Q 0 880, -100 920
-           Q -200 960, -400 980"
+           Q 300 600, 180 660
+           Q 60 720, -100 760
+           Q -260 800, -450 820"
         stroke="hsl(var(--primary))"
         strokeWidth="12"
         fill="none"
