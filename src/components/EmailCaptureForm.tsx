@@ -44,11 +44,11 @@ const EmailCaptureForm = () => {
         <span className="font-mono text-xs text-primary uppercase tracking-wider">
           &gt; STAY UPDATED
         </span>
-        <div className="inline-flex items-center justify-center gap-3">
-          <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase m-0 p-0 leading-none flex items-center">
+        <div className="flex items-center justify-center gap-3">
+          <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase leading-none">
             JOIN THE MISSION
           </h2>
-          <img src={missionGraphic} alt="Mission graphic" className="h-9 w-auto block" />
+          <img src={missionGraphic} alt="Mission graphic" className="h-8 w-auto self-center" />
         </div>
         <p className="font-mono text-sm text-muted-foreground">
           Get updates on Tiber's progress and be the first to know when new capabilities come online.
