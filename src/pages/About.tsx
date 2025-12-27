@@ -111,16 +111,16 @@ const About = () => {
                 <p className="font-mono text-xs text-muted-foreground mt-1">CAD TO PART</p>
               </div>
               <div className="border border-ghost p-4 card-hover">
-                <span className="font-mono text-2xl font-bold text-primary">0.001"</span>
-                <p className="font-mono text-xs text-muted-foreground mt-1">TOLERANCE</p>
+                <span className="font-mono text-2xl font-bold text-primary">250°C+</span>
+                <p className="font-mono text-xs text-muted-foreground mt-1">HIGH TEMP</p>
               </div>
               <div className="border border-ghost p-4 card-hover">
                 <span className="font-mono text-2xl font-bold text-primary">100%</span>
                 <p className="font-mono text-xs text-muted-foreground mt-1">USA MADE</p>
               </div>
               <div className="border border-ghost p-4 card-hover">
-                <span className="font-mono text-2xl font-bold text-primary">ITAR</span>
-                <p className="font-mono text-xs text-muted-foreground mt-1">COMPLIANT</p>
+                <span className="font-mono text-2xl font-bold text-primary">RAPID</span>
+                <p className="font-mono text-xs text-muted-foreground mt-1">PROTOTYPING</p>
               </div>
             </div>
           </div>
