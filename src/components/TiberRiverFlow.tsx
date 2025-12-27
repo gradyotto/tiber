@@ -56,19 +56,12 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
            Q 640 2140, 580 2220
            Q 520 2300, 450 2400
            Q 380 2500, 300 2600"
-        stroke="url(#riverGradient)"
+        stroke="hsl(var(--primary))"
         strokeWidth="4"
         fill="none"
         strokeLinecap="round"
-        style={{ filter: "drop-shadow(0 0 10px hsl(var(--primary) / 0.5))" }}
-      >
-        <animate
-          attributeName="stroke-dasharray"
-          values="0 20 10 20;10 20 0 20;0 20 10 20"
-          dur="3s"
-          repeatCount="indefinite"
-        />
-      </path>
+        style={{ filter: "drop-shadow(0 0 8px hsl(var(--primary) / 0.6))" }}
+      />
       
       {/* Glowing outer river edge */}
       <path
