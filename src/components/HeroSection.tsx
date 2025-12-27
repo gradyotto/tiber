@@ -18,24 +18,37 @@ const HeroSection = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock scroll initially, unlock after first scroll triggers transition
+  // Lock scroll initially, unlock after animation completes
   useEffect(() => {
     if (scrollLocked) {
       document.body.style.overflow = 'hidden';
       
       const handleWheel = (e: WheelEvent) => {
-        if (e.deltaY > 0) {
+        if (e.deltaY > 0 && !scrolled) {
           setScrolled(true);
-          setScrollLocked(false);
-          document.body.style.overflow = '';
           window.dispatchEvent(new CustomEvent('heroScrolled', { detail: { scrolled: true } }));
+          
+          // Wait for animation to complete before unlocking scroll
+          setTimeout(() => {
+            setScrollLocked(false);
+            document.body.style.overflow = '';
+          }, 500);
         }
       };
       
+      const handleTouchMove = (e: TouchEvent) => {
+        e.preventDefault();
+      };
+      
       window.addEventListener('wheel', handleWheel, { passive: true });
-      return () => window.removeEventListener('wheel', handleWheel);
+      window.addEventListener('touchmove', handleTouchMove, { passive: false });
+      
+      return () => {
+        window.removeEventListener('wheel', handleWheel);
+        window.removeEventListener('touchmove', handleTouchMove);
+      };
     }
-  }, [scrollLocked]);
+  }, [scrollLocked, scrolled]);
 
   return (
     <section className="min-h-[90vh] pt-14 relative">
