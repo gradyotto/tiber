@@ -1,3 +1,5 @@
+import TiberRiverMap from "./TiberRiverMap";
+
 const HeroSection = () => {
   return (
     <section className="min-h-[90vh] pt-14 relative">
@@ -10,6 +12,10 @@ const HeroSection = () => {
       <div className="h-full min-h-[calc(90vh-3.5rem)]">
         {/* Full Width Content */}
         <div className="relative flex flex-col justify-center p-8 lg:p-12 h-full min-h-[calc(90vh-3.5rem)] overflow-hidden">
+          {/* Tiber River Map Background */}
+          <div className="absolute inset-0 opacity-70">
+            <TiberRiverMap className="w-full h-full" />
+          </div>
           <div className="relative z-10 space-y-8">
             {/* Main Headline */}
             <h1 className="opacity-0 animate-fade-up">

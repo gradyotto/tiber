@@ -1,6 +1,24 @@
-import { Mail } from "lucide-react";
+import { Calculator, Layers, Zap, Mail } from "lucide-react";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
+
+const capabilities = [
+  {
+    icon: Calculator,
+    title: "ALGORITHMIC QUOTING",
+    description: "Instant pricing. Zero friction.",
+  },
+  {
+    icon: Layers,
+    title: "INDUSTRIAL COMPOSITES",
+    description: "Carbon Fiber Nylon. Polycarbonate. ABS.",
+  },
+  {
+    icon: Zap,
+    title: "RAPID DEPLOYMENT",
+    description: "From CAD to Part in 24 hours.",
+  },
+];
 
 const CapabilitiesSection = () => {
   const [email, setEmail] = useState("");
@@ -24,123 +42,45 @@ const CapabilitiesSection = () => {
 
   return (
     <section className="border-t border-ghost">
-      {/* About Header Section */}
-      <div className="py-16 px-6 border-b border-ghost relative">
-        <span className="corner-marker top-6 left-6">+</span>
-        <span className="corner-marker top-6 right-6">+</span>
-        
-        <div className="max-w-4xl mx-auto">
-          <span className="font-mono text-xs text-primary uppercase tracking-wider opacity-0 animate-fade-up">
-            &gt; ABOUT TIBER
-          </span>
-          <h2 className="mt-4">
-            <span className="block font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase leading-[0.9] opacity-0 animate-fade-up animate-delay-100">
-              REBUILDING THE
-            </span>
-            <span className="block font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase leading-[0.9] opacity-0 animate-fade-up animate-delay-200">
-              INDUSTRIAL BASE
-            </span>
-          </h2>
-        </div>
-      </div>
+      {/* Top row - 3 cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3">
+        {capabilities.map((cap, index) => (
+          <div
+            key={cap.title}
+            className={`p-8 lg:p-12 card-hover group ${
+              index < 2 ? "border-b md:border-b-0 md:border-r border-ghost" : "border-b md:border-b-0"
+            }`}
+          >
+            <div className="space-y-6">
+              {/* Icon */}
+              <div className="relative">
+                <cap.icon
+                  className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors duration-300"
+                  strokeWidth={1}
+                />
+                {/* Hover glow */}
+                <div className="absolute inset-0 w-8 h-8 bg-primary opacity-0 blur-xl group-hover:opacity-30 transition-opacity duration-300" />
+              </div>
 
-      {/* Mission Section */}
-      <div className="py-16 px-6 border-b border-ghost">
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-          <div className="opacity-0 animate-fade-up animate-delay-300">
-            <span className="font-mono text-xs text-primary uppercase tracking-wider">
-              &gt; 01 — MISSION
-            </span>
-            <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
-              AMERICAN DYNAMISM
-            </h2>
-          </div>
-          <div className="space-y-6">
-            <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              Tiber was founded with a singular mission: to rebuild and secure America's 
-              manufacturing capabilities. In an era where supply chains have become 
-              strategic vulnerabilities, we believe that critical parts should be made 
-              on American soil, by American hands.
-            </p>
-            <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              Named after the river that built an empire, Tiber represents the 
-              infrastructure that enables greatness. We are the backbone of the 
-              next industrial revolution.
-            </p>
-          </div>
-        </div>
-      </div>
+              {/* Title */}
+              <h3 className="font-sans font-black text-xl tracking-tight uppercase text-foreground">
+                {cap.title}
+              </h3>
 
-      {/* Origin Section */}
-      <div className="py-16 px-6 border-b border-ghost">
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-          <div className="opacity-0 animate-fade-up animate-delay-300">
-            <span className="font-mono text-xs text-primary uppercase tracking-wider">
-              &gt; 02 — ORIGIN
-            </span>
-            <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
-              BORN FROM NECESSITY
-            </h2>
-          </div>
-          <div className="space-y-6">
-            <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              Our founders witnessed firsthand the erosion of American manufacturing 
-              capacity. Critical defense programs delayed by months. Medical device 
-              companies unable to source precision components. Aerospace firms 
-              dependent on foreign suppliers for mission-critical parts.
-            </p>
-            <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              Tiber was created to solve this. Based in Phoenix, Arizona, we operate 
-              at the intersection of advanced manufacturing technology and relentless 
-              execution. Our algorithmic quoting system eliminates friction. Our 
-              24-hour deployment capability eliminates waiting.
-            </p>
-          </div>
-        </div>
-      </div>
+              {/* Description */}
+              <p className="font-mono text-sm text-muted-foreground">
+                {cap.description}
+              </p>
 
-      {/* Capabilities Section */}
-      <div className="py-16 px-6 border-b border-ghost">
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-          <div className="opacity-0 animate-fade-up animate-delay-300">
-            <span className="font-mono text-xs text-primary uppercase tracking-wider">
-              &gt; 03 — CAPABILITIES
-            </span>
-            <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
-              DEFENSE-GRADE<br />PRECISION
-            </h2>
-          </div>
-          <div className="space-y-6">
-            <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              We specialize in industrial composites and high-performance materials: 
-              Carbon Fiber Nylon, Polycarbonate, ABS, and beyond. Every part we produce 
-              meets the exacting standards required by defense, aerospace, and critical 
-              infrastructure applications.
-            </p>
-            <div className="grid grid-cols-2 gap-4 pt-4">
-              <div className="border border-ghost p-4 card-hover">
-                <span className="font-mono text-2xl font-bold text-primary">24H</span>
-                <p className="font-mono text-xs text-muted-foreground mt-1">CAD TO PART</p>
-              </div>
-              <div className="border border-ghost p-4 card-hover">
-                <span className="font-mono text-2xl font-bold text-primary">0.001"</span>
-                <p className="font-mono text-xs text-muted-foreground mt-1">TOLERANCE</p>
-              </div>
-              <div className="border border-ghost p-4 card-hover">
-                <span className="font-mono text-2xl font-bold text-primary">100%</span>
-                <p className="font-mono text-xs text-muted-foreground mt-1">USA MADE</p>
-              </div>
-              <div className="border border-ghost p-4 card-hover">
-                <span className="font-mono text-2xl font-bold text-primary">ITAR</span>
-                <p className="font-mono text-xs text-muted-foreground mt-1">COMPLIANT</p>
-              </div>
+              {/* Bottom accent line */}
+              <div className="h-px bg-ghost w-0 group-hover:w-full transition-all duration-500" />
             </div>
           </div>
-        </div>
+        ))}
       </div>
 
-      {/* Email capture - now at bottom */}
-      <div className="p-8 lg:p-12 group">
+      {/* Bottom row - Email capture */}
+      <div className="border-t border-ghost p-8 lg:p-12 group">
         <div className="max-w-2xl mx-auto text-center space-y-6">
           <div className="flex items-center justify-center gap-3">
             <Mail className="w-6 h-6 text-primary" strokeWidth={1} />
