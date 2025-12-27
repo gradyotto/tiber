@@ -1,6 +1,4 @@
-import { Calculator, Layers, Zap, Mail } from "lucide-react";
-import { useState } from "react";
-import { toast } from "@/hooks/use-toast";
+import { Calculator, Layers, Zap } from "lucide-react";
 
 const capabilities = [
   {
@@ -21,25 +19,6 @@ const capabilities = [
 ];
 
 const CapabilitiesSection = () => {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    
-    setIsSubmitting(true);
-    // Simulate submission
-    setTimeout(() => {
-      toast({
-        title: "NOTIFICATION REGISTERED",
-        description: "You'll be notified when Tiber launches.",
-      });
-      setEmail("");
-      setIsSubmitting(false);
-    }, 500);
-  };
-
   return (
     <section className="border-t border-ghost">
       {/* Top row - 3 cards */}
@@ -77,40 +56,6 @@ const CapabilitiesSection = () => {
             </div>
           </div>
         ))}
-      </div>
-
-      {/* Bottom row - Email capture */}
-      <div className="border-t border-ghost p-8 lg:p-12 group">
-        <div className="max-w-2xl mx-auto text-center space-y-6">
-          <div className="flex items-center justify-center gap-3">
-            <Mail className="w-6 h-6 text-primary" strokeWidth={1} />
-            <h3 className="font-sans font-black text-2xl md:text-3xl tracking-tight uppercase text-foreground">
-              GET NOTIFIED
-            </h3>
-          </div>
-          <p className="font-mono text-sm md:text-base text-muted-foreground">
-            Enter your email to be notified when Tiber launches.
-          </p>
-          
-          {/* Email form */}
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto pt-2">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="EMAIL ADDRESS"
-              required
-              className="flex-1 bg-background border border-ghost px-4 py-3 font-mono text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-            />
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="px-6 py-3 bg-primary text-primary-foreground font-mono text-sm uppercase tracking-wider hover:bg-primary/90 transition-colors disabled:opacity-50"
-            >
-              {isSubmitting ? "SENDING..." : "NOTIFY ME"}
-            </button>
-          </form>
-        </div>
       </div>
     </section>
   );
