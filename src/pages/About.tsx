@@ -100,7 +100,7 @@ const About = () => {
           </div>
           <div className="space-y-6">
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              We specialize in industrial composites and high-performance materials: 
+              We specialize in <span className="text-primary">3D printing</span> industrial composites and high-performance materials: 
               Carbon Fiber Nylon, Polycarbonate, ABS, and beyond. Every part we produce 
               meets the exacting standards required by defense, aerospace, and{" "}
               <span className="text-primary">critical infrastructure applications</span>.
