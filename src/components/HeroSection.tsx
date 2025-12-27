@@ -19,10 +19,7 @@ const HeroSection = () => {
           <div className="relative z-10 space-y-8">
             {/* Main Headline */}
             <h1 className="opacity-0 animate-fade-up">
-              <span className="block font-sans font-black text-5xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none text-primary">
-                TIBER
-              </span>
-              <span className="block font-sans font-black text-5xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none text-foreground opacity-0 animate-fade-up animate-delay-100">
+              <span className="block font-sans font-black text-5xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none text-foreground">
                 CRITICAL PARTS
               </span>
               <span className="block font-sans font-black text-5xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none text-foreground opacity-0 animate-fade-up animate-delay-100">
@@ -33,6 +30,10 @@ const HeroSection = () => {
               </span>
             </h1>
 
+            {/* Subtext */}
+            <p className="font-mono text-sm text-primary uppercase tracking-wider opacity-0 animate-fade-up animate-delay-300">
+              &gt; Scaling Defense-Grade Precision
+            </p>
 
             {/* Loading Bar */}
             <div className="opacity-0 animate-fade-up animate-delay-400 space-y-2">
