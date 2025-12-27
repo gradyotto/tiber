@@ -99,7 +99,7 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
 
       {/* Second river - reenters from left beneath Defense Grade Precision in Capabilities, flows across to right, then down right side */}
       <path
-        d="M -100 1450
+        d="M -100 1650
            Q 100 1480, 300 1520
            Q 500 1560, 650 1620
            Q 800 1680, 820 1780
@@ -119,7 +119,7 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
       
       {/* Glowing outer edge for second river */}
       <path
-        d="M -100 1450
+        d="M -100 1650
            Q 100 1480, 300 1520
            Q 500 1560, 650 1620
            Q 800 1680, 820 1780
