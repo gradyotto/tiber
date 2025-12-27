@@ -1,5 +1,4 @@
 import TiberRiverMap from "./TiberRiverMap";
-import tiberLogo from "@/assets/tiber-logo.png";
 
 const HeroSection = () => {
   return (
@@ -19,14 +18,15 @@ const HeroSection = () => {
           </div>
           <div className="relative z-10 space-y-8">
             {/* Main Headline */}
-            <h1 className="opacity-0 animate-fade-up flex items-center gap-6">
-              <img 
-                src={tiberLogo} 
-                alt="Tiber Logo" 
-                className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40"
-              />
-              <span className="font-sans font-black text-5xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none text-foreground">
-                TIBER
+            <h1 className="opacity-0 animate-fade-up">
+              <span className="block font-sans font-black text-5xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none text-foreground">
+                CRITICAL PARTS
+              </span>
+              <span className="block font-sans font-black text-5xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none text-foreground opacity-0 animate-fade-up animate-delay-100">
+                FOR THE AMERICAN
+              </span>
+              <span className="block font-sans font-black text-5xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none text-foreground opacity-0 animate-fade-up animate-delay-200">
+                INDUSTRIAL BASE
               </span>
             </h1>
 
