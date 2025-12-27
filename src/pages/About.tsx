@@ -51,7 +51,7 @@ const About = () => {
               on American soil, by American hands.
             </p>
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              Named after the river that built an empire, Tiber represents the 
+              Named after <span className="text-primary">the river that built an empire</span>, Tiber represents the 
               infrastructure that enables greatness. We are the backbone of the 
               next industrial revolution.
             </p>
@@ -75,10 +75,10 @@ const About = () => {
               Our founders witnessed firsthand the erosion of American manufacturing 
               capacity. Critical defense programs delayed by months. Medical device 
               companies unable to source precision components. Aerospace firms 
-              dependent on foreign suppliers for mission-critical parts.
+              dependent on foreign suppliers for <span className="text-primary">mission-critical parts</span>.
             </p>
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              Tiber was created to solve this. Based in Phoenix, Arizona, we operate 
+              Tiber was created to solve this. Based in <span className="text-primary">Phoenix, Arizona</span>, we operate 
               at the intersection of advanced manufacturing technology and relentless 
               execution. Our algorithmic quoting system eliminates friction. Our 
               24-hour deployment capability eliminates waiting.
@@ -102,8 +102,8 @@ const About = () => {
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
               We specialize in industrial composites and high-performance materials: 
               Carbon Fiber Nylon, Polycarbonate, ABS, and beyond. Every part we produce 
-              meets the exacting standards required by defense, aerospace, and critical 
-              infrastructure applications.
+              meets the exacting standards required by defense, aerospace, and{" "}
+              <span className="text-primary">critical infrastructure applications</span>.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="border border-ghost p-4 card-hover">
