@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import EmailCaptureForm from "@/components/EmailCaptureForm";
 
 const About = () => {
   return (
@@ -125,6 +126,7 @@ const About = () => {
         </div>
       </section>
 
+      <EmailCaptureForm />
       <Footer />
     </main>
   );
