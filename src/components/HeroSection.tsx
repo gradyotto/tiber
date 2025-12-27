@@ -66,7 +66,7 @@ const HeroSection = () => {
                 <img 
                   src={tiberLogo} 
                   alt="Tiber Logo" 
-                  className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 object-contain" 
+                  className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 object-contain"
                 />
                 <span className="font-sans font-black text-6xl md:text-7xl lg:text-8xl tracking-tight text-foreground">
                   TIBER
