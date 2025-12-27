@@ -83,8 +83,6 @@ const Roadmap = () => {
             strokeWidth="6"
             fill="none"
             strokeLinecap="round"
-            className="animate-pulse"
-            style={{ filter: "drop-shadow(0 0 12px hsl(var(--primary) / 0.6))" }}
           />
 
           {/* Tributary streams */}
