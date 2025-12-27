@@ -43,44 +43,19 @@ const RoadmapSection = () => {
       </div>
 
       {/* Roadmap Cards */}
-      <div className="py-16 px-6 relative">
-        {/* Roadmap Cards - with inline waypoints */}
-        <div className="max-w-4xl mx-auto relative z-10 space-y-16 md:space-y-20">
+      <div className="py-16 px-6 min-h-[600px] relative">
+      {/* Roadmap Cards - positioned to the right of the river */}
+      <div className="max-w-4xl mx-auto relative z-10 space-y-12 pl-8 md:pl-24">
           {roadmapSteps.map((step, index) => (
             <div 
               key={step.id}
-              className="flex items-start gap-6 md:gap-10 opacity-0 animate-fade-up"
+              className="opacity-0 animate-fade-up ml-8 md:ml-16"
               style={{ 
                 animationDelay: `${300 + index * 200}ms`,
                 animationFillMode: "forwards"
               }}
             >
-              {/* Waypoint marker - inline with card */}
-              <div className="flex-shrink-0 relative">
-                {index === 0 ? (
-                  // Active waypoint
-                  <div className="relative">
-                    <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-primary" />
-                    <div className="absolute inset-0 -m-2 w-8 h-8 md:w-9 md:h-9 rounded-full border-2 border-primary opacity-50 animate-pulse" />
-                    <div className="absolute inset-0 -m-4 w-12 h-12 md:w-13 md:h-13 rounded-full border border-primary opacity-20" />
-                  </div>
-                ) : (
-                  // Future waypoint
-                  <div className="relative">
-                    <div 
-                      className="w-4 h-4 md:w-5 md:h-5 rounded-full border-2 border-primary opacity-60"
-                      style={{ borderStyle: 'dashed' }}
-                    />
-                    <div 
-                      className="absolute inset-0 -m-2 w-8 h-8 md:w-9 md:h-9 rounded-full border border-primary opacity-30"
-                      style={{ borderStyle: 'dashed' }}
-                    />
-                  </div>
-                )}
-              </div>
-
-              {/* Card content */}
-              <div className={`flex-1 bg-background/90 backdrop-blur-sm border ${index === 0 ? 'border-primary' : 'border-ghost hover:border-primary'} transition-colors duration-300 p-6`}>
+              <div className={`bg-background/90 backdrop-blur-sm border ${index === 0 ? 'border-primary' : 'border-ghost hover:border-primary'} transition-colors duration-300 p-6 max-w-lg`}>
                 <div className="flex items-center gap-3 mb-3">
                   <span className={`font-mono text-xs ${index === 0 ? 'text-primary' : 'text-muted-foreground'}`}>
                     0{step.id}
@@ -89,10 +64,10 @@ const RoadmapSection = () => {
                     {step.status}
                   </span>
                 </div>
-                <h3 className="font-sans font-black text-lg md:text-xl tracking-tight uppercase text-foreground mb-2">
+                <h3 className="font-sans font-black text-lg tracking-tight uppercase text-foreground mb-2">
                   {step.title}
                 </h3>
-                <p className="font-mono text-xs md:text-sm text-muted-foreground">
+                <p className="font-mono text-xs text-muted-foreground">
                   {step.description}
                 </p>
               </div>
