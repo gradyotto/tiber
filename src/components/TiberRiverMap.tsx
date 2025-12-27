@@ -72,16 +72,16 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
       <circle
         cx="650"
         cy="300"
-        r="12"
+        r="8"
         fill="hsl(var(--primary))"
         opacity="1"
       />
       <circle
         cx="650"
         cy="300"
-        r="20"
+        r="14"
         stroke="hsl(var(--primary))"
-        strokeWidth="2"
+        strokeWidth="1.5"
         fill="none"
         opacity="0.5"
         className="animate-pulse"
@@ -89,7 +89,7 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
       <circle
         cx="650"
         cy="300"
-        r="28"
+        r="20"
         stroke="hsl(var(--primary))"
         strokeWidth="1"
         fill="none"
