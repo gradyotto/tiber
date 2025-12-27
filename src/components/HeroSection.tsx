@@ -4,14 +4,38 @@ import tiberLogo from "@/assets/tiber-logo.png";
 
 const HeroSection = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [scrollLocked, setScrollLocked] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 5);
+      const hasScrolled = window.scrollY > 5;
+      setScrolled(hasScrolled);
+      
+      // Dispatch custom event to notify navbar
+      window.dispatchEvent(new CustomEvent('heroScrolled', { detail: { scrolled: hasScrolled } }));
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Lock scroll initially, unlock after first scroll triggers transition
+  useEffect(() => {
+    if (scrollLocked) {
+      document.body.style.overflow = 'hidden';
+      
+      const handleWheel = (e: WheelEvent) => {
+        if (e.deltaY > 0) {
+          setScrolled(true);
+          setScrollLocked(false);
+          document.body.style.overflow = '';
+          window.dispatchEvent(new CustomEvent('heroScrolled', { detail: { scrolled: true } }));
+        }
+      };
+      
+      window.addEventListener('wheel', handleWheel, { passive: true });
+      return () => window.removeEventListener('wheel', handleWheel);
+    }
+  }, [scrollLocked]);
 
   return (
     <section className="min-h-[90vh] pt-14 relative">
