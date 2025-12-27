@@ -1,10 +1,21 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import TiberRiverMap from "./TiberRiverMap";
 import tiberLogo from "@/assets/tiber-logo.png";
 
 const HeroSection = () => {
   const [scrolled, setScrolled] = useState(false);
   const [scrollLocked, setScrollLocked] = useState(true);
+  const location = useLocation();
+
+  // Reset state when navigating to homepage
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setScrolled(false);
+    setScrollLocked(true);
+    document.body.style.overflow = 'hidden';
+    window.dispatchEvent(new CustomEvent('heroScrolled', { detail: { scrolled: false } }));
+  }, [location.key]);
 
   useEffect(() => {
     const handleScroll = () => {
