@@ -33,29 +33,30 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
       
       <rect width="100%" height="100%" fill="url(#grid-flow)" />
 
-      {/* Extended Tiber River - flows through entire page */}
+      {/* Extended Tiber River - flows through entire page, left-aligned */}
       <path
-        d="M 900 -60 
-           Q 850 -20, 800 30
-           Q 750 80, 720 120 
-           Q 680 160, 700 210 
-           Q 720 260, 650 300 
-           Q 580 340, 620 390 
-           Q 660 440, 580 480 
-           Q 500 520, 450 560
-           Q 400 600, 350 650
-           Q 300 700, 380 780
-           Q 460 860, 400 940
-           Q 340 1020, 420 1100
-           Q 500 1180, 450 1260
-           Q 400 1340, 480 1420
-           Q 560 1500, 500 1580
-           Q 440 1660, 520 1740
-           Q 600 1820, 540 1900
-           Q 480 1980, 560 2060
-           Q 640 2140, 580 2220
-           Q 520 2300, 450 2400
-           Q 380 2500, 300 2600"
+        d="M 250 -60 
+           Q 200 0, 150 60
+           Q 100 120, 120 180 
+           Q 140 240, 80 300 
+           Q 20 360, 60 420 
+           Q 100 480, 40 540 
+           Q -20 600, 30 660
+           Q 80 720, 20 780
+           Q -40 840, 40 900
+           Q 120 960, 60 1020
+           Q 0 1080, 80 1140
+           Q 160 1200, 100 1260
+           Q 40 1320, 120 1380
+           Q 200 1440, 140 1500
+           Q 80 1560, 160 1620
+           Q 240 1680, 180 1740
+           Q 120 1800, 200 1860
+           Q 280 1920, 220 1980
+           Q 160 2040, 240 2100
+           Q 320 2160, 260 2220
+           Q 200 2280, 150 2400
+           Q 100 2500, 50 2600"
         stroke="hsl(var(--primary))"
         strokeWidth="4"
         fill="none"
@@ -65,27 +66,28 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
       
       {/* Glowing outer river edge */}
       <path
-        d="M 900 -60 
-           Q 850 -20, 800 30
-           Q 750 80, 720 120 
-           Q 680 160, 700 210 
-           Q 720 260, 650 300 
-           Q 580 340, 620 390 
-           Q 660 440, 580 480 
-           Q 500 520, 450 560
-           Q 400 600, 350 650
-           Q 300 700, 380 780
-           Q 460 860, 400 940
-           Q 340 1020, 420 1100
-           Q 500 1180, 450 1260
-           Q 400 1340, 480 1420
-           Q 560 1500, 500 1580
-           Q 440 1660, 520 1740
-           Q 600 1820, 540 1900
-           Q 480 1980, 560 2060
-           Q 640 2140, 580 2220
-           Q 520 2300, 450 2400
-           Q 380 2500, 300 2600"
+        d="M 250 -60 
+           Q 200 0, 150 60
+           Q 100 120, 120 180 
+           Q 140 240, 80 300 
+           Q 20 360, 60 420 
+           Q 100 480, 40 540 
+           Q -20 600, 30 660
+           Q 80 720, 20 780
+           Q -40 840, 40 900
+           Q 120 960, 60 1020
+           Q 0 1080, 80 1140
+           Q 160 1200, 100 1260
+           Q 40 1320, 120 1380
+           Q 200 1440, 140 1500
+           Q 80 1560, 160 1620
+           Q 240 1680, 180 1740
+           Q 120 1800, 200 1860
+           Q 280 1920, 220 1980
+           Q 160 2040, 240 2100
+           Q 320 2160, 260 2220
+           Q 200 2280, 150 2400
+           Q 100 2500, 50 2600"
         stroke="hsl(var(--primary))"
         strokeWidth="12"
         fill="none"
@@ -96,42 +98,28 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
 
       {/* Tributary rivers along the flow */}
       <path
-        d="M 800 150 Q 760 170, 710 180"
+        d="M 150 60 Q 200 80, 250 70"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
         opacity="0.4"
       />
       <path
-        d="M 750 320 Q 700 330, 660 310"
+        d="M 80 300 Q 130 320, 180 300"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
         opacity="0.4"
       />
       <path
-        d="M 200 700 Q 280 720, 340 690"
+        d="M 40 900 Q 100 920, 160 890"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
         opacity="0.4"
       />
       <path
-        d="M 600 1100 Q 520 1120, 450 1090"
-        stroke="hsl(var(--ghost))"
-        strokeWidth="1.5"
-        fill="none"
-        opacity="0.4"
-      />
-      <path
-        d="M 300 1500 Q 380 1520, 460 1490"
-        stroke="hsl(var(--ghost))"
-        strokeWidth="1.5"
-        fill="none"
-        opacity="0.4"
-      />
-      <path
-        d="M 700 1900 Q 620 1920, 560 1890"
+        d="M 140 1500 Q 200 1520, 260 1490"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
@@ -140,14 +128,14 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
 
       {/* Phoenix marker - on the river line */}
       <circle
-        cx="650"
+        cx="80"
         cy="300"
         r="8"
         fill="hsl(var(--primary))"
         opacity="0.8"
       />
       <circle
-        cx="650"
+        cx="80"
         cy="300"
         r="14"
         stroke="hsl(var(--primary))"
@@ -171,7 +159,7 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
 
       {/* Location label */}
       <text
-        x="670"
+        x="100"
         y="305"
         fill="hsl(var(--primary))"
         fontSize="12"
@@ -204,10 +192,10 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
       </text>
 
       {/* Section waypoint markers along the river */}
-      <circle cx="400" cy="940" r="4" fill="hsl(var(--primary))" opacity="0.5" />
-      <circle cx="450" cy="1260" r="4" fill="hsl(var(--primary))" opacity="0.5" />
-      <circle cx="500" cy="1580" r="4" fill="hsl(var(--primary))" opacity="0.5" />
-      <circle cx="540" cy="1900" r="4" fill="hsl(var(--primary))" opacity="0.5" />
+      <circle cx="40" cy="900" r="4" fill="hsl(var(--primary))" opacity="0.5" />
+      <circle cx="100" cy="1260" r="4" fill="hsl(var(--primary))" opacity="0.5" />
+      <circle cx="140" cy="1500" r="4" fill="hsl(var(--primary))" opacity="0.5" />
+      <circle cx="200" cy="1860" r="4" fill="hsl(var(--primary))" opacity="0.5" />
     </svg>
   );
 };
