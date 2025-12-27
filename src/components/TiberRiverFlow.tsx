@@ -97,19 +97,19 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
         opacity="0.4"
       />
 
-      {/* Second river - reenters from left in Roadmap section, flows across to right, then down right side */}
+      {/* Second river - reenters from left beneath Defense Grade Precision, flows across to right, then down right side */}
       <path
-        d="M -100 2050
-           Q 100 2080, 300 2120
-           Q 500 2160, 650 2220
-           Q 800 2280, 820 2380
-           Q 840 2480, 780 2560
-           Q 720 2640, 760 2720
-           Q 800 2800, 750 2880
-           Q 700 2960, 740 3040
-           Q 780 3120, 730 3200
-           Q 680 3280, 720 3360
-           Q 760 3440, 900 3500"
+        d="M -100 2350
+           Q 100 2380, 300 2420
+           Q 500 2460, 650 2520
+           Q 800 2580, 820 2680
+           Q 840 2780, 780 2860
+           Q 720 2940, 760 3020
+           Q 800 3100, 750 3180
+           Q 700 3260, 740 3340
+           Q 780 3420, 730 3500
+           Q 680 3580, 720 3660
+           Q 760 3740, 900 3800"
         stroke="hsl(var(--primary))"
         strokeWidth="4"
         fill="none"
@@ -119,17 +119,17 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
       
       {/* Glowing outer edge for second river */}
       <path
-        d="M -100 2050
-           Q 100 2080, 300 2120
-           Q 500 2160, 650 2220
-           Q 800 2280, 820 2380
-           Q 840 2480, 780 2560
-           Q 720 2640, 760 2720
-           Q 800 2800, 750 2880
-           Q 700 2960, 740 3040
-           Q 780 3120, 730 3200
-           Q 680 3280, 720 3360
-           Q 760 3440, 900 3500"
+        d="M -100 2350
+           Q 100 2380, 300 2420
+           Q 500 2460, 650 2520
+           Q 800 2580, 820 2680
+           Q 840 2780, 780 2860
+           Q 720 2940, 760 3020
+           Q 800 3100, 750 3180
+           Q 700 3260, 740 3340
+           Q 780 3420, 730 3500
+           Q 680 3580, 720 3660
+           Q 760 3740, 900 3800"
         stroke="hsl(var(--primary))"
         strokeWidth="12"
         fill="none"
@@ -140,14 +140,14 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
 
       {/* Tributaries for second river */}
       <path
-        d="M 780 2600 Q 820 2620, 860 2610"
+        d="M 780 2900 Q 820 2920, 860 2910"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
         opacity="0.4"
       />
       <path
-        d="M 750 2900 Q 790 2920, 830 2910"
+        d="M 750 3200 Q 790 3220, 830 3210"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
