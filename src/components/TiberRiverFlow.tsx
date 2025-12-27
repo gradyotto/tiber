@@ -33,7 +33,7 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
       
       <rect width="100%" height="100%" fill="url(#grid-flow)" />
 
-      {/* Extended Tiber River - flows right side initially, then left side for content sections, then continues through roadmap */}
+      {/* Extended Tiber River - flows right side initially, then left side for content sections, then vertical through roadmap */}
       <path
         d="M 900 -60 
            Q 850 -20, 800 30
@@ -51,14 +51,10 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
            Q 20 1400, 60 1480
            Q 100 1560, 50 1640
            Q 0 1720, 40 1800
-           Q 80 1880, 30 1960
-           Q -20 2040, 20 2120
-           Q 60 2200, 80 2300
-           Q 100 2400, 80 2500
-           Q 60 2600, 100 2700
-           Q 140 2800, 80 2900
-           Q 20 3000, 60 3100
-           Q 100 3200, 50 3400"
+           Q 80 1880, 50 1960
+           Q 20 2040, 60 2120
+           Q 100 2200, 80 2280
+           L 80 3400"
         stroke="hsl(var(--primary))"
         strokeWidth="4"
         fill="none"
@@ -84,14 +80,10 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
            Q 20 1400, 60 1480
            Q 100 1560, 50 1640
            Q 0 1720, 40 1800
-           Q 80 1880, 30 1960
-           Q -20 2040, 20 2120
-           Q 60 2200, 80 2300
-           Q 100 2400, 80 2500
-           Q 60 2600, 100 2700
-           Q 140 2800, 80 2900
-           Q 20 3000, 60 3100
-           Q 100 3200, 50 3400"
+           Q 80 1880, 50 1960
+           Q 20 2040, 60 2120
+           Q 100 2200, 80 2280
+           L 80 3400"
         stroke="hsl(var(--primary))"
         strokeWidth="12"
         fill="none"
@@ -237,19 +229,6 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
       <circle cx="50" cy="1640" r="4" fill="hsl(var(--primary))" opacity="0.5" />
       <circle cx="30" cy="1960" r="4" fill="hsl(var(--primary))" opacity="0.5" />
 
-      {/* Roadmap section waypoints - larger markers for roadmap milestones */}
-      {/* Waypoint 1 - Industrial Additive Manufacturing (active) */}
-      <circle cx="80" cy="2400" r="8" fill="hsl(var(--primary))" opacity="1" />
-      <circle cx="80" cy="2400" r="14" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" opacity="0.5" className="animate-pulse" />
-      <circle cx="80" cy="2400" r="22" stroke="hsl(var(--primary))" strokeWidth="1" fill="none" opacity="0.2" />
-
-      {/* Waypoint 2 - CNC Milling & Turning */}
-      <circle cx="100" cy="2700" r="8" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" strokeDasharray="4 3" opacity="0.6" />
-      <circle cx="100" cy="2700" r="14" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeDasharray="6 4" fill="none" opacity="0.4" />
-
-      {/* Waypoint 3 - Autonomous Factory */}
-      <circle cx="80" cy="3000" r="8" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" strokeDasharray="4 3" opacity="0.5" />
-      <circle cx="80" cy="3000" r="14" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeDasharray="6 4" fill="none" opacity="0.3" />
     </svg>
   );
 };
