@@ -209,47 +209,11 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
         PHOENIX, AZ
       </text>
 
-      {/* Coordinate markers */}
-      <text
-        x="20"
-        y="30"
-        fill="hsl(var(--muted-foreground))"
-        fontSize="8"
-        fontFamily="monospace"
-        opacity="0.7"
-      >
-        33.4484° N
-      </text>
-      <text
-        x="20"
-        y="45"
-        fill="hsl(var(--muted-foreground))"
-        fontSize="8"
-        fontFamily="monospace"
-        opacity="0.7"
-      >
-        112.0740° W
-      </text>
-
       {/* Section waypoint markers along the river - on left side */}
       <circle cx="100" cy="1000" r="4" fill="hsl(var(--primary))" opacity="0.5" />
       <circle cx="80" cy="1320" r="4" fill="hsl(var(--primary))" opacity="0.5" />
       <circle cx="50" cy="1640" r="4" fill="hsl(var(--primary))" opacity="0.5" />
       <circle cx="30" cy="1960" r="4" fill="hsl(var(--primary))" opacity="0.5" />
-
-      {/* Roadmap section waypoints - larger markers for roadmap milestones */}
-      {/* Waypoint 1 - Industrial Additive Manufacturing (active) */}
-      <circle cx="80" cy="2400" r="8" fill="hsl(var(--primary))" opacity="1" />
-      <circle cx="80" cy="2400" r="14" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" opacity="0.5" className="animate-pulse" />
-      <circle cx="80" cy="2400" r="22" stroke="hsl(var(--primary))" strokeWidth="1" fill="none" opacity="0.2" />
-
-      {/* Waypoint 2 - CNC Milling & Turning */}
-      <circle cx="100" cy="2700" r="8" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" strokeDasharray="4 3" opacity="0.6" />
-      <circle cx="100" cy="2700" r="14" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeDasharray="6 4" fill="none" opacity="0.4" />
-
-      {/* Waypoint 3 - Autonomous Factory */}
-      <circle cx="80" cy="3000" r="8" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" strokeDasharray="4 3" opacity="0.5" />
-      <circle cx="80" cy="3000" r="14" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeDasharray="6 4" fill="none" opacity="0.3" />
     </svg>
   );
 };
