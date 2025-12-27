@@ -44,14 +44,14 @@ const About = () => {
           </div>
           <div className="space-y-6">
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              Tiber was founded with a singular mission: to rebuild and{" "}
+              <span className="text-primary">Tiber</span> was founded with a singular mission: to rebuild and{" "}
               <span className="text-primary">secure America's manufacturing capabilities</span>.
               In an era where supply chains have become 
               strategic vulnerabilities, we believe that critical parts should be made 
               on American soil, by American hands.
             </p>
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              Named after <span className="text-primary">the river that built an empire</span>, Tiber represents the 
+              Named after the river that built an empire, <span className="text-primary">Tiber</span> represents the 
               infrastructure that enables greatness. We are the backbone of the 
               next industrial revolution.
             </p>
@@ -78,7 +78,7 @@ const About = () => {
               dependent on foreign suppliers for <span className="text-primary">mission-critical parts</span>.
             </p>
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              Tiber was created to solve this. Based in <span className="text-primary">Phoenix, Arizona</span>, we operate 
+              <span className="text-primary">Tiber</span> was created to solve this. Based in <span className="text-primary">Phoenix, Arizona</span>, we operate 
               at the intersection of advanced manufacturing technology and relentless 
               execution. Our algorithmic quoting system eliminates friction. Our 
               24-hour deployment capability eliminates waiting.
