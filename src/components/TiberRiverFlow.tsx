@@ -33,7 +33,7 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
       
       <rect width="100%" height="100%" fill="url(#grid-flow)" />
 
-      {/* Extended Tiber River - flows right side initially, then curves left to avoid section headers */}
+      {/* Extended Tiber River - flows right side initially, then curves off-screen to the left */}
       <path
         d="M 900 -60 
            Q 850 -20, 800 30
@@ -44,22 +44,9 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
            Q 660 440, 580 480 
            Q 500 520, 400 560
            Q 300 600, 200 680
-           Q 100 760, 80 840
-           Q 60 920, 40 980
-           Q 20 1040, -20 1100
-           Q -60 1160, -40 1220
-           Q -20 1280, -60 1340
-           Q -100 1400, -60 1480
-           Q -20 1560, -80 1640
-           Q -140 1720, -100 1800
-           Q -60 1880, -120 1960
-           Q -180 2040, -140 2120
-           Q -100 2200, -80 2300
-           Q -60 2400, -80 2500
-           Q -100 2600, -60 2700
-           Q -20 2800, -80 2900
-           Q -140 3000, -100 3100
-           Q -60 3200, -100 3400"
+           Q 100 760, 50 820
+           Q 0 880, -100 920
+           Q -200 960, -400 980"
         stroke="hsl(var(--primary))"
         strokeWidth="4"
         fill="none"
@@ -78,22 +65,9 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
            Q 660 440, 580 480 
            Q 500 520, 400 560
            Q 300 600, 200 680
-           Q 100 760, 80 840
-           Q 60 920, 40 980
-           Q 20 1040, -20 1100
-           Q -60 1160, -40 1220
-           Q -20 1280, -60 1340
-           Q -100 1400, -60 1480
-           Q -20 1560, -80 1640
-           Q -140 1720, -100 1800
-           Q -60 1880, -120 1960
-           Q -180 2040, -140 2120
-           Q -100 2200, -80 2300
-           Q -60 2400, -80 2500
-           Q -100 2600, -60 2700
-           Q -20 2800, -80 2900
-           Q -140 3000, -100 3100
-           Q -60 3200, -100 3400"
+           Q 100 760, 50 820
+           Q 0 880, -100 920
+           Q -200 960, -400 980"
         stroke="hsl(var(--primary))"
         strokeWidth="12"
         fill="none"
@@ -119,49 +93,6 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
       />
       <path
         d="M 250 700 Q 180 720, 150 690"
-        stroke="hsl(var(--ghost))"
-        strokeWidth="1.5"
-        fill="none"
-        opacity="0.4"
-      />
-      <path
-        d="M 120 1100 Q 180 1120, 220 1090"
-        stroke="hsl(var(--ghost))"
-        strokeWidth="1.5"
-        fill="none"
-        opacity="0.4"
-      />
-      <path
-        d="M 80 1500 Q 140 1520, 180 1490"
-        stroke="hsl(var(--ghost))"
-        strokeWidth="1.5"
-        fill="none"
-        opacity="0.4"
-      />
-      <path
-        d="M 60 1900 Q 120 1920, 160 1890"
-        stroke="hsl(var(--ghost))"
-        strokeWidth="1.5"
-        fill="none"
-        opacity="0.4"
-      />
-
-      <path
-        d="M 100 2350 Q 160 2370, 200 2340"
-        stroke="hsl(var(--ghost))"
-        strokeWidth="1.5"
-        fill="none"
-        opacity="0.4"
-      />
-      <path
-        d="M 120 2650 Q 180 2670, 220 2640"
-        stroke="hsl(var(--ghost))"
-        strokeWidth="1.5"
-        fill="none"
-        opacity="0.4"
-      />
-      <path
-        d="M 80 2950 Q 140 2970, 180 2940"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
@@ -211,11 +142,6 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
         PHOENIX, AZ
       </text>
 
-      {/* Section waypoint markers along the river - adjusted for new path */}
-      <circle cx="40" cy="980" r="4" fill="hsl(var(--primary))" opacity="0.5" />
-      <circle cx="-60" cy="1340" r="4" fill="hsl(var(--primary))" opacity="0.5" />
-      <circle cx="-80" cy="1640" r="4" fill="hsl(var(--primary))" opacity="0.5" />
-      <circle cx="-120" cy="1960" r="4" fill="hsl(var(--primary))" opacity="0.5" />
     </svg>
   );
 };
