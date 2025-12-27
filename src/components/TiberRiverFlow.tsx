@@ -100,16 +100,16 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
       {/* Second river - reenters from left beneath Defense Grade Precision in Capabilities, flows across to right, then down right side */}
       <path
         d="M -100 1650
-           Q 100 1480, 300 1520
-           Q 500 1560, 650 1620
-           Q 800 1680, 820 1780
-           Q 840 1880, 780 1960
-           Q 720 2040, 760 2120
-           Q 800 2200, 750 2280
-           Q 700 2360, 740 2440
-           Q 780 2520, 730 2600
-           Q 680 2680, 720 2760
-           Q 760 2840, 900 2900"
+           Q 100 1720, 300 1800
+           Q 500 1880, 650 1940
+           Q 800 2000, 820 2100
+           Q 840 2200, 780 2280
+           Q 720 2360, 760 2440
+           Q 800 2520, 750 2600
+           Q 700 2680, 740 2760
+           Q 780 2840, 730 2920
+           Q 680 3000, 720 3080
+           Q 760 3160, 900 3220"
         stroke="hsl(var(--primary))"
         strokeWidth="4"
         fill="none"
@@ -120,16 +120,16 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
       {/* Glowing outer edge for second river */}
       <path
         d="M -100 1650
-           Q 100 1480, 300 1520
-           Q 500 1560, 650 1620
-           Q 800 1680, 820 1780
-           Q 840 1880, 780 1960
-           Q 720 2040, 760 2120
-           Q 800 2200, 750 2280
-           Q 700 2360, 740 2440
-           Q 780 2520, 730 2600
-           Q 680 2680, 720 2760
-           Q 760 2840, 900 2900"
+           Q 100 1720, 300 1800
+           Q 500 1880, 650 1940
+           Q 800 2000, 820 2100
+           Q 840 2200, 780 2280
+           Q 720 2360, 760 2440
+           Q 800 2520, 750 2600
+           Q 700 2680, 740 2760
+           Q 780 2840, 730 2920
+           Q 680 3000, 720 3080
+           Q 760 3160, 900 3220"
         stroke="hsl(var(--primary))"
         strokeWidth="12"
         fill="none"
