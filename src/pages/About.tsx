@@ -22,10 +22,13 @@ const About = () => {
           </span>
           <h1 className="mt-4">
             <span className="block font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase leading-[0.9] opacity-0 animate-fade-up animate-delay-100">
-              REBUILDING THE
+              SCALING
             </span>
             <span className="block font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase leading-[0.9] opacity-0 animate-fade-up animate-delay-200">
-              INDUSTRIAL BASE
+              DEFENSE-GRADE
+            </span>
+            <span className="block font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase leading-[0.9] opacity-0 animate-fade-up animate-delay-300">
+              PRECISION
             </span>
           </h1>
         </div>
