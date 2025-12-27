@@ -45,10 +45,10 @@ const EmailCaptureForm = () => {
           &gt; STAY UPDATED
         </span>
         <div className="flex items-center justify-center gap-3">
-          <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase">
+          <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase leading-none">
             JOIN THE MISSION
           </h2>
-          <img src={missionGraphic} alt="Mission graphic" className="h-8 w-auto" />
+          <img src={missionGraphic} alt="Mission graphic" className="h-8 w-auto self-center" />
         </div>
         <p className="font-mono text-sm text-muted-foreground">
           Get updates on Tiber's progress and be the first to know when new capabilities come online.
