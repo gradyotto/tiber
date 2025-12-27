@@ -33,7 +33,7 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
       
       <rect width="100%" height="100%" fill="url(#grid-flow)" />
 
-      {/* Extended Tiber River - flows right side initially, curves above About Tiber, then exits left */}
+      {/* Extended Tiber River - flows right side initially, maneuvers ABOVE About Tiber, then exits left */}
       <path
         d="M 900 -60 
            Q 850 -20, 800 30
@@ -43,9 +43,9 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
            Q 580 340, 620 390 
            Q 660 440, 580 480 
            Q 500 520, 400 560
-           Q 300 600, 180 640
-           Q 60 680, -50 700
-           Q -160 720, -450 680"
+           Q 260 520, 140 420
+           Q 40 320, -80 200
+           Q -220 80, -450 40"
         stroke="hsl(var(--primary))"
         strokeWidth="4"
         fill="none"
@@ -63,9 +63,9 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
            Q 580 340, 620 390 
            Q 660 440, 580 480 
            Q 500 520, 400 560
-           Q 300 600, 180 640
-           Q 60 680, -50 700
-           Q -160 720, -450 680"
+           Q 260 520, 140 420
+           Q 40 320, -80 200
+           Q -220 80, -450 40"
         stroke="hsl(var(--primary))"
         strokeWidth="12"
         fill="none"
