@@ -5,7 +5,7 @@ interface TiberRiverFlowProps {
 const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
   return (
     <svg
-      viewBox="0 0 800 2400"
+      viewBox="0 0 800 3200"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -33,7 +33,7 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
       
       <rect width="100%" height="100%" fill="url(#grid-flow)" />
 
-      {/* Extended Tiber River - flows right side initially, then left side for content sections */}
+      {/* Extended Tiber River - flows right side initially, then left side for content sections, then continues through roadmap */}
       <path
         d="M 900 -60 
            Q 850 -20, 800 30
@@ -53,8 +53,12 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
            Q 0 1720, 40 1800
            Q 80 1880, 30 1960
            Q -20 2040, 20 2120
-           Q 60 2200, 10 2280
-           Q -40 2360, 0 2500"
+           Q 60 2200, 80 2300
+           Q 100 2400, 80 2500
+           Q 60 2600, 100 2700
+           Q 140 2800, 80 2900
+           Q 20 3000, 60 3100
+           Q 100 3200, 50 3400"
         stroke="hsl(var(--primary))"
         strokeWidth="4"
         fill="none"
@@ -82,8 +86,12 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
            Q 0 1720, 40 1800
            Q 80 1880, 30 1960
            Q -20 2040, 20 2120
-           Q 60 2200, 10 2280
-           Q -40 2360, 0 2500"
+           Q 60 2200, 80 2300
+           Q 100 2400, 80 2500
+           Q 60 2600, 100 2700
+           Q 140 2800, 80 2900
+           Q 20 3000, 60 3100
+           Q 100 3200, 50 3400"
         stroke="hsl(var(--primary))"
         strokeWidth="12"
         fill="none"
@@ -130,6 +138,28 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
       />
       <path
         d="M 60 1900 Q 120 1920, 160 1890"
+        stroke="hsl(var(--ghost))"
+        strokeWidth="1.5"
+        fill="none"
+        opacity="0.4"
+      />
+
+      <path
+        d="M 100 2350 Q 160 2370, 200 2340"
+        stroke="hsl(var(--ghost))"
+        strokeWidth="1.5"
+        fill="none"
+        opacity="0.4"
+      />
+      <path
+        d="M 120 2650 Q 180 2670, 220 2640"
+        stroke="hsl(var(--ghost))"
+        strokeWidth="1.5"
+        fill="none"
+        opacity="0.4"
+      />
+      <path
+        d="M 80 2950 Q 140 2970, 180 2940"
         stroke="hsl(var(--ghost))"
         strokeWidth="1.5"
         fill="none"
@@ -201,11 +231,25 @@ const TiberRiverFlow = ({ className = "" }: TiberRiverFlowProps) => {
         112.0740° W
       </text>
 
-      {/* Section waypoint markers along the river - now on left side */}
+      {/* Section waypoint markers along the river - on left side */}
       <circle cx="100" cy="1000" r="4" fill="hsl(var(--primary))" opacity="0.5" />
       <circle cx="80" cy="1320" r="4" fill="hsl(var(--primary))" opacity="0.5" />
       <circle cx="50" cy="1640" r="4" fill="hsl(var(--primary))" opacity="0.5" />
       <circle cx="30" cy="1960" r="4" fill="hsl(var(--primary))" opacity="0.5" />
+
+      {/* Roadmap section waypoints - larger markers for roadmap milestones */}
+      {/* Waypoint 1 - Industrial Additive Manufacturing (active) */}
+      <circle cx="80" cy="2400" r="8" fill="hsl(var(--primary))" opacity="1" />
+      <circle cx="80" cy="2400" r="14" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" opacity="0.5" className="animate-pulse" />
+      <circle cx="80" cy="2400" r="22" stroke="hsl(var(--primary))" strokeWidth="1" fill="none" opacity="0.2" />
+
+      {/* Waypoint 2 - CNC Milling & Turning */}
+      <circle cx="100" cy="2700" r="8" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" strokeDasharray="4 3" opacity="0.6" />
+      <circle cx="100" cy="2700" r="14" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeDasharray="6 4" fill="none" opacity="0.4" />
+
+      {/* Waypoint 3 - Autonomous Factory */}
+      <circle cx="80" cy="3000" r="8" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" strokeDasharray="4 3" opacity="0.5" />
+      <circle cx="80" cy="3000" r="14" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeDasharray="6 4" fill="none" opacity="0.3" />
     </svg>
   );
 };
