@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import EmailCaptureForm from "@/components/EmailCaptureForm";
 
 const roadmapSteps = [
   {
@@ -265,6 +266,7 @@ const Roadmap = () => {
         <div className="corner-marker bottom-6 right-6">+</div>
       </section>
 
+      <EmailCaptureForm />
       <Footer />
     </div>
   );
