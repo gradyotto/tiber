@@ -44,8 +44,8 @@ const About = () => {
           </div>
           <div className="space-y-6">
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              Tiber was founded with a singular mission: to rebuild and secure{" "}
-              <span className="text-primary">America's manufacturing capabilities</span>. 
+              Tiber was founded with a singular mission: to rebuild and{" "}
+              <span className="text-primary">secure America's manufacturing capabilities</span>.
               In an era where supply chains have become 
               strategic vulnerabilities, we believe that critical parts should be made 
               on American soil, by American hands.
