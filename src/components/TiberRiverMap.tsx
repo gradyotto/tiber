@@ -8,8 +8,8 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
       viewBox="0 0 800 600"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      preserveAspectRatio="xMidYMid slice"
+      className={`${className} md:preserveAspectRatio-slice`}
+      preserveAspectRatio="xMinYMid meet"
     >
       {/* Grid lines for technical feel */}
       <defs>
