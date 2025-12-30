@@ -47,16 +47,36 @@ const HeroSection = () => {
         }
       };
       
-      const handleTouchMove = (e: TouchEvent) => {
-        e.preventDefault();
+      let touchStartY = 0;
+      
+      const handleTouchStart = (e: TouchEvent) => {
+        touchStartY = e.touches[0].clientY;
+      };
+      
+      const handleTouchEnd = (e: TouchEvent) => {
+        const touchEndY = e.changedTouches[0].clientY;
+        const deltaY = touchStartY - touchEndY;
+        
+        // Swipe down detected (finger moved up)
+        if (deltaY > 30 && !scrolled) {
+          setScrolled(true);
+          window.dispatchEvent(new CustomEvent('heroScrolled', { detail: { scrolled: true } }));
+          
+          setTimeout(() => {
+            setScrollLocked(false);
+            document.body.style.overflow = '';
+          }, 500);
+        }
       };
       
       window.addEventListener('wheel', handleWheel, { passive: true });
-      window.addEventListener('touchmove', handleTouchMove, { passive: false });
+      window.addEventListener('touchstart', handleTouchStart, { passive: true });
+      window.addEventListener('touchend', handleTouchEnd, { passive: true });
       
       return () => {
         window.removeEventListener('wheel', handleWheel);
-        window.removeEventListener('touchmove', handleTouchMove);
+        window.removeEventListener('touchstart', handleTouchStart);
+        window.removeEventListener('touchend', handleTouchEnd);
       };
     }
   }, [scrollLocked, scrolled]);
