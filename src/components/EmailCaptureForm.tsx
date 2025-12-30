@@ -9,7 +9,7 @@ const EmailCaptureForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!email || !email.includes("@")) {
@@ -23,15 +23,33 @@ const EmailCaptureForm = () => {
 
     setIsSubmitting(true);
     
-    // Simulate submission
-    setTimeout(() => {
-      toast({
-        title: "You're on the list",
-        description: "We'll be in touch soon.",
+    try {
+      const response = await fetch("https://formspree.io/f/xvzonvwp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
       });
-      setEmail("");
+
+      if (response.ok) {
+        toast({
+          title: "You're on the list",
+          description: "We'll be in touch soon.",
+        });
+        setEmail("");
+      } else {
+        throw new Error("Submission failed");
+      }
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 500);
+    }
   };
 
   return (
