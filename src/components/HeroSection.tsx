@@ -69,6 +69,12 @@ const HeroSection = () => {
       <span className="corner-marker bottom-6 left-6">+</span>
       <span className="corner-marker bottom-6 right-6">+</span>
 
+      {/* Coordinate markers - fixed position */}
+      <div className="absolute top-24 left-8 font-mono text-xs text-muted-foreground opacity-70 z-10">
+        <div>33.4484° N</div>
+        <div>112.0740° W</div>
+      </div>
+
       <div className="h-full min-h-[calc(90vh-3.5rem)]">
         {/* Full Width Content */}
         <div className="relative flex flex-col justify-center p-8 lg:p-12 h-full min-h-[calc(90vh-3.5rem)] overflow-hidden">

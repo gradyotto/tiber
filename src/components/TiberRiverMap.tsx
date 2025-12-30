@@ -108,27 +108,6 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
         PHOENIX, AZ
       </text>
 
-      {/* Coordinate markers - Phoenix coordinates */}
-      <text
-        x="20"
-        y="30"
-        fill="hsl(var(--muted-foreground))"
-        fontSize="8"
-        fontFamily="monospace"
-        opacity="0.7"
-      >
-        33.4484° N
-      </text>
-      <text
-        x="20"
-        y="45"
-        fill="hsl(var(--muted-foreground))"
-        fontSize="8"
-        fontFamily="monospace"
-        opacity="0.7"
-      >
-        112.0740° W
-      </text>
     </svg>
   );
 };
