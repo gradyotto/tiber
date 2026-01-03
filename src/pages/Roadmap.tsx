@@ -47,8 +47,74 @@ const Roadmap = () => {
         <div className="corner-marker top-6 right-6">+</div>
       </section>
 
-      {/* Roadmap River Section */}
-      <section className="relative py-20 px-6 min-h-[800px]">
+      {/* Mobile Roadmap - Vertical Timeline */}
+      <section className="md:hidden py-12 px-6">
+        <div className="relative">
+          {/* Vertical line */}
+          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-primary/30" />
+          
+          {/* Timeline items */}
+          <div className="space-y-8">
+            {roadmapSteps.map((step, index) => (
+              <div 
+                key={step.id}
+                className="relative pl-12 opacity-0 animate-fade-up"
+                style={{ 
+                  animationDelay: `${300 + index * 150}ms`,
+                  animationFillMode: "forwards"
+                }}
+              >
+                {/* Waypoint marker */}
+                <div className="absolute left-0 top-0">
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                    step.status === "LOADING" 
+                      ? "bg-primary" 
+                      : "border-2 border-primary/50 border-dashed"
+                  }`}>
+                    {step.status === "LOADING" && (
+                      <div className="w-3 h-3 rounded-full bg-primary-foreground" />
+                    )}
+                  </div>
+                  {step.status === "LOADING" && (
+                    <div className="absolute inset-0 w-8 h-8 rounded-full bg-primary/30 animate-pulse" />
+                  )}
+                </div>
+
+                {/* Card */}
+                <div className={`bg-background/90 border p-5 ${
+                  step.status === "LOADING" 
+                    ? "border-primary" 
+                    : "border-ghost"
+                }`}>
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className={`font-mono text-xs ${
+                      step.status === "LOADING" ? "text-primary" : "text-muted-foreground"
+                    }`}>
+                      0{step.id}
+                    </span>
+                    <span className={`font-mono text-xs px-2 py-0.5 ${
+                      step.status === "LOADING"
+                        ? "bg-primary text-primary-foreground"
+                        : "border border-ghost text-muted-foreground"
+                    }`}>
+                      {step.status}
+                    </span>
+                  </div>
+                  <h3 className="font-sans font-black text-base tracking-tight uppercase text-foreground mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="font-mono text-xs text-muted-foreground">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Desktop Roadmap River Section */}
+      <section className="hidden md:block relative py-20 px-6 min-h-[800px]">
         {/* River SVG Background */}
         <svg
           className="absolute inset-0 w-full h-full"
