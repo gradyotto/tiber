@@ -13,7 +13,7 @@ const capabilities = [
   },
   {
     icon: Zap,
-    title: "RAPID DEPLOYMENT",
+    title: "SPEED AS A FEATURE",
     description: "From CAD to Part in 24 hours.",
   },
 ];
