@@ -68,17 +68,17 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
         opacity="0.4"
       />
 
-      {/* Phoenix marker - positioned more centrally for mobile visibility */}
+      {/* Phoenix marker - positioned in upper-right portion of river */}
       <circle
-        cx="450"
-        cy="500"
+        cx="710"
+        cy="160"
         r="8"
         fill="hsl(var(--primary))"
         opacity="1"
       />
       <circle
-        cx="450"
-        cy="500"
+        cx="710"
+        cy="160"
         r="14"
         stroke="hsl(var(--primary))"
         strokeWidth="1.5"
@@ -87,8 +87,8 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
         className="animate-pulse"
       />
       <circle
-        cx="450"
-        cy="500"
+        cx="710"
+        cy="160"
         r="20"
         stroke="hsl(var(--primary))"
         strokeWidth="1"
@@ -98,8 +98,8 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
 
       {/* Location label */}
       <text
-        x="475"
-        y="505"
+        x="735"
+        y="165"
         fill="hsl(var(--primary))"
         fontSize="12"
         fontFamily="monospace"
