@@ -68,20 +68,20 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
         opacity="0.4"
       />
 
-      {/* Phoenix marker - Desktop (upper-right portion of river) */}
+      {/* Phoenix marker - Desktop */}
       <g className="hidden md:block">
-        <circle cx="700" cy="210" r="8" fill="hsl(var(--primary))" opacity="1" />
-        <circle cx="700" cy="210" r="14" stroke="hsl(var(--primary))" strokeWidth="1.5" fill="none" opacity="0.5" className="animate-pulse" />
-        <circle cx="700" cy="210" r="20" stroke="hsl(var(--primary))" strokeWidth="1" fill="none" opacity="0.2" />
-        <text x="725" y="215" fill="hsl(var(--primary))" fontSize="12" fontFamily="monospace" fontWeight="bold">PHOENIX, AZ</text>
+        <circle cx="620" cy="390" r="8" fill="hsl(var(--primary))" opacity="1" />
+        <circle cx="620" cy="390" r="14" stroke="hsl(var(--primary))" strokeWidth="1.5" fill="none" opacity="0.5" className="animate-pulse" />
+        <circle cx="620" cy="390" r="20" stroke="hsl(var(--primary))" strokeWidth="1" fill="none" opacity="0.2" />
+        <text x="645" y="395" fill="hsl(var(--primary))" fontSize="12" fontFamily="monospace" fontWeight="bold">PHOENIX, AZ</text>
       </g>
 
-      {/* Phoenix marker - Mobile (center-bottom portion of river) */}
+      {/* Phoenix marker - Mobile (text below waypoint) */}
       <g className="block md:hidden">
         <circle cx="450" cy="500" r="8" fill="hsl(var(--primary))" opacity="1" />
         <circle cx="450" cy="500" r="14" stroke="hsl(var(--primary))" strokeWidth="1.5" fill="none" opacity="0.5" className="animate-pulse" />
         <circle cx="450" cy="500" r="20" stroke="hsl(var(--primary))" strokeWidth="1" fill="none" opacity="0.2" />
-        <text x="475" y="505" fill="hsl(var(--primary))" fontSize="12" fontFamily="monospace" fontWeight="bold">PHOENIX, AZ</text>
+        <text x="450" y="540" fill="hsl(var(--primary))" fontSize="12" fontFamily="monospace" fontWeight="bold" textAnchor="middle">PHOENIX, AZ</text>
       </g>
 
     </svg>
