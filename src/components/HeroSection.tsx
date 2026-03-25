@@ -6,17 +6,7 @@ import tiberLogo from "@/assets/tiber-logo.png";
 const HeroSection = () => {
   const [scrolled, setScrolled] = useState(false);
   const [scrollLocked, setScrollLocked] = useState(true);
-  const [imageLoaded, setImageLoaded] = useState(false);
   const location = useLocation();
-
-  // Preload logo image
-  useEffect(() => {
-    const img = new Image();
-    img.src = tiberLogo;
-    img.onload = () => setImageLoaded(true);
-    // If already cached, onload fires immediately
-    if (img.complete) setImageLoaded(true);
-  }, []);
 
   // Reset state when navigating to homepage
   useEffect(() => {
@@ -114,14 +104,12 @@ const HeroSection = () => {
           </div>
           
           <div className="relative z-10">
-            {/* Initial State: TIBER with Logo - only show when image is loaded */}
-            <div 
-              className={`absolute inset-0 flex items-center transition-all duration-500 ease-out ${
-                scrolled 
-                  ? "opacity-0 -translate-y-8 pointer-events-none" 
-                  : imageLoaded 
-                    ? "opacity-100 translate-y-0" 
-                    : "opacity-0"
+            {/* Initial State: TIBER with Logo */}
+            <div
+              className={`absolute inset-0 flex items-center transition-[opacity,transform] duration-500 ease-out ${
+                scrolled
+                  ? "opacity-0 -translate-y-8 pointer-events-none"
+                  : "opacity-100"
               }`}
             >
               <div className="flex items-center gap-2 md:gap-4">
@@ -137,10 +125,10 @@ const HeroSection = () => {
             </div>
 
             {/* Scrolled State: Full Content */}
-            <div 
-              className={`transition-all duration-500 ease-out ${
-                scrolled 
-                  ? "opacity-100 translate-y-0" 
+            <div
+              className={`transition-[opacity,transform] duration-500 ease-out ${
+                scrolled
+                  ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8 pointer-events-none"
               }`}
             >
