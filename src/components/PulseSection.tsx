@@ -1,10 +1,51 @@
+import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 
-const SCORE = 48;
+const PULSE_API = "https://pulse.tibermfg.com/api/health";
 const SEGMENTS = 25;
-const FILLED = Math.round(SCORE / (100 / SEGMENTS)); // 12 of 25
+
+type HealthLabel = "Strong" | "Stable" | "Cautious" | "Stressed" | "Critical";
+
+interface HealthScore {
+  total: number;
+  label: HealthLabel;
+  summary: string;
+}
+
+function statusColor(label: HealthLabel): string {
+  if (label === "Strong" || label === "Stable") return "text-foreground";
+  if (label === "Critical") return "text-destructive";
+  return "text-primary"; // Cautious / Stressed
+}
+
+function barColor(label: HealthLabel): string {
+  if (label === "Critical") return "bg-destructive";
+  return "bg-primary";
+}
 
 const PulseSection = () => {
+  const [score, setScore] = useState<HealthScore | null>(null);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    fetch(PULSE_API)
+      .then((r) => r.json())
+      .then((data) => {
+        if (data?.score?.total !== undefined) {
+          setScore({
+            total: data.score.total,
+            label: data.score.label,
+            summary: data.score.summary,
+          });
+        } else {
+          setError(true);
+        }
+      })
+      .catch(() => setError(true));
+  }, []);
+
+  const filled = score ? Math.round(score.total / (100 / SEGMENTS)) : 0;
+
   return (
     <section className="border-t border-ghost">
       <div className="grid grid-cols-1 md:grid-cols-2">
@@ -44,8 +85,8 @@ const PulseSection = () => {
 
           {/* Score */}
           <div className="flex items-end gap-2">
-            <span className="font-mono font-bold text-7xl text-primary leading-none tabular-nums">
-              {SCORE}
+            <span className={`font-mono font-bold text-7xl leading-none tabular-nums transition-colors duration-500 ${score ? statusColor(score.label) : "text-ghost"}`}>
+              {score ? score.total : "—"}
             </span>
             <span className="font-mono text-sm text-muted-foreground pb-2">/ 100</span>
           </div>
@@ -55,16 +96,26 @@ const PulseSection = () => {
             {Array.from({ length: SEGMENTS }).map((_, i) => (
               <div
                 key={i}
-                className={`h-2 flex-1 ${i < FILLED ? "bg-primary" : "bg-ghost"}`}
+                className={`h-2 flex-1 transition-colors duration-500 ${
+                  !score
+                    ? "bg-ghost"
+                    : i < filled
+                    ? barColor(score.label)
+                    : "bg-ghost"
+                }`}
               />
             ))}
           </div>
 
           {/* Status */}
           <div className="flex items-center gap-2">
-            <div className="w-1.5 h-1.5 bg-primary animate-pulse" />
-            <span className="font-mono text-xs text-primary uppercase tracking-wider">
-              CAUTIOUS — UPDATED DAILY
+            <div className={`w-1.5 h-1.5 animate-pulse ${score ? barColor(score.label) : "bg-ghost"}`} />
+            <span className={`font-mono text-xs uppercase tracking-wider ${score ? statusColor(score.label) : "text-muted-foreground"}`}>
+              {error
+                ? "UNAVAILABLE"
+                : score
+                ? `${score.label.toUpperCase()} — UPDATED DAILY`
+                : "LOADING..."}
             </span>
           </div>
         </div>
