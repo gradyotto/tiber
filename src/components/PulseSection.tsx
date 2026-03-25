@@ -114,7 +114,7 @@ const PulseSection = () => {
               {error
                 ? "UNAVAILABLE"
                 : score
-                ? `${score.label.toUpperCase()} — UPDATED DAILY`
+                ? score.label.toUpperCase()
                 : "LOADING..."}
             </span>
           </div>
