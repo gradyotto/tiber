@@ -7,7 +7,7 @@ const roadmapSteps = [
     id: 1,
     title: "INDUSTRIAL ADDITIVE MANUFACTURING",
     description: "Defense-grade 3D printing with carbon fiber composites and high-performance polymers.",
-    status: "LOADING",
+    status: "Q2 - 2026",
   },
   {
     id: 2,
@@ -67,33 +67,33 @@ const Roadmap = () => {
                 {/* Waypoint marker */}
                 <div className="absolute left-0 top-0">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                    step.status === "LOADING" 
+                    step.id === 1 
                       ? "bg-primary" 
                       : "border-2 border-primary/50 border-dashed"
                   }`}>
-                    {step.status === "LOADING" && (
+                    {step.id === 1 && (
                       <div className="w-3 h-3 rounded-full bg-primary-foreground" />
                     )}
                   </div>
-                  {step.status === "LOADING" && (
+                  {step.id === 1 && (
                     <div className="absolute inset-0 w-8 h-8 rounded-full bg-primary/30 animate-pulse" />
                   )}
                 </div>
 
                 {/* Card */}
                 <div className={`bg-background/90 border p-5 ${
-                  step.status === "LOADING" 
+                  step.id === 1 
                     ? "border-primary" 
                     : "border-ghost"
                 }`}>
                   <div className="flex items-center gap-3 mb-3">
                     <span className={`font-mono text-xs ${
-                      step.status === "LOADING" ? "text-primary" : "text-muted-foreground"
+                      step.id === 1 ? "text-primary" : "text-muted-foreground"
                     }`}>
                       0{step.id}
                     </span>
                     <span className={`font-mono text-xs px-2 py-0.5 ${
-                      step.status === "LOADING"
+                      step.id === 1
                         ? "bg-primary text-primary-foreground"
                         : "border border-ghost text-muted-foreground"
                     }`}>

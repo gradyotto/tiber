@@ -60,16 +60,16 @@ const EmailCaptureForm = () => {
 
       <div className="max-w-xl mx-auto text-center space-y-6">
         <span className="font-mono text-xs text-primary uppercase tracking-wider">
-          &gt; STAY UPDATED
+          &gt; EARLY ACCESS
         </span>
         <div className="flex items-center justify-center gap-3">
           <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase leading-none">
-            JOIN THE MISSION
+            JOIN THE EARLY ACCESS LIST
           </h2>
           <img src={missionGraphic} alt="Mission graphic" className="h-8 w-auto self-center mt-1" />
         </div>
         <p className="font-mono text-sm text-muted-foreground">
-          Get updates on Tiber's progress and be the first to know when new capabilities come online.
+          Early access subscribers lock in <span className="text-primary">founding member pricing</span> — a rate that stays with you for the lifetime of your relationship with Tiber. Be first to quote when we go live.
         </p>
         
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
