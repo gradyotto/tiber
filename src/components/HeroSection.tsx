@@ -31,52 +31,52 @@ const HeroSection = () => {
 
   // Lock scroll initially, unlock after animation completes
   useEffect(() => {
-    if (scrollLocked) {
+    // Phase 1: locked, waiting for user to scroll down
+    if (scrollLocked && !scrolled) {
       document.body.style.overflow = 'hidden';
-      
+
       const handleWheel = (e: WheelEvent) => {
-        if (e.deltaY > 0 && !scrolled) {
+        if (e.deltaY > 0) {
           setScrolled(true);
           window.dispatchEvent(new CustomEvent('heroScrolled', { detail: { scrolled: true } }));
-          
-          // Wait for animation to complete before unlocking scroll
-          setTimeout(() => {
-            setScrollLocked(false);
-            document.body.style.overflow = '';
-          }, 500);
         }
       };
-      
+
       let touchStartY = 0;
-      
+
       const handleTouchStart = (e: TouchEvent) => {
         touchStartY = e.touches[0].clientY;
       };
-      
+
       const handleTouchEnd = (e: TouchEvent) => {
         const touchEndY = e.changedTouches[0].clientY;
-        const deltaY = touchStartY - touchEndY;
-        
-        // Swipe down detected (finger moved up)
-        if (deltaY > 30 && !scrolled) {
+        if (touchStartY - touchEndY > 30) {
           setScrolled(true);
           window.dispatchEvent(new CustomEvent('heroScrolled', { detail: { scrolled: true } }));
-          
-          setTimeout(() => {
-            setScrollLocked(false);
-            document.body.style.overflow = '';
-          }, 500);
         }
       };
-      
+
       window.addEventListener('wheel', handleWheel, { passive: true });
       window.addEventListener('touchstart', handleTouchStart, { passive: true });
       window.addEventListener('touchend', handleTouchEnd, { passive: true });
-      
+
       return () => {
         window.removeEventListener('wheel', handleWheel);
         window.removeEventListener('touchstart', handleTouchStart);
         window.removeEventListener('touchend', handleTouchEnd);
+      };
+    }
+
+    // Phase 2: animation in progress — unlock after transition completes
+    if (scrollLocked && scrolled) {
+      const timer = setTimeout(() => {
+        setScrollLocked(false);
+        document.body.style.overflow = '';
+      }, 500);
+
+      return () => {
+        clearTimeout(timer);
+        document.body.style.overflow = '';
       };
     }
   }, [scrollLocked, scrolled]);
