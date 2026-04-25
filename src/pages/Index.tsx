@@ -15,7 +15,7 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <CapabilitiesSection />
-      <PulseSection />
+      {/* <PulseSection /> */}
       <EmailCaptureForm />
       <Footer />
     </main>
