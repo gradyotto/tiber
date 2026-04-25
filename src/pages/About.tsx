@@ -99,27 +99,27 @@ const About = () => {
           </div>
           <div className="space-y-6">
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              We specialize in <span className="text-primary">3D printing</span> industrial composites and high-performance materials: 
-              Carbon Fiber Nylon, Polycarbonate, ABS, and beyond. Every part we produce 
-              meets the exacting standards required by defense, aerospace, and{" "}
-              <span className="text-primary">critical infrastructure applications</span>.
+              We specialize in <span className="text-primary">precision 3+2 CNC machining</span> of mission-critical metals: 
+              6061 & 7075 aluminum, 4140 tool steel, and 17-4/304/316 stainless steel. 
+              Every part we produce meets the exacting standards required by defense, 
+              aerospace, and <span className="text-primary">critical infrastructure applications</span>.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="border border-ghost p-4 card-hover">
-                <span className="font-mono text-2xl font-bold text-primary">24H</span>
-                <p className="font-mono text-xs text-muted-foreground mt-1">CAD TO PART</p>
+                <span className="font-mono text-2xl font-bold text-primary">INSTANT</span>
+                <p className="font-mono text-xs text-muted-foreground mt-1">CAD TO QUOTE</p>
               </div>
               <div className="border border-ghost p-4 card-hover">
-                <span className="font-mono text-2xl font-bold text-primary">250°C+</span>
-                <p className="font-mono text-xs text-muted-foreground mt-1">HIGH TEMP</p>
+                <span className="font-mono text-2xl font-bold text-primary">±0.0005"</span>
+                <p className="font-mono text-xs text-muted-foreground mt-1">TOLERANCE</p>
               </div>
               <div className="border border-ghost p-4 card-hover">
                 <span className="font-mono text-2xl font-bold text-primary">100%</span>
                 <p className="font-mono text-xs text-muted-foreground mt-1">USA MADE</p>
               </div>
               <div className="border border-ghost p-4 card-hover">
-                <span className="font-mono text-2xl font-bold text-primary">RAPID</span>
-                <p className="font-mono text-xs text-muted-foreground mt-1">PROTOTYPING</p>
+                <span className="font-mono text-2xl font-bold text-primary">3+2</span>
+                <p className="font-mono text-xs text-muted-foreground mt-1">AXIS MACHINING</p>
               </div>
             </div>
           </div>
