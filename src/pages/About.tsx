@@ -80,8 +80,7 @@ const About = () => {
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
               <span className="text-primary">Tiber</span> was created to solve this. Based in <span className="text-primary">Phoenix, Arizona</span>, we operate 
               at the intersection of advanced manufacturing technology and relentless 
-              execution. Our algorithmic quoting system eliminates friction. Our 
-              24-hour deployment capability eliminates waiting.
+              execution. Our algorithmic quoting system delivers pricing in seconds, not days.
             </p>
           </div>
         </div>
