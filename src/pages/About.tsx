@@ -52,7 +52,7 @@ const About = () => {
             </p>
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
               Named after the river that built an empire, <span className="text-primary">Tiber</span> represents the 
-              infrastructure that enables greatness. We are the backbone of the 
+              <span className="text-primary">infrastructure that enables greatness</span>. We are the backbone of the 
               next industrial revolution.
             </p>
           </div>
@@ -72,8 +72,8 @@ const About = () => {
           </div>
           <div className="space-y-6">
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              Our founders witnessed firsthand the erosion of American manufacturing 
-              capacity. Critical defense programs delayed by months. Medical device 
+              Our founders witnessed firsthand the <span className="text-primary">erosion of American manufacturing
+              capacity</span>. Critical defense programs delayed by months. Medical device 
               companies unable to source precision components. Aerospace firms 
               dependent on foreign suppliers for <span className="text-primary">mission-critical parts</span>.
             </p>
