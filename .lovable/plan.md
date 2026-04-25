@@ -1,24 +1,37 @@
+# Pivot to Precision Machining + Instant Quoting
 
+Aligns site copy with the Haas VF-2SS 3+2 machining focus, and replaces the contradictory "24H CAD to Part" messaging with **instant quoting** to match the algorithmic quoting positioning. Production lead time language is removed (since it depends on part complexity) in favor of emphasizing quote speed.
 
-# Tiber Design Summary — For Claude Code Analysis
+## 1. `src/components/CapabilitiesSection.tsx`
+- Replace **INDUSTRIAL COMPOSITES** card → **PRECISION MACHINING**
+  - Icon: `Layers` → `Cog`
+  - Description: `"Aluminum. Stainless. Tool Steel."`
+- Replace **SPEED AS A FEATURE** description:
+  - From: `"From CAD to Part in 24 hours."`
+  - To: `"From CAD to Quote in seconds."`
+- Keep **ALGORITHMIC QUOTING** card unchanged (now reinforced by the speed card).
 
-I'll generate a markdown document summarizing the full design system, site structure, and implementation details of the Tiber site. This will be saved to `/mnt/documents/` for you to download and feed to Claude Code.
+## 2. `src/pages/About.tsx`
+- **Section 02 copy** (line ~80–85): Replace `"Our 24-hour deployment capability eliminates waiting."` with `"Our algorithmic quoting system delivers pricing in seconds, not days."` (and tighten the prior sentence so it doesn't double up).
+- **Section 03 — CAPABILITIES**:
+  - Headline: `DEFENSE-GRADE / PRECISION` → keep (still fits)
+  - Body copy: Replace 3D printing / composites text with:
+    > "We specialize in **precision 3+2 CNC machining** of mission-critical metals: 6061 & 7075 aluminum, 4140 tool steel, and 17-4/304/316 stainless steel. Every part we produce meets the exacting standards required by defense, aerospace, and **critical infrastructure applications**."
+- **Stats grid** (4 tiles):
+  - `24H / CAD TO PART` → `INSTANT / CAD TO QUOTE`
+  - `250°C+ / HIGH TEMP` → `±0.0005" / TOLERANCE`
+  - `100% / USA MADE` → keep
+  - Fourth tile → `3+2 / AXIS MACHINING`
 
-## What the document will cover
+## 3. `src/pages/Roadmap.tsx`
+- Reorder milestones so **PRECISION CNC MACHINING** is the current `LOADING` milestone (Phoenix, AZ).
+- Move **INDUSTRIAL ADDITIVE MANUFACTURING** to a future milestone (2027).
+- Adjust waypoint statuses/years accordingly so the river flows: current → near-future → 2027.
 
-1. **Brand Identity** — Company name, tagline, location, sector, logo assets
-2. **Design Philosophy** — Neo-Industrial / Hard Tech aesthetic, inspirations (Linear, Vercel, Kyle Anthony Miller)
-3. **Color System** — All CSS custom properties with hex values (Void #080808, Safety Orange #FF5F00, Ghost Grey #27272A, Titanium #EDEDED)
-4. **Typography** — Inter Black (weight 900) for headers, JetBrains Mono for body/UI, sizing conventions, uppercase/tracking rules
-5. **Layout Patterns** — Grid-based with 1px ghost borders, corner markers (+), coordinate markers, tech-grid backgrounds, noise overlay
-6. **Component Inventory** — Navbar, HeroSection (scroll-lock animation), CapabilitiesSection (3-card grid), EmailCaptureForm (Formspree), TiberRiverMap (SVG), Roadmap (river + waypoints), About (numbered sections), Footer
-7. **Animation System** — fade-up, fade-in, scale-in, glow, pulse, staggered delays (100-700ms)
-8. **Interaction Patterns** — Hero scroll-lock mechanism, card-hover glow effects, navbar logo show/hide based on hero state
-9. **Site Architecture** — Routes (/, /about, /roadmap, /quote), shared layout (Navbar + Footer + EmailCapture)
-10. **Technical Stack** — React, Vite, TypeScript, Tailwind CSS, shadcn/ui, react-router-dom, Formspree, deployed on Vercel
-11. **Key Design Rules** — Dark mode only, 0px border-radius, monospace labels with `>` prefix, section numbering pattern (`01 — TITLE`), status indicators (LOADING badge, dashed circles for future)
+## 4. Files NOT changing
+- `index.html` — generic enough, no machining/printing claims.
+- `src/pages/Quote.tsx` — already framed around CAD upload + instant algorithmic quoting; copy stays.
+- `HeroSection`, `Navbar`, `Footer`, `EmailCaptureForm` — no relevant content.
 
-## Implementation
-
-Single file: `tiber-design-summary.md` written to `/mnt/documents/`
-
+## Outcome
+Messaging becomes internally consistent: **algorithmic quoting → instant quotes**, **Haas VF-2SS → 3+2 precision machining of realistic materials**, and additive manufacturing becomes a future roadmap item rather than a current capability.
