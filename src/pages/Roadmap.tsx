@@ -5,14 +5,14 @@ import EmailCaptureForm from "@/components/EmailCaptureForm";
 const roadmapSteps = [
   {
     id: 1,
-    title: "INDUSTRIAL ADDITIVE MANUFACTURING",
-    description: "Defense-grade 3D printing with carbon fiber composites and high-performance polymers.",
+    title: "PRECISION CNC MACHINING",
+    description: "3+2 machining of aluminum, stainless, and tool steel for defense and aerospace.",
     status: "LOADING",
   },
   {
     id: 2,
-    title: "CNC MILLING & TURNING",
-    description: "Precision machining capabilities for metals and advanced materials.",
+    title: "INDUSTRIAL ADDITIVE MANUFACTURING",
+    description: "Defense-grade 3D printing with carbon fiber composites and high-performance polymers.",
     status: "2027",
   },
   {

@@ -1,4 +1,4 @@
-import { Calculator, Layers, Zap } from "lucide-react";
+import { Calculator, Cog, Zap } from "lucide-react";
 
 const capabilities = [
   {
@@ -7,14 +7,14 @@ const capabilities = [
     description: "Instant pricing. Zero friction.",
   },
   {
-    icon: Layers,
-    title: "INDUSTRIAL COMPOSITES",
-    description: "Carbon Fiber Nylon. Polycarbonate. ABS.",
+    icon: Cog,
+    title: "PRECISION MACHINING",
+    description: "Aluminum. Stainless. Tool Steel.",
   },
   {
     icon: Zap,
     title: "SPEED AS A FEATURE",
-    description: "From CAD to Part in 24 hours.",
+    description: "From CAD to Quote in seconds.",
   },
 ];
 
