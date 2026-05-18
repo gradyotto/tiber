@@ -1,37 +1,19 @@
 import { Calculator, Cog } from "lucide-react";
 import missionGraphic from "@/assets/mission-graphic.svg";
 
-const iconClass = "w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors duration-300";
-const glowDiv = <div className="absolute inset-0 w-8 h-8 bg-primary opacity-0 blur-xl group-hover:opacity-30 transition-opacity duration-300" />;
-
 const capabilities = [
   {
-    renderIcon: () => (
-      <div className="relative">
-        <Calculator className={iconClass} strokeWidth={1} />
-        {glowDiv}
-      </div>
-    ),
+    renderIcon: () => <Calculator className="w-8 h-8 text-muted-foreground" strokeWidth={1} />,
     title: "ALGORITHMIC QUOTING",
     description: "Instant pricing. Zero friction.",
   },
   {
-    renderIcon: () => (
-      <div className="relative">
-        <Cog className={iconClass} strokeWidth={1} />
-        {glowDiv}
-      </div>
-    ),
+    renderIcon: () => <Cog className="w-8 h-8 text-muted-foreground" strokeWidth={1} />,
     title: "PRECISION MACHINING",
     description: "Aluminum. Stainless. Tool Steel.",
   },
   {
-    renderIcon: () => (
-      <div className="relative">
-        <img src={missionGraphic} alt="American flag" className="h-8 w-auto" />
-        {glowDiv}
-      </div>
-    ),
+    renderIcon: () => <img src={missionGraphic} alt="American flag" className="h-8 w-auto" />,
     title: "0% OVERSEAS OUTSOURCING",
     description: "Every part made on American soil.",
   },
