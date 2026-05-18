@@ -1,43 +1,62 @@
+import { Calculator, Cog, Zap } from "lucide-react";
+
 const capabilities = [
   {
-    num: "01. System",
-    title: "Algorithmic Quoting",
-    description:
-      "Proprietary geometric analysis engine delivers instant pricing for complex defense-grade components.",
+    icon: Calculator,
+    title: "ALGORITHMIC QUOTING",
+    description: "Instant pricing. Zero friction.",
   },
   {
-    num: "02. Output",
-    title: "Precision Machining",
-    description:
-      "Specialized in 6061/7075 aluminum, 17-4/304/316 stainless, and tool steel. Tolerances to ±0.0005\".",
+    icon: Cog,
+    title: "PRECISION MACHINING",
+    description: "Aluminum. Stainless. Tool Steel.",
   },
   {
-    num: "03. Velocity",
-    title: "Speed as a Feature",
-    description:
-      "CAD to quote in seconds. Algorithmic CAM path generation eliminates the bottleneck.",
+    icon: Zap,
+    title: "SPEED AS A FEATURE",
+    description: "From CAD to Quote in seconds.",
   },
 ];
 
 const CapabilitiesSection = () => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3 border-t border-b border-navy/10">
-      {capabilities.map((cap, i) => (
-        <div
-          key={cap.title}
-          className={`p-10 lg:p-14 transition-colors hover:bg-navy/[0.02] ${
-            i < 2 ? "border-b md:border-b-0 md:border-r border-navy/10" : ""
-          } ${i === 1 ? "bg-navy/[0.015]" : ""}`}
-        >
-          <span className="font-mono text-[10px] text-navy/40 mb-6 block uppercase tracking-[0.25em]">
-            {cap.num}
-          </span>
-          <h3 className="font-serif italic font-bold text-2xl text-navy mb-4">
-            {cap.title}
-          </h3>
-          <p className="text-sm text-navy/60 leading-relaxed">{cap.description}</p>
-        </div>
-      ))}
+    <section className="border-t border-ghost">
+      {/* Top row - 3 cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3">
+        {capabilities.map((cap, index) => (
+          <div
+            key={cap.title}
+            className={`p-8 lg:p-12 card-hover group ${
+              index < 2 ? "border-b md:border-b-0 md:border-r border-ghost" : "border-b md:border-b-0"
+            }`}
+          >
+            <div className="space-y-6">
+              {/* Icon */}
+              <div className="relative">
+                <cap.icon
+                  className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors duration-300"
+                  strokeWidth={1}
+                />
+                {/* Hover glow */}
+                <div className="absolute inset-0 w-8 h-8 bg-primary opacity-0 blur-xl group-hover:opacity-30 transition-opacity duration-300" />
+              </div>
+
+              {/* Title */}
+              <h3 className="font-sans font-black text-xl tracking-tight uppercase text-foreground">
+                {cap.title}
+              </h3>
+
+              {/* Description */}
+              <p className="font-mono text-sm text-muted-foreground">
+                {cap.description}
+              </p>
+
+              {/* Bottom accent line */}
+              <div className="h-px bg-ghost w-0 group-hover:w-full transition-all duration-500" />
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

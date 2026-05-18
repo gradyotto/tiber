@@ -31,11 +31,11 @@ const Roadmap = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 px-6 border-b border-ghost overflow-hidden">
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <p className="font-mono text-xs text-flag-red tracking-widest mb-4 animate-fade-up">
+          <p className="font-mono text-xs text-primary tracking-widest mb-4 animate-fade-up">
             // MANUFACTURING EVOLUTION
           </p>
           <h1 className="font-sans font-black text-4xl md:text-6xl tracking-tight uppercase leading-none animate-fade-up" style={{ animationDelay: "100ms" }}>
-            THE <span className="text-flag-red">ROAD</span> AHEAD
+            THE <span className="text-primary">ROAD</span> AHEAD
           </h1>
           <p className="font-mono text-sm text-muted-foreground mt-6 max-w-xl mx-auto animate-fade-up" style={{ animationDelay: "200ms" }}>
             From additive manufacturing to fully autonomous production. Follow the river to see where we're headed.
@@ -88,13 +88,13 @@ const Roadmap = () => {
                 }`}>
                   <div className="flex items-center gap-3 mb-3">
                     <span className={`font-mono text-xs ${
-                      step.status === "LOADING" ? "text-flag-red" : "text-muted-foreground"
+                      step.status === "LOADING" ? "text-primary" : "text-muted-foreground"
                     }`}>
                       0{step.id}
                     </span>
                     <span className={`font-mono text-xs px-2 py-0.5 ${
                       step.status === "LOADING"
-                        ? "bg-primary text-flag-red-foreground"
+                        ? "bg-primary text-primary-foreground"
                         : "border border-ghost text-muted-foreground"
                     }`}>
                       {step.status}
@@ -261,8 +261,8 @@ const Roadmap = () => {
         >
           <div className="bg-background/90 backdrop-blur-sm border border-primary p-6 max-w-xs">
             <div className="flex items-center gap-3 mb-3">
-              <span className="font-mono text-xs text-flag-red">01</span>
-              <span className="font-mono text-xs px-2 py-0.5 bg-primary text-flag-red-foreground">
+              <span className="font-mono text-xs text-primary">01</span>
+              <span className="font-mono text-xs px-2 py-0.5 bg-primary text-primary-foreground">
                 {roadmapSteps[0].status}
               </span>
             </div>

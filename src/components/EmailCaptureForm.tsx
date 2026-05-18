@@ -1,5 +1,8 @@
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import missionGraphic from "@/assets/mission-graphic.svg";
 
 const EmailCaptureForm = () => {
   const [email, setEmail] = useState("");
@@ -8,6 +11,7 @@ const EmailCaptureForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
     if (!email || !email.includes("@")) {
       toast({
         title: "Invalid email",
@@ -18,17 +22,26 @@ const EmailCaptureForm = () => {
     }
 
     setIsSubmitting(true);
+    
     try {
       const response = await fetch("https://formspree.io/f/xvzonvwp", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({ email }),
       });
+
       if (response.ok) {
-        toast({ title: "You're on the list", description: "We'll be in touch soon." });
+        toast({
+          title: "You're on the list",
+          description: "We'll be in touch soon.",
+        });
         setEmail("");
-      } else throw new Error("Submission failed");
-    } catch {
+      } else {
+        throw new Error("Submission failed");
+      }
+    } catch (error) {
       toast({
         title: "Something went wrong",
         description: "Please try again later.",
@@ -40,42 +53,40 @@ const EmailCaptureForm = () => {
   };
 
   return (
-    <section className="py-24 px-6 border-t border-navy/10 text-center">
-      <div className="max-w-2xl mx-auto">
-        {/* Flag glyph */}
-        <div className="mb-8 flex justify-center">
-          <div className="w-10 h-6 relative border border-navy/20">
-            <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-flag-red" />
-            <div className="absolute bottom-0 left-0 right-0 h-px bg-navy/20" />
-            <div className="absolute top-1/2 left-0 right-0 h-px bg-navy/10" />
-          </div>
-        </div>
+    <section className="py-16 px-6 border-t border-ghost relative">
+      {/* Corner markers */}
+      <span className="corner-marker top-6 left-6">+</span>
+      <span className="corner-marker top-6 right-6">+</span>
 
-        <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-flag-red mb-4 block">
-          &gt; Stay Updated
+      <div className="max-w-xl mx-auto text-center space-y-6">
+        <span className="font-mono text-xs text-primary uppercase tracking-wider">
+          &gt; STAY UPDATED
         </span>
-        <h2 className="font-serif font-bold text-4xl md:text-5xl text-navy mb-6">
-          Join the mission.
-        </h2>
-        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-navy/50 mb-10">
-          Get updates on Tiber's capabilities as they come online.
+        <div className="flex items-center justify-center gap-3">
+          <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase leading-none">
+            JOIN THE MISSION
+          </h2>
+          <img src={missionGraphic} alt="Mission graphic" className="h-8 w-auto self-center mt-1" />
+        </div>
+        <p className="font-mono text-sm text-muted-foreground">
+          Get updates on Tiber's progress and be the first to know when new capabilities come online.
         </p>
-
-        <form onSubmit={handleSubmit} className="flex max-w-md mx-auto gap-4">
-          <input
+        
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <Input
             type="email"
             placeholder="your@email.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="flex-1 bg-transparent border-b border-navy/20 py-3 px-1 font-mono text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:border-navy transition"
+            className="flex-1 bg-background border-ghost font-mono text-sm placeholder:text-muted-foreground"
           />
-          <button
-            type="submit"
+          <Button 
+            type="submit" 
             disabled={isSubmitting}
-            className="px-8 py-3 font-mono text-[11px] tracking-[0.2em] bg-navy text-cream hover:bg-flag-red transition-all uppercase disabled:opacity-50"
+            className="font-mono text-xs uppercase tracking-wider"
           >
-            {isSubmitting ? "..." : "Subscribe"}
-          </button>
+            {isSubmitting ? "Submitting..." : "Subscribe"}
+          </Button>
         </form>
       </div>
     </section>
