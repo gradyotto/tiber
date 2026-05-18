@@ -59,12 +59,16 @@ export default {
         },
         void: "hsl(var(--void))",
         safety: "hsl(var(--safety))",
-        ghost: "hsl(var(--ghost))",
+        ghost: "hsl(var(--ghost) / 0.1)",
         titanium: "hsl(var(--titanium))",
+        cream: "hsl(var(--cream))",
+        navy: "hsl(var(--navy))",
+        "flag-red": "hsl(var(--flag-red))",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
+        serif: ["Fraunces", "Georgia", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
