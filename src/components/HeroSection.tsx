@@ -6,6 +6,7 @@ import tiberLogo from "@/assets/tiber-logo.png";
 const HeroSection = () => {
   const [scrolled, setScrolled] = useState(false);
   const [scrollLocked, setScrollLocked] = useState(true);
+  const [showInitial, setShowInitial] = useState(true);
   const location = useLocation();
 
   // Reset state when navigating to homepage
@@ -13,9 +14,18 @@ const HeroSection = () => {
     window.scrollTo(0, 0);
     setScrolled(false);
     setScrollLocked(true);
+    setShowInitial(true);
     document.body.style.overflow = 'hidden';
     window.dispatchEvent(new CustomEvent('heroScrolled', { detail: { scrolled: false } }));
   }, [location.key]);
+
+  // Unmount initial state after its transition finishes so the GPU layer is released
+  useEffect(() => {
+    if (scrolled) {
+      const timer = setTimeout(() => setShowInitial(false), 550);
+      return () => clearTimeout(timer);
+    }
+  }, [scrolled]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -104,25 +114,27 @@ const HeroSection = () => {
           </div>
           
           <div className="relative z-10">
-            {/* Initial State: TIBER with Logo */}
-            <div
-              className={`absolute inset-0 flex items-center transition-[opacity,transform] duration-500 ease-out ${
-                scrolled
-                  ? "opacity-0 -translate-y-8 pointer-events-none"
-                  : "opacity-100"
-              }`}
-            >
-              <div className="flex items-center gap-2 md:gap-4">
-                <img 
-                  src={tiberLogo} 
-                  alt="Tiber Logo" 
-                  className="w-20 h-20 md:w-40 md:h-40 lg:w-48 lg:h-48 object-contain"
-                />
-                <span className="font-sans font-black text-4xl md:text-7xl lg:text-8xl tracking-tight text-foreground">
-                  TIBER
-                </span>
+            {/* Initial State: TIBER with Logo — unmounted after transition to release GPU layer */}
+            {showInitial && (
+              <div
+                className={`absolute inset-0 flex items-center transition-[opacity,transform] duration-500 ease-out ${
+                  scrolled
+                    ? "opacity-0 -translate-y-8 pointer-events-none"
+                    : "opacity-100"
+                }`}
+              >
+                <div className="flex items-center gap-2 md:gap-4">
+                  <img
+                    src={tiberLogo}
+                    alt="Tiber Logo"
+                    className="w-20 h-20 md:w-40 md:h-40 lg:w-48 lg:h-48 object-contain"
+                  />
+                  <span className="font-sans font-black text-4xl md:text-7xl lg:text-8xl tracking-tight text-foreground">
+                    TIBER
+                  </span>
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Scrolled State: Full Content */}
             <div
