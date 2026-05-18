@@ -17,7 +17,7 @@ const About = () => {
         <span className="corner-marker top-20 right-6">+</span>
         
         <div className="max-w-4xl mx-auto">
-          <span className="font-mono text-xs text-primary uppercase tracking-wider opacity-0 animate-fade-up">
+          <span className="font-mono text-xs text-flag-red uppercase tracking-wider opacity-0 animate-fade-up">
             &gt; ABOUT TIBER
           </span>
           <h1 className="mt-4">
@@ -35,7 +35,7 @@ const About = () => {
       <section className="py-16 px-6 border-b border-ghost">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
           <div className="opacity-0 animate-fade-up animate-delay-300">
-            <span className="font-mono text-xs text-primary uppercase tracking-wider">
+            <span className="font-mono text-xs text-flag-red uppercase tracking-wider">
               &gt; 01 — MISSION
             </span>
             <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
@@ -44,14 +44,14 @@ const About = () => {
           </div>
           <div className="space-y-6">
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              <span className="text-primary">Tiber</span> was founded with a singular mission: to rebuild and{" "}
-              <span className="text-primary">secure America's manufacturing capabilities</span>.
+              <span className="text-flag-red">Tiber</span> was founded with a singular mission: to rebuild and{" "}
+              <span className="text-flag-red">secure America's manufacturing capabilities</span>.
               In an era where supply chains have become 
               strategic vulnerabilities, we believe that critical parts should be made 
               on American soil, by American hands.
             </p>
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              Named after the river that built an empire, <span className="text-primary">Tiber</span> represents the 
+              Named after the river that built an empire, <span className="text-flag-red">Tiber</span> represents the 
               infrastructure that enables greatness. We are the backbone of the 
               next industrial revolution.
             </p>
@@ -63,7 +63,7 @@ const About = () => {
       <section className="py-16 px-6 border-b border-ghost">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
           <div className="opacity-0 animate-fade-up animate-delay-300">
-            <span className="font-mono text-xs text-primary uppercase tracking-wider">
+            <span className="font-mono text-xs text-flag-red uppercase tracking-wider">
               &gt; 02 — ORIGIN
             </span>
             <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
@@ -75,10 +75,10 @@ const About = () => {
               Our founders witnessed firsthand the erosion of American manufacturing 
               capacity. Critical defense programs delayed by months. Medical device 
               companies unable to source precision components. Aerospace firms 
-              dependent on foreign suppliers for <span className="text-primary">mission-critical parts</span>.
+              dependent on foreign suppliers for <span className="text-flag-red">mission-critical parts</span>.
             </p>
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              <span className="text-primary">Tiber</span> was created to solve this. Based in <span className="text-primary">Phoenix, Arizona</span>, we operate 
+              <span className="text-flag-red">Tiber</span> was created to solve this. Based in <span className="text-flag-red">Phoenix, Arizona</span>, we operate 
               at the intersection of advanced manufacturing technology and relentless 
               execution. Our algorithmic quoting system delivers pricing in seconds, not days.
             </p>
@@ -90,7 +90,7 @@ const About = () => {
       <section className="py-16 px-6 border-b border-ghost">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
           <div className="opacity-0 animate-fade-up animate-delay-300">
-            <span className="font-mono text-xs text-primary uppercase tracking-wider">
+            <span className="font-mono text-xs text-flag-red uppercase tracking-wider">
               &gt; 03 — CAPABILITIES
             </span>
             <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
@@ -99,26 +99,26 @@ const About = () => {
           </div>
           <div className="space-y-6">
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              We specialize in <span className="text-primary">precision 3+2 CNC machining</span> of mission-critical metals: 
+              We specialize in <span className="text-flag-red">precision 3+2 CNC machining</span> of mission-critical metals: 
               6061 & 7075 aluminum, 4140 tool steel, and 17-4/304/316 stainless steel. 
               Every part we produce meets the exacting standards required by defense, 
-              aerospace, and <span className="text-primary">critical infrastructure applications</span>.
+              aerospace, and <span className="text-flag-red">critical infrastructure applications</span>.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="border border-ghost p-4 card-hover">
-                <span className="font-mono text-2xl font-bold text-primary">INSTANT</span>
+                <span className="font-mono text-2xl font-bold text-flag-red">INSTANT</span>
                 <p className="font-mono text-xs text-muted-foreground mt-1">CAD TO QUOTE</p>
               </div>
               <div className="border border-ghost p-4 card-hover">
-                <span className="font-mono text-2xl font-bold text-primary">±0.0005"</span>
+                <span className="font-mono text-2xl font-bold text-flag-red">±0.0005"</span>
                 <p className="font-mono text-xs text-muted-foreground mt-1">TOLERANCE</p>
               </div>
               <div className="border border-ghost p-4 card-hover">
-                <span className="font-mono text-2xl font-bold text-primary">100%</span>
+                <span className="font-mono text-2xl font-bold text-flag-red">100%</span>
                 <p className="font-mono text-xs text-muted-foreground mt-1">USA MADE</p>
               </div>
               <div className="border border-ghost p-4 card-hover">
-                <span className="font-mono text-2xl font-bold text-primary">3+2</span>
+                <span className="font-mono text-2xl font-bold text-flag-red">3+2</span>
                 <p className="font-mono text-xs text-muted-foreground mt-1">AXIS MACHINING</p>
               </div>
             </div>
