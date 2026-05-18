@@ -24,6 +24,8 @@ const HeroSection = () => {
     if (scrolled) {
       const timer = setTimeout(() => setShowInitial(false), 550);
       return () => clearTimeout(timer);
+    } else {
+      setShowInitial(true);
     }
   }, [scrolled]);
 
@@ -109,8 +111,8 @@ const HeroSection = () => {
         {/* Full Width Content */}
         <div className="relative flex flex-col justify-center p-6 md:p-8 lg:p-12 h-full min-h-[calc(70vh-3.5rem)] md:min-h-[calc(90vh-3.5rem)] overflow-hidden">
           {/* Tiber River Map Background */}
-          <div className="absolute inset-0 opacity-70">
-            <TiberRiverMap className="w-full h-full" />
+          <div className="absolute inset-0">
+            <TiberRiverMap className="w-full h-full opacity-70" />
           </div>
           
           <div className="relative z-10">
