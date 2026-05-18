@@ -26,7 +26,12 @@ const capabilities = [
     description: "Aluminum. Stainless. Tool Steel.",
   },
   {
-    renderIcon: () => <img src={missionGraphic} alt="American flag" className="h-8 w-auto" />,
+    renderIcon: () => (
+      <div className="relative">
+        <img src={missionGraphic} alt="American flag" className="h-8 w-auto" />
+        {glowDiv}
+      </div>
+    ),
     title: "0% OVERSEAS OUTSOURCING",
     description: "Every part made on American soil.",
   },
