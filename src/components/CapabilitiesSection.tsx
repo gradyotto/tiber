@@ -5,16 +5,25 @@ const capabilities = [
     icon: Calculator,
     title: "ALGORITHMIC QUOTING",
     description: "Instant pricing. Zero friction.",
+    // Old Glory Red — official US flag red
+    color: "#B22234",
+    colorName: "OLD GLORY RED · #B22234",
   },
   {
     icon: Cog,
     title: "PRECISION MACHINING",
     description: "Aluminum. Stainless. Tool Steel.",
+    // Flag Red / Pantone 186 — common patriotic crimson
+    color: "#C8102E",
+    colorName: "FLAG RED · #C8102E",
   },
   {
     icon: Zap,
     title: "SPEED AS A FEATURE",
     description: "From CAD to Quote in seconds.",
+    // Deep Barn Red — darker, muted, industrial
+    color: "#8B0000",
+    colorName: "BARN RED · #8B0000",
   },
 ];
 
@@ -42,13 +51,24 @@ const CapabilitiesSection = () => {
               </div>
 
               {/* Title */}
-              <h3 className="font-sans font-black text-xl tracking-tight uppercase text-foreground">
+              <h3
+                className="font-sans font-black text-xl tracking-tight uppercase"
+                style={{ color: cap.color }}
+              >
                 {cap.title}
               </h3>
 
               {/* Description */}
               <p className="font-mono text-sm text-muted-foreground">
                 {cap.description}
+              </p>
+
+              {/* Color label */}
+              <p
+                className="font-mono text-[10px] tracking-widest"
+                style={{ color: cap.color }}
+              >
+                {cap.colorName}
               </p>
 
               {/* Bottom accent line */}
