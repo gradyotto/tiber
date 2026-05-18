@@ -39,13 +39,13 @@ const Roadmap = () => {
         <span className="corner-marker top-20 left-6">+</span>
         <span className="corner-marker top-20 right-6">+</span>
         <div className="max-w-4xl mx-auto">
-          <p className="font-mono text-xs text-primary tracking-widest mb-4 opacity-0 animate-fade-up">
+          <p className="font-mono text-xs text-primary text-slate-50 tracking-widest mb-4 opacity-0 animate-fade-up">
             // MANUFACTURING EVOLUTION
           </p>
           <h1
             className="font-sans font-black text-4xl md:text-6xl tracking-tight uppercase leading-none opacity-0 animate-fade-up animate-delay-100"
           >
-            THE <span className="text-primary">ROAD</span> AHEAD
+            THE <span className="text-primary text-slate-50">ROAD</span> AHEAD
           </h1>
           <p
             className="font-mono text-sm text-muted-foreground mt-6 max-w-xl opacity-0 animate-fade-up animate-delay-200"

@@ -147,7 +147,7 @@ const HeroSection = () => {
                 </h1>
 
                 {/* Subtext */}
-                <p className="font-mono text-xs md:text-sm text-primary uppercase tracking-wider">
+                <p className="font-mono text-xs md:text-sm text-primary text-slate-50 uppercase tracking-wider">
                   &gt; Scaling Defense-Grade Precision
                 </p>
 
@@ -159,7 +159,7 @@ const HeroSection = () => {
                   <div className="w-48 md:w-64 h-2 bg-ghost border border-ghost overflow-hidden">
                     <div className={`h-full bg-primary transition-all duration-700 ease-out ${scrolled ? 'w-1/4' : 'w-0'}`} />
                   </div>
-                  <div className="font-mono text-xs text-primary uppercase tracking-wider">
+                  <div className="font-mono text-xs text-primary text-slate-50 uppercase tracking-wider">
                     25% LOADED
                   </div>
                 </div>
