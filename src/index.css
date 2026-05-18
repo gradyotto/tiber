@@ -4,54 +4,54 @@
 
 @layer base {
   :root {
-    /* Neo-Industrial Dark Theme - Tiber */
-    --background: 0 0% 3%;
-    --foreground: 0 0% 93%;
+    /* Neo-Industrial Deep Navy Theme - Tiber */
+    --background: 222 70% 6%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 93%;
+    --card: 222 65% 9%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 93%;
+    --popover: 222 65% 9%;
+    --popover-foreground: 0 0% 100%;
 
-    /* Navy Blue - Primary */
-    --primary: 218 85% 55%;
-    --primary-foreground: 0 0% 0%;
+    /* White - Primary accent */
+    --primary: 0 0% 100%;
+    --primary-foreground: 222 70% 6%;
 
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 93%;
+    --secondary: 222 55% 14%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 222 50% 16%;
+    --muted-foreground: 220 20% 65%;
 
-    --accent: 218 85% 55%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 0 0% 100%;
+    --accent-foreground: 222 70% 6%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    /* Ghost Grey borders */
-    --border: 240 4% 16%;
-    --input: 240 4% 16%;
-    --ring: 218 85% 55%;
+    /* Ghost borders - subtle navy */
+    --border: 222 45% 20%;
+    --input: 222 45% 20%;
+    --ring: 0 0% 100%;
 
     --radius: 0px;
 
     /* Custom Tiber tokens */
-    --void: 0 0% 3%;
-    --safety: 218 85% 55%;
-    --ghost: 240 4% 16%;
-    --titanium: 0 0% 93%;
+    --void: 222 70% 6%;
+    --safety: 0 0% 100%;
+    --ghost: 222 45% 20%;
+    --titanium: 0 0% 100%;
 
-    /* Sidebar - keeping for compatibility */
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 93%;
-    --sidebar-primary: 218 85% 55%;
-    --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 0 0% 10%;
-    --sidebar-accent-foreground: 0 0% 93%;
-    --sidebar-border: 240 4% 16%;
-    --sidebar-ring: 218 85% 55%;
+    /* Sidebar */
+    --sidebar-background: 222 65% 9%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 222 70% 6%;
+    --sidebar-accent: 222 55% 14%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 222 45% 20%;
+    --sidebar-ring: 0 0% 100%;
   }
 }
 
