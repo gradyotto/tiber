@@ -53,7 +53,7 @@ const PulseSection = () => {
         {/* Left: description + CTA */}
         <div className="p-8 lg:p-12 border-b md:border-b-0 md:border-r border-ghost flex flex-col justify-between gap-8">
           <div className="space-y-4">
-            <span className="font-mono text-xs text-primary uppercase tracking-wider">
+            <span className="font-mono text-xs text-primary text-slate-50 uppercase tracking-wider">
               &gt; SUPPLY CHAIN INTELLIGENCE
             </span>
             <h3 className="font-sans font-black text-2xl md:text-3xl tracking-tight uppercase text-foreground">
@@ -70,7 +70,7 @@ const PulseSection = () => {
             href="https://pulse.tibermfg.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 font-mono text-xs text-primary uppercase tracking-wider w-fit"
+            className="group inline-flex items-center gap-2 font-mono text-xs text-primary text-slate-50 uppercase tracking-wider w-fit"
           >
             OPEN PULSE
             <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />

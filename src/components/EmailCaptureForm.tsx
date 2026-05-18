@@ -59,7 +59,7 @@ const EmailCaptureForm = () => {
       <span className="corner-marker top-6 right-6">+</span>
 
       <div className="max-w-xl mx-auto text-center space-y-6">
-        <span className="font-mono text-xs text-primary uppercase tracking-wider">
+        <span className="font-mono text-xs text-primary text-slate-50 uppercase tracking-wider">
           &gt; EARLY ACCESS
         </span>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
@@ -69,7 +69,7 @@ const EmailCaptureForm = () => {
           <img src={missionGraphic} alt="Mission graphic" className="h-8 w-auto flex-shrink-0 text-slate-50" />
         </div>
         <p className="font-mono text-sm text-muted-foreground">
-          Early access subscribers lock in <span className="text-primary">founding member pricing</span> — a rate that stays with you for the lifetime of your relationship with Tiber. Be first to quote when we go live.
+          Early access subscribers lock in <span className="text-primary text-slate-50">founding member pricing</span> — a rate that stays with you for the lifetime of your relationship with Tiber. Be first to quote when we go live.
         </p>
         
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
