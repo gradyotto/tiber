@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
-import missionGraphic from "@/assets/mission-graphic.svg";
+import missionGraphic from "@/assets/mission-graphic.png";
 
 const EmailCaptureForm = () => {
   const [email, setEmail] = useState("");
@@ -66,7 +66,7 @@ const EmailCaptureForm = () => {
           <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase leading-none text-center">
             JOIN THE EARLY ACCESS LIST
           </h2>
-          <img src={missionGraphic} alt="Mission graphic" className="h-8 w-auto flex-shrink-0" />
+          <img src={missionGraphic} alt="Mission graphic" className="h-8 w-auto flex-shrink-0 text-slate-50" />
         </div>
         <p className="font-mono text-sm text-muted-foreground">
           Early access subscribers lock in <span className="text-primary">founding member pricing</span> — a rate that stays with you for the lifetime of your relationship with Tiber. Be first to quote when we go live.
