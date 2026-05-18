@@ -126,10 +126,10 @@ const HeroSection = () => {
 
             {/* Scrolled State: Full Content */}
             <div
-              className={`transition-[opacity,transform] duration-500 ease-out ${
+              className={`transition-opacity duration-500 ease-out ${
                 scrolled
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8 pointer-events-none"
+                  ? "opacity-100"
+                  : "opacity-0 pointer-events-none"
               }`}
             >
               <div className="space-y-6 md:space-y-8">
