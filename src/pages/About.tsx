@@ -17,7 +17,7 @@ const About = () => {
         <span className="corner-marker top-20 right-6">+</span>
         
         <div className="max-w-4xl mx-auto">
-          <span className="font-mono text-xs text-primary text-slate-50 uppercase tracking-wider opacity-0 animate-fade-up">
+          <span className="font-mono text-xs text-primary uppercase tracking-wider opacity-0 animate-fade-up">
             &gt; ABOUT TIBER
           </span>
           <h1 className="mt-4">
@@ -35,7 +35,7 @@ const About = () => {
       <section className="py-16 px-6 border-b border-ghost">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
           <div className="opacity-0 animate-fade-up animate-delay-300">
-            <span className="font-mono text-xs text-primary text-slate-50 uppercase tracking-wider">
+            <span className="font-mono text-xs text-primary uppercase tracking-wider">
               &gt; 01 — MISSION
             </span>
             <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
@@ -64,7 +64,7 @@ const About = () => {
       <section className="py-16 px-6 border-b border-ghost">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
           <div className="opacity-0 animate-fade-up animate-delay-300">
-            <span className="font-mono text-xs text-primary text-slate-50 uppercase tracking-wider">
+            <span className="font-mono text-xs text-primary uppercase tracking-wider">
               &gt; 02 — ORIGIN
             </span>
             <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
@@ -94,7 +94,7 @@ const About = () => {
       <section className="py-16 px-6 border-b border-ghost">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
           <div className="opacity-0 animate-fade-up animate-delay-300">
-            <span className="font-mono text-xs text-primary text-slate-50 uppercase tracking-wider">
+            <span className="font-mono text-xs text-primary uppercase tracking-wider">
               &gt; 03 — CAPABILITIES
             </span>
             <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
