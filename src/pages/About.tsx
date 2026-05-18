@@ -51,7 +51,7 @@ const About = () => {
               on American soil, by American hands.
             </p>
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              Named after the river that built an empire, <span className="text-primary">Tiber</span> represents the 
+              Named after the river that built an empire, <span className="text-primary">Tiber</span> represents the{" "}
               <span className="text-primary">infrastructure that enables greatness</span>. We are the backbone of the 
               next industrial revolution.
             </p>

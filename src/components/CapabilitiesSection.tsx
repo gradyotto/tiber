@@ -1,4 +1,4 @@
-import { Calculator, Cog, Zap } from "lucide-react";
+import { Calculator, Cog, Flag } from "lucide-react";
 
 const capabilities = [
   {
@@ -12,9 +12,9 @@ const capabilities = [
     description: "Aluminum. Stainless. Tool Steel.",
   },
   {
-    icon: Zap,
-    title: "SPEED AS A FEATURE",
-    description: "From CAD to Quote in seconds.",
+    icon: Flag,
+    title: "0% OVERSEAS OUTSOURCING",
+    description: "Every part made on American soil.",
   },
 ];
 

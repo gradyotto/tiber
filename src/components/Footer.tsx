@@ -5,7 +5,7 @@ const Footer = () => {
         TIBER MFG // EST. 2025
       </div>
       <div className="font-mono text-xs text-muted-foreground uppercase tracking-wider">
-        PHOENIX, AZ // SECTOR: DEFENSE
+        PHOENIX, AZ
       </div>
     </footer>
   );
