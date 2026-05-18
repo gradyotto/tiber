@@ -7,8 +7,8 @@ const phases = [
     id: "01",
     title: "PRECISION CNC MACHINING",
     description:
-      "3+2 machining of aluminum, stainless, and tool steel for defense and aerospace.",
-    label: "ACTIVE",
+      "Actively sourcing our first CNC machine with 3+2 axis capabilities. Targeting aluminum, stainless, and tool steel for defense and aerospace applications.",
+    label: "LOADING",
     active: true,
   },
   {
@@ -63,7 +63,7 @@ const Roadmap = () => {
           <div className="font-mono text-xs space-y-1.5 mb-12 opacity-0 animate-fade-up animate-delay-300" style={{ animationFillMode: "forwards" }}>
             <p className="text-muted-foreground opacity-50">// TIBER MFG SYSTEMS v1.0 // PHOENIX, AZ</p>
             <p className="text-muted-foreground opacity-50">// MANUFACTURING SEQUENCE INITIALIZED</p>
-            <p className="text-primary opacity-70">// 3 PHASES DETECTED // 1 ACTIVE // 2 PENDING</p>
+            <p className="text-primary opacity-70">// 3 PHASES DETECTED // 1 LOADING // 2 PENDING</p>
           </div>
 
           {/* Phase list */}
@@ -86,7 +86,7 @@ const Roadmap = () => {
                     </span>
                     {phase.active ? (
                       <span className="font-mono text-xs bg-primary text-primary-foreground px-2 py-0.5 flex items-center gap-1.5 whitespace-nowrap flex-shrink-0">
-                        ACTIVE
+                        LOADING
                         <span className="inline-block w-1.5 h-3 bg-primary-foreground animate-pulse" />
                       </span>
                     ) : (
