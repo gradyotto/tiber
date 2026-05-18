@@ -51,13 +51,24 @@ const CapabilitiesSection = () => {
               </div>
 
               {/* Title */}
-              <h3 className="font-sans font-black text-xl tracking-tight uppercase text-foreground">
+              <h3
+                className="font-sans font-black text-xl tracking-tight uppercase"
+                style={{ color: cap.color }}
+              >
                 {cap.title}
               </h3>
 
               {/* Description */}
               <p className="font-mono text-sm text-muted-foreground">
                 {cap.description}
+              </p>
+
+              {/* Color label */}
+              <p
+                className="font-mono text-[10px] tracking-widest"
+                style={{ color: cap.color }}
+              >
+                {cap.colorName}
               </p>
 
               {/* Bottom accent line */}
