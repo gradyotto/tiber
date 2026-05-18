@@ -6,7 +6,6 @@ import tiberLogo from "@/assets/tiber-logo.png";
 const HeroSection = () => {
   const [scrolled, setScrolled] = useState(false);
   const [scrollLocked, setScrollLocked] = useState(true);
-  const [showInitial, setShowInitial] = useState(true);
   const location = useLocation();
 
   // Reset state when navigating to homepage
@@ -14,20 +13,9 @@ const HeroSection = () => {
     window.scrollTo(0, 0);
     setScrolled(false);
     setScrollLocked(true);
-    setShowInitial(true);
     document.body.style.overflow = 'hidden';
     window.dispatchEvent(new CustomEvent('heroScrolled', { detail: { scrolled: false } }));
   }, [location.key]);
-
-  // Unmount initial state after its transition finishes so the GPU layer is released
-  useEffect(() => {
-    if (scrolled) {
-      const timer = setTimeout(() => setShowInitial(false), 550);
-      return () => clearTimeout(timer);
-    } else {
-      setShowInitial(true);
-    }
-  }, [scrolled]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -111,39 +99,37 @@ const HeroSection = () => {
         {/* Full Width Content */}
         <div className="relative flex flex-col justify-center p-6 md:p-8 lg:p-12 h-full min-h-[calc(70vh-3.5rem)] md:min-h-[calc(90vh-3.5rem)] overflow-hidden">
           {/* Tiber River Map Background */}
-          <div className="absolute inset-0">
-            <TiberRiverMap className="w-full h-full opacity-70" />
+          <div className="absolute inset-0 opacity-70">
+            <TiberRiverMap className="w-full h-full" />
           </div>
           
           <div className="relative z-10">
-            {/* Initial State: TIBER with Logo — unmounted after transition to release GPU layer */}
-            {showInitial && (
-              <div
-                className={`absolute inset-0 flex items-center transition-[opacity,transform] duration-500 ease-out ${
-                  scrolled
-                    ? "opacity-0 -translate-y-8 pointer-events-none"
-                    : "opacity-100"
-                }`}
-              >
-                <div className="flex items-center gap-2 md:gap-4">
-                  <img
-                    src={tiberLogo}
-                    alt="Tiber Logo"
-                    className="w-20 h-20 md:w-40 md:h-40 lg:w-48 lg:h-48 object-contain"
-                  />
-                  <span className="font-sans font-black text-4xl md:text-7xl lg:text-8xl tracking-tight text-foreground">
-                    TIBER
-                  </span>
-                </div>
+            {/* Initial State: TIBER with Logo */}
+            <div
+              className={`absolute inset-0 flex items-center transition-[opacity,transform] duration-500 ease-out ${
+                scrolled
+                  ? "opacity-0 -translate-y-8 pointer-events-none"
+                  : "opacity-100"
+              }`}
+            >
+              <div className="flex items-center gap-2 md:gap-4">
+                <img 
+                  src={tiberLogo} 
+                  alt="Tiber Logo" 
+                  className="w-20 h-20 md:w-40 md:h-40 lg:w-48 lg:h-48 object-contain"
+                />
+                <span className="font-sans font-black text-4xl md:text-7xl lg:text-8xl tracking-tight text-foreground">
+                  TIBER
+                </span>
               </div>
-            )}
+            </div>
 
             {/* Scrolled State: Full Content */}
             <div
-              className={`transition-opacity duration-500 ease-out ${
+              className={`transition-[opacity,transform] duration-500 ease-out ${
                 scrolled
-                  ? "opacity-100"
-                  : "opacity-0 pointer-events-none"
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8 pointer-events-none"
               }`}
             >
               <div className="space-y-6 md:space-y-8">
