@@ -3,12 +3,12 @@ import missionGraphic from "@/assets/mission-graphic.png";
 
 const capabilities = [
   {
-    renderIcon: () => <Calculator className="w-8 h-8 text-muted-foreground" strokeWidth={1} />,
+    renderIcon: () => <Calculator className="w-8 h-8 text-slate-50" strokeWidth={1} />,
     title: "ALGORITHMIC QUOTING",
     description: "Instant pricing. Zero friction.",
   },
   {
-    renderIcon: () => <Cog className="w-8 h-8 text-muted-foreground" strokeWidth={1} />,
+    renderIcon: () => <Cog className="w-8 h-8 text-slate-50" strokeWidth={1} />,
     title: "PRECISION MACHINING",
     description: "Aluminum. Stainless. Tool Steel.",
   },
