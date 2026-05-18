@@ -44,15 +44,16 @@ const About = () => {
           </div>
           <div className="space-y-6">
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              <span className="text-primary">Tiber</span> was founded with a singular mission: to rebuild and{" "}
-              <span className="text-primary">secure America's manufacturing capabilities</span>.
+              <span className="text-primary text-slate-50">Tiber</span> was founded with a singular mission: to rebuild and{" "}
+              <span className="text-primary text-slate-50">secure America's manufacturing capabilities</span>.
               In an era where supply chains have become 
               strategic vulnerabilities, we believe that critical parts should be made 
               on American soil, by American hands.
             </p>
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              Named after the river that built an empire, <span className="text-primary">Tiber</span> represents the{" "}
-              <span className="text-primary">infrastructure that enables greatness</span>. We are the backbone of the 
+              Named after the river that built an empire, <span className="text-primary text-slate-50">Tiber</span> represents the{" "}
+              <span className="text-primary text-slate-50">infrastructure that enables greatness</span>. We are the backbone of the 
+
               next industrial revolution.
             </p>
           </div>
@@ -74,15 +75,15 @@ const About = () => {
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
               America's manufacturing capacity has been in decline for decades. Defense
               programs stall waiting on parts. Medical device companies can't source basic
-              precision components. The <span className="text-primary">industrial base that once made this country
+              precision components. The <span className="text-primary text-slate-50">industrial base that once made this country
               untouchable</span> has eroded.
             </p>
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
               We didn't come from the shop floor. We came from frustration — and from a
-              genuine belief that <span className="text-primary">something better is possible</span>. The space economy
+              genuine belief that <span className="text-primary text-slate-50">something better is possible</span>. The space economy
               is being unlocked. The robotics wave is coming. These are going to be the most
               significant technological shifts in a generation, and they will{" "}
-              <span className="text-primary">demand precision-made parts at scale</span>. America needs to be
+              <span className="text-primary text-slate-50">demand precision-made parts at scale</span>. America needs to be
               positioned to supply them. Tiber is our answer to that.
             </p>
           </div>
@@ -102,26 +103,26 @@ const About = () => {
           </div>
           <div className="space-y-6">
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              We specialize in <span className="text-primary">precision 3+2 CNC machining</span> of mission-critical metals: 
+              We specialize in <span className="text-primary text-slate-50">precision 3+2 CNC machining</span> of mission-critical metals: 
               6061 & 7075 aluminum, 4140 tool steel, and 17-4/304/316 stainless steel. 
               Every part we produce meets the exacting standards required by defense, 
-              aerospace, and <span className="text-primary">critical infrastructure applications</span>.
+              aerospace, and <span className="text-primary text-slate-50">critical infrastructure applications</span>.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="border border-ghost p-4 card-hover">
-                <span className="font-mono text-2xl font-bold text-primary">INSTANT</span>
+                <span className="font-mono text-2xl font-bold text-primary text-slate-50">INSTANT</span>
                 <p className="font-mono text-xs text-muted-foreground mt-1">CAD TO QUOTE</p>
               </div>
               <div className="border border-ghost p-4 card-hover">
-                <span className="font-mono text-2xl font-bold text-primary">±0.0005"</span>
+                <span className="font-mono text-2xl font-bold text-primary text-slate-50">±0.0005"</span>
                 <p className="font-mono text-xs text-muted-foreground mt-1">TOLERANCE</p>
               </div>
               <div className="border border-ghost p-4 card-hover">
-                <span className="font-mono text-2xl font-bold text-primary">100%</span>
+                <span className="font-mono text-2xl font-bold text-primary text-slate-50">100%</span>
                 <p className="font-mono text-xs text-muted-foreground mt-1">USA MADE</p>
               </div>
               <div className="border border-ghost p-4 card-hover">
-                <span className="font-mono text-2xl font-bold text-primary">3+2</span>
+                <span className="font-mono text-2xl font-bold text-primary text-slate-50">3+2</span>
                 <p className="font-mono text-xs text-muted-foreground mt-1">AXIS MACHINING</p>
               </div>
             </div>
