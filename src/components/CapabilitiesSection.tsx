@@ -5,16 +5,25 @@ const capabilities = [
     icon: Calculator,
     title: "ALGORITHMIC QUOTING",
     description: "Instant pricing. Zero friction.",
+    // Old Glory Red — official US flag red
+    color: "#B22234",
+    colorName: "OLD GLORY RED · #B22234",
   },
   {
     icon: Cog,
     title: "PRECISION MACHINING",
     description: "Aluminum. Stainless. Tool Steel.",
+    // Flag Red / Pantone 186 — common patriotic crimson
+    color: "#C8102E",
+    colorName: "FLAG RED · #C8102E",
   },
   {
     icon: Zap,
     title: "SPEED AS A FEATURE",
     description: "From CAD to Quote in seconds.",
+    // Deep Barn Red — darker, muted, industrial
+    color: "#8B0000",
+    colorName: "BARN RED · #8B0000",
   },
 ];
 
