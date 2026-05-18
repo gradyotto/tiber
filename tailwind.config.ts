@@ -59,16 +59,12 @@ export default {
         },
         void: "hsl(var(--void))",
         safety: "hsl(var(--safety))",
-        ghost: "hsl(var(--ghost) / 0.1)",
+        ghost: "hsl(var(--ghost))",
         titanium: "hsl(var(--titanium))",
-        cream: "hsl(var(--cream))",
-        navy: "hsl(var(--navy))",
-        "flag-red": "hsl(var(--flag-red))",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
-        serif: ["Fraunces", "Georgia", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -101,8 +97,8 @@ export default {
           "100%": { opacity: "1", transform: "scale(1)" },
         },
         glow: {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(22 100% 50% / 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsl(22 100% 50% / 0.5)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(218 85% 55% / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(218 85% 55% / 0.5)" },
         },
       },
       animation: {

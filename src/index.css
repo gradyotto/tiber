@@ -4,63 +4,60 @@
 
 @layer base {
   :root {
-    /* Patriotic Editorial - Tiber Light */
-    --background: 45 33% 98%;
-    --foreground: 222 71% 10%;
+    /* Neo-Industrial Dark Theme - Tiber */
+    --background: 0 0% 3%;
+    --foreground: 0 0% 93%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 71% 10%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 93%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 71% 10%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 93%;
 
-    /* Navy - Primary */
-    --primary: 222 71% 10%;
-    --primary-foreground: 45 33% 98%;
+    /* Navy Blue - Primary */
+    --primary: 218 85% 55%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 222 30% 96%;
-    --secondary-foreground: 222 71% 10%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 93%;
 
-    --muted: 222 20% 94%;
-    --muted-foreground: 222 20% 40%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 45%;
 
-    /* Flag red - sparingly */
-    --accent: 352 79% 42%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 218 85% 55%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 222 71% 10%;
-    --input: 222 71% 10%;
-    --ring: 222 71% 10%;
+    /* Ghost Grey borders */
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 218 85% 55%;
 
     --radius: 0px;
 
     /* Custom Tiber tokens */
-    --cream: 45 33% 98%;
-    --navy: 222 71% 10%;
-    --flag-red: 352 79% 42%;
-    --ghost: 222 71% 10%;
-    --titanium: 222 71% 10%;
-    /* legacy alias */
-    --void: 45 33% 98%;
-    --safety: 352 79% 42%;
+    --void: 0 0% 3%;
+    --safety: 218 85% 55%;
+    --ghost: 240 4% 16%;
+    --titanium: 0 0% 93%;
 
-    --sidebar-background: 45 33% 98%;
-    --sidebar-foreground: 222 71% 10%;
-    --sidebar-primary: 222 71% 10%;
-    --sidebar-primary-foreground: 45 33% 98%;
-    --sidebar-accent: 222 20% 94%;
-    --sidebar-accent-foreground: 222 71% 10%;
-    --sidebar-border: 222 71% 10%;
-    --sidebar-ring: 222 71% 10%;
+    /* Sidebar - keeping for compatibility */
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 93%;
+    --sidebar-primary: 218 85% 55%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 93%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 218 85% 55%;
   }
 }
 
 @layer base {
   * {
-    border-color: hsl(var(--border) / 0.1);
+    @apply border-border;
   }
 
   body {
@@ -72,7 +69,7 @@
   }
 }
 
-/* Noise/Grain Overlay - very subtle on cream */
+/* Noise/Grain Overlay */
 .noise-overlay {
   position: fixed;
   top: 0;
@@ -81,29 +78,41 @@
   height: 100%;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.025;
+  opacity: 0.03;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 
 /* Technical Grid Pattern */
 .tech-grid {
   background-image: 
-    linear-gradient(to right, hsl(var(--navy) / 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, hsl(var(--navy) / 0.06) 1px, transparent 1px);
+    linear-gradient(to right, hsl(var(--ghost) / 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--ghost) / 0.3) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
+/* Radial gradient overlay for hero */
 .radial-overlay {
-  background: radial-gradient(circle at center, transparent 0%, hsl(var(--cream)) 70%);
+  background: radial-gradient(circle at center, transparent 0%, hsl(var(--void)) 70%);
 }
 
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
-::-webkit-scrollbar-track { background: hsl(var(--cream)); }
-::-webkit-scrollbar-thumb { background: hsl(var(--navy) / 0.2); }
-::-webkit-scrollbar-thumb:hover { background: hsl(var(--navy) / 0.4); }
 
+::-webkit-scrollbar-track {
+  background: hsl(var(--void));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--ghost));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Animation delays for staggered effects */
 .animate-delay-100 { animation-delay: 100ms; }
 .animate-delay-200 { animation-delay: 200ms; }
 .animate-delay-300 { animation-delay: 300ms; }
@@ -112,14 +121,17 @@
 .animate-delay-600 { animation-delay: 600ms; }
 .animate-delay-700 { animation-delay: 700ms; }
 
+/* Hover glow effect for cards */
 .card-hover {
   @apply transition-all duration-300;
 }
+
 .card-hover:hover {
-  background: hsl(var(--navy) / 0.02);
+  background: hsl(var(--card));
+  box-shadow: 0 0 30px hsl(var(--safety) / 0.1);
 }
 
+/* Corner markers */
 .corner-marker {
-  @apply absolute font-mono text-xs;
-  color: hsl(var(--navy) / 0.25);
+  @apply absolute text-ghost font-mono text-xs opacity-50;
 }
