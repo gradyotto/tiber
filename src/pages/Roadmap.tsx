@@ -2,24 +2,30 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EmailCaptureForm from "@/components/EmailCaptureForm";
 
-const roadmapSteps = [
+const phases = [
   {
-    id: 1,
+    id: "01",
     title: "PRECISION CNC MACHINING",
-    description: "3+2 machining of aluminum, stainless, and tool steel for defense and aerospace.",
-    status: "LOADING",
+    description:
+      "3+2 machining of aluminum, stainless, and tool steel for defense and aerospace.",
+    label: "ACTIVE",
+    active: true,
   },
   {
-    id: 2,
+    id: "02",
     title: "INDUSTRIAL ADDITIVE MANUFACTURING",
-    description: "Defense-grade 3D printing with carbon fiber composites and high-performance polymers.",
-    status: "2027",
+    description:
+      "Defense-grade 3D printing with carbon fiber composites and high-performance polymers.",
+    label: "2027",
+    active: false,
   },
   {
-    id: 3,
+    id: "03",
     title: "AUTONOMOUS FACTORY",
-    description: "Lights-out manufacturing with AI-driven quality control and logistics.",
-    status: "2028",
+    description:
+      "Lights-out manufacturing with AI-driven quality control and logistics.",
+    label: "2028",
+    active: false,
   },
 ];
 
@@ -28,308 +34,85 @@ const Roadmap = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-16 px-6 border-b border-ghost overflow-hidden">
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <p className="font-mono text-xs text-primary tracking-widest mb-4 animate-fade-up">
+      {/* Hero */}
+      <section className="relative pt-32 pb-16 px-6 border-b border-ghost">
+        <span className="corner-marker top-20 left-6">+</span>
+        <span className="corner-marker top-20 right-6">+</span>
+        <div className="max-w-4xl mx-auto">
+          <p className="font-mono text-xs text-primary tracking-widest mb-4 opacity-0 animate-fade-up">
             // MANUFACTURING EVOLUTION
           </p>
-          <h1 className="font-sans font-black text-4xl md:text-6xl tracking-tight uppercase leading-none animate-fade-up" style={{ animationDelay: "100ms" }}>
+          <h1
+            className="font-sans font-black text-4xl md:text-6xl tracking-tight uppercase leading-none opacity-0 animate-fade-up animate-delay-100"
+          >
             THE <span className="text-primary">ROAD</span> AHEAD
           </h1>
-          <p className="font-mono text-sm text-muted-foreground mt-6 max-w-xl mx-auto animate-fade-up" style={{ animationDelay: "200ms" }}>
-            From additive manufacturing to fully autonomous production. Follow the river to see where we're headed.
+          <p
+            className="font-mono text-sm text-muted-foreground mt-6 max-w-xl opacity-0 animate-fade-up animate-delay-200"
+          >
+            From precision machining to fully autonomous production. Follow the sequence.
           </p>
         </div>
-
-        {/* Corner markers */}
-        <div className="corner-marker top-6 left-6">+</div>
-        <div className="corner-marker top-6 right-6">+</div>
       </section>
 
-      {/* Mobile Roadmap - Vertical Timeline */}
-      <section className="md:hidden py-12 px-6">
-        <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-primary/30" />
-          
-          {/* Timeline items */}
-          <div className="space-y-8">
-            {roadmapSteps.map((step, index) => (
-              <div 
-                key={step.id}
-                className="relative pl-12 opacity-0 animate-fade-up"
-                style={{ 
-                  animationDelay: `${300 + index * 150}ms`,
-                  animationFillMode: "forwards"
+      {/* Terminal body */}
+      <section className="py-16 px-6">
+        <div className="max-w-4xl mx-auto">
+
+          {/* Boot lines */}
+          <div className="font-mono text-xs space-y-1.5 mb-12 opacity-0 animate-fade-up animate-delay-300" style={{ animationFillMode: "forwards" }}>
+            <p className="text-muted-foreground opacity-50">// TIBER MFG SYSTEMS v1.0 // PHOENIX, AZ</p>
+            <p className="text-muted-foreground opacity-50">// MANUFACTURING SEQUENCE INITIALIZED</p>
+            <p className="text-primary opacity-70">// 3 PHASES DETECTED // 1 ACTIVE // 2 PENDING</p>
+          </div>
+
+          {/* Phase list */}
+          <div>
+            {phases.map((phase, index) => (
+              <div
+                key={phase.id}
+                className="border-t border-ghost opacity-0 animate-fade-up"
+                style={{
+                  animationDelay: `${450 + index * 150}ms`,
+                  animationFillMode: "forwards",
                 }}
               >
-                {/* Waypoint marker */}
-                <div className="absolute left-0 top-0">
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                    step.id === 1 
-                      ? "bg-primary" 
-                      : "border-2 border-primary/50 border-dashed"
-                  }`}>
-                    {step.id === 1 && (
-                      <div className="w-3 h-3 rounded-full bg-primary-foreground" />
+                <div className={`py-8 transition-opacity ${!phase.active ? "opacity-40" : ""}`}>
+                  {/* Header row */}
+                  <div className="flex items-start justify-between gap-6 mb-5">
+                    <span className={`font-mono text-sm md:text-base leading-snug ${phase.active ? "text-foreground" : "text-muted-foreground"}`}>
+                      <span className={phase.active ? "text-primary" : "text-muted-foreground"}>{">"}</span>
+                      {"  "}PHASE {phase.id} // {phase.title}
+                    </span>
+                    {phase.active ? (
+                      <span className="font-mono text-xs bg-primary text-primary-foreground px-2 py-0.5 flex items-center gap-1.5 whitespace-nowrap flex-shrink-0">
+                        ACTIVE
+                        <span className="inline-block w-1.5 h-3 bg-primary-foreground animate-pulse" />
+                      </span>
+                    ) : (
+                      <span className="font-mono text-xs border border-ghost text-muted-foreground px-2 py-0.5 whitespace-nowrap flex-shrink-0">
+                        {phase.label}
+                      </span>
                     )}
                   </div>
-                  {step.id === 1 && (
-                    <div className="absolute inset-0 w-8 h-8 rounded-full bg-primary/30 animate-pulse" />
-                  )}
-                </div>
 
-                {/* Card */}
-                <div className={`bg-background/90 border p-5 ${
-                  step.id === 1 
-                    ? "border-primary" 
-                    : "border-ghost"
-                }`}>
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className={`font-mono text-xs ${
-                      step.id === 1 ? "text-primary" : "text-muted-foreground"
-                    }`}>
-                      0{step.id}
-                    </span>
-                    <span className={`font-mono text-xs px-2 py-0.5 ${
-                      step.id === 1
-                        ? "bg-primary text-primary-foreground"
-                        : "border border-ghost text-muted-foreground"
-                    }`}>
-                      {step.status}
-                    </span>
+                  {/* Description */}
+                  <div className={`ml-6 border-l pl-4 ${phase.active ? "border-primary" : "border-ghost"}`}>
+                    <p className="font-mono text-xs text-muted-foreground leading-relaxed">
+                      {phase.description}
+                    </p>
                   </div>
-                  <h3 className="font-sans font-black text-base tracking-tight uppercase text-foreground mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="font-mono text-xs text-muted-foreground">
-                    {step.description}
-                  </p>
                 </div>
               </div>
             ))}
+            <div className="border-t border-ghost" />
           </div>
+
+          {/* End of sequence */}
+          <p className="font-mono text-xs text-muted-foreground opacity-30 mt-8">
+            // END OF SEQUENCE
+          </p>
         </div>
-      </section>
-
-      {/* Desktop Roadmap River Section */}
-      <section className="hidden md:block relative py-20 px-6 min-h-[800px]">
-        {/* River SVG Background */}
-        <svg
-          className="absolute inset-0 w-full h-full"
-          viewBox="0 0 1200 800"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMidYMid slice"
-        >
-          {/* Grid pattern */}
-          <defs>
-            <pattern id="roadmap-grid" width="60" height="60" patternUnits="userSpaceOnUse">
-              <path
-                d="M 60 0 L 0 0 0 60"
-                fill="none"
-                stroke="hsl(var(--ghost))"
-                strokeWidth="0.5"
-                opacity="0.3"
-              />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#roadmap-grid)" />
-
-          {/* Main River Path - flowing S-curve from top center through the page */}
-          <path
-            d="M 600 -50 
-               Q 500 100, 350 180
-               Q 200 260, 350 340
-               Q 550 450, 900 400
-               Q 1100 370, 950 550
-               Q 750 700, 350 650
-               Q 100 620, -50 750"
-            stroke="hsl(var(--primary))"
-            strokeWidth="6"
-            fill="none"
-            strokeLinecap="round"
-          />
-
-          {/* Tributary streams */}
-          <path
-            d="M 0 250 Q 100 230, 200 250"
-            stroke="hsl(var(--ghost))"
-            strokeWidth="1.5"
-            fill="none"
-            opacity="0.4"
-          />
-          <path
-            d="M 1200 350 Q 1050 380, 950 350"
-            stroke="hsl(var(--ghost))"
-            strokeWidth="1.5"
-            fill="none"
-            opacity="0.4"
-          />
-          <path
-            d="M 500 800 Q 480 720, 550 680"
-            stroke="hsl(var(--ghost))"
-            strokeWidth="1.5"
-            fill="none"
-            opacity="0.4"
-          />
-
-          {/* Waypoint 1 - Industrial Additive Manufacturing */}
-          <circle
-            cx="350"
-            cy="180"
-            r="12"
-            fill="hsl(var(--primary))"
-            opacity="1"
-          />
-          <circle
-            cx="350"
-            cy="180"
-            r="20"
-            stroke="hsl(var(--primary))"
-            strokeWidth="2"
-            fill="none"
-            opacity="0.5"
-            className="animate-pulse"
-          />
-          <circle
-            cx="350"
-            cy="180"
-            r="28"
-            stroke="hsl(var(--primary))"
-            strokeWidth="1"
-            fill="none"
-            opacity="0.2"
-          />
-
-          {/* Waypoint 2 - CNC Milling & Turning */}
-          <circle
-            cx="900"
-            cy="400"
-            r="12"
-            fill="none"
-            stroke="hsl(var(--primary))"
-            strokeWidth="2"
-            strokeDasharray="4 3"
-            opacity="0.6"
-          />
-          <circle
-            cx="900"
-            cy="400"
-            r="20"
-            stroke="hsl(var(--primary))"
-            strokeWidth="1.5"
-            strokeDasharray="6 4"
-            fill="none"
-            opacity="0.4"
-          />
-
-          {/* Waypoint 3 - Autonomous Factory */}
-          <circle
-            cx="350"
-            cy="650"
-            r="12"
-            fill="none"
-            stroke="hsl(var(--primary))"
-            strokeWidth="2"
-            strokeDasharray="4 3"
-            opacity="0.5"
-          />
-          <circle
-            cx="350"
-            cy="650"
-            r="20"
-            stroke="hsl(var(--primary))"
-            strokeWidth="1.5"
-            strokeDasharray="6 4"
-            fill="none"
-            opacity="0.3"
-          />
-        </svg>
-
-        {/* Waypoint Cards - positioned relative to section */}
-        {/* Waypoint 1 - outside river, bottom-left corner near top-right of waypoint */}
-        <div 
-          className="absolute z-10 opacity-0 animate-fade-up"
-          style={{ 
-            top: "5%", 
-            left: "30%",
-            animationDelay: "300ms",
-            animationFillMode: "forwards"
-          }}
-        >
-          <div className="bg-background/90 backdrop-blur-sm border border-primary p-6 max-w-xs">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="font-mono text-xs text-primary">01</span>
-              <span className="font-mono text-xs px-2 py-0.5 bg-primary text-primary-foreground">
-                {roadmapSteps[0].status}
-              </span>
-            </div>
-            <h3 className="font-sans font-black text-lg tracking-tight uppercase text-foreground mb-2">
-              {roadmapSteps[0].title}
-            </h3>
-            <p className="font-mono text-xs text-muted-foreground">
-              {roadmapSteps[0].description}
-            </p>
-          </div>
-        </div>
-
-        {/* Waypoint 2 - inside river, top-right corner near bottom-left of waypoint */}
-        <div 
-          className="absolute z-10 opacity-0 animate-fade-up"
-          style={{ 
-            top: "53%", 
-            left: "52%",
-            animationDelay: "500ms",
-            animationFillMode: "forwards"
-          }}
-        >
-          <div className="bg-background/90 backdrop-blur-sm border border-ghost hover:border-primary transition-colors duration-300 p-6 max-w-xs">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="font-mono text-xs text-muted-foreground">02</span>
-              <span className="font-mono text-xs px-2 py-0.5 border border-ghost text-muted-foreground">
-                {roadmapSteps[1].status}
-              </span>
-            </div>
-            <h3 className="font-sans font-black text-lg tracking-tight uppercase text-foreground mb-2">
-              {roadmapSteps[1].title}
-            </h3>
-            <p className="font-mono text-xs text-muted-foreground">
-              {roadmapSteps[1].description}
-            </p>
-          </div>
-        </div>
-
-        {/* Waypoint 3 - inside river, bottom-right corner near top-left of waypoint */}
-        <div 
-          className="absolute z-10 opacity-0 animate-fade-up"
-          style={{ 
-            top: "62%", 
-            left: "5%",
-            animationDelay: "700ms",
-            animationFillMode: "forwards"
-          }}
-        >
-          <div className="bg-background/90 backdrop-blur-sm border border-ghost hover:border-primary transition-colors duration-300 p-6 max-w-xs">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="font-mono text-xs text-muted-foreground">03</span>
-              <span className="font-mono text-xs px-2 py-0.5 border border-ghost text-muted-foreground">
-                {roadmapSteps[2].status}
-              </span>
-            </div>
-            <h3 className="font-sans font-black text-lg tracking-tight uppercase text-foreground mb-2">
-              {roadmapSteps[2].title}
-            </h3>
-            <p className="font-mono text-xs text-muted-foreground">
-              {roadmapSteps[2].description}
-            </p>
-          </div>
-        </div>
-
-        {/* Corner markers */}
-        <div className="corner-marker bottom-6 left-6">+</div>
-        <div className="corner-marker bottom-6 right-6">+</div>
       </section>
 
       <EmailCaptureForm />
