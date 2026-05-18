@@ -72,15 +72,18 @@ const About = () => {
           </div>
           <div className="space-y-6">
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              Our founders witnessed firsthand the <span className="text-primary">erosion of American manufacturing
-              capacity</span>. Critical defense programs delayed by months. Medical device 
-              companies unable to source precision components. Aerospace firms 
-              dependent on foreign suppliers for <span className="text-primary">mission-critical parts</span>.
+              America's manufacturing capacity has been in decline for decades. Defense
+              programs stall waiting on parts. Medical device companies can't source basic
+              precision components. The <span className="text-primary">industrial base that once made this country
+              untouchable</span> has eroded.
             </p>
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-              <span className="text-primary">Tiber</span> was created to solve this. Based in <span className="text-primary">Phoenix, Arizona</span>, we operate 
-              at the intersection of advanced manufacturing technology and relentless 
-              execution. Our algorithmic quoting system delivers pricing in seconds, not days.
+              We didn't come from the shop floor. We came from frustration — and from a
+              genuine belief that <span className="text-primary">something better is possible</span>. The space economy
+              is being unlocked. The robotics wave is coming. These are going to be the most
+              significant technological shifts in a generation, and they will{" "}
+              <span className="text-primary">demand precision-made parts at scale</span>. America needs to be
+              positioned to supply them. Tiber is our answer to that.
             </p>
           </div>
         </div>
