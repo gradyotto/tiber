@@ -35,13 +35,13 @@ const TiberLogo = ({ className = "" }: TiberLogoProps) => {
         y1="155"
         x2="150"
         y2="155"
-        stroke="hsl(218 85% 55%)"
+        stroke="hsl(0 0% 100%)"
         strokeWidth="2"
         className="animate-line-reveal"
       />
       
       {/* Corner accents */}
-      <circle cx="100" cy="10" r="3" fill="hsl(218 85% 55%)" />
+      <circle cx="100" cy="10" r="3" fill="hsl(0 0% 100%)" />
       <circle cx="180" cy="55" r="2" className="fill-ghost" />
       <circle cx="180" cy="145" r="2" className="fill-ghost" />
       <circle cx="100" cy="190" r="2" className="fill-ghost" />

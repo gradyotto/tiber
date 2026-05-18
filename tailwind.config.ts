@@ -97,8 +97,8 @@ export default {
           "100%": { opacity: "1", transform: "scale(1)" },
         },
         glow: {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(218 85% 55% / 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsl(218 85% 55% / 0.5)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(0 0% 100% / 0.2)" },
+          "50%": { boxShadow: "0 0 40px hsl(0 0% 100% / 0.4)" },
         },
       },
       animation: {
