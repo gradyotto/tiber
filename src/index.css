@@ -5,53 +5,53 @@
 @layer base {
   :root {
     /* Neo-Industrial Dark Theme - Tiber */
-    --background: 0 0% 3%;
+    --background: 221 73% 6%;
     --foreground: 0 0% 93%;
 
-    --card: 0 0% 5%;
+    --card: 221 60% 5%;
     --card-foreground: 0 0% 93%;
 
-    --popover: 0 0% 5%;
+    --popover: 221 60% 5%;
     --popover-foreground: 0 0% 93%;
 
-    /* Safety Orange - Primary */
-    --primary: 22 100% 50%;
-    --primary-foreground: 0 0% 0%;
+    /* Flag Red - Primary */
+    --primary: 350 85% 42%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 10%;
+    --secondary: 221 40% 8%;
     --secondary-foreground: 0 0% 93%;
 
-    --muted: 0 0% 15%;
+    --muted: 221 30% 12%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 22 100% 50%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 350 85% 42%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    /* Ghost Grey borders */
-    --border: 240 4% 16%;
-    --input: 240 4% 16%;
-    --ring: 22 100% 50%;
+    /* Ghost borders */
+    --border: 221 25% 18%;
+    --input: 221 25% 18%;
+    --ring: 350 85% 42%;
 
     --radius: 0px;
 
     /* Custom Tiber tokens */
-    --void: 0 0% 3%;
-    --safety: 22 100% 50%;
-    --ghost: 240 4% 16%;
+    --void: 221 73% 6%;
+    --safety: 350 85% 42%;
+    --ghost: 221 25% 18%;
     --titanium: 0 0% 93%;
 
     /* Sidebar - keeping for compatibility */
-    --sidebar-background: 0 0% 5%;
+    --sidebar-background: 221 60% 5%;
     --sidebar-foreground: 0 0% 93%;
-    --sidebar-primary: 22 100% 50%;
-    --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 0 0% 10%;
+    --sidebar-primary: 350 85% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 221 40% 8%;
     --sidebar-accent-foreground: 0 0% 93%;
-    --sidebar-border: 240 4% 16%;
-    --sidebar-ring: 22 100% 50%;
+    --sidebar-border: 221 25% 18%;
+    --sidebar-ring: 350 85% 42%;
   }
 }
 

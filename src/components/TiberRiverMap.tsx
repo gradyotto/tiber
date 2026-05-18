@@ -27,45 +27,46 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
 
       {/* Tiber River - More winding path starting from outside view */}
       <path
-        d="M 900 -60 
+        d="M 900 -60
            Q 850 -20, 800 30
-           Q 750 80, 720 120 
-           Q 680 160, 700 210 
-           Q 720 260, 650 300 
-           Q 580 340, 620 390 
-           Q 660 440, 580 480 
-           Q 500 520, 450 500 
-           Q 400 480, 350 520 
-           Q 300 560, 220 540 
+           Q 750 80, 720 120
+           Q 680 160, 700 210
+           Q 720 260, 650 300
+           Q 580 340, 620 390
+           Q 660 440, 580 480
+           Q 500 520, 450 500
+           Q 400 480, 350 520
+           Q 300 560, 220 540
            Q 140 520, 100 570
            Q 60 620, -20 600"
-        stroke="hsl(var(--primary))"
+        stroke="white"
         strokeWidth="4"
         fill="none"
         strokeLinecap="round"
+        opacity="0.7"
       />
 
       {/* Tributary rivers */}
       <path
         d="M 800 150 Q 760 170, 710 180"
-        stroke="hsl(var(--ghost))"
+        stroke="white"
         strokeWidth="1.5"
         fill="none"
-        opacity="0.4"
+        opacity="0.2"
       />
       <path
         d="M 750 320 Q 700 330, 660 310"
-        stroke="hsl(var(--ghost))"
+        stroke="white"
         strokeWidth="1.5"
         fill="none"
-        opacity="0.4"
+        opacity="0.2"
       />
       <path
         d="M 400 600 Q 350 580, 300 560"
-        stroke="hsl(var(--ghost))"
+        stroke="white"
         strokeWidth="1.5"
         fill="none"
-        opacity="0.4"
+        opacity="0.2"
       />
 
       {/* Phoenix marker - Desktop */}
