@@ -1,5 +1,5 @@
 import { Calculator, Cog } from "lucide-react";
-import missionGraphic from "@/assets/mission-graphic.svg";
+import missionGraphic from "@/assets/mission-graphic.png";
 
 const capabilities = [
   {
