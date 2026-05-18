@@ -135,3 +135,22 @@
 .corner-marker {
   @apply absolute text-ghost font-mono text-xs opacity-50;
 }
+
+/* Left-to-right orange sweep on text hover */
+.sweep-text {
+  background: linear-gradient(
+    to right,
+    hsl(var(--primary)) 50%,
+    hsl(var(--foreground)) 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100% center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.4s ease;
+}
+
+.group:hover .sweep-text {
+  background-position: 0% center;
+}

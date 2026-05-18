@@ -33,7 +33,7 @@ const CapabilitiesSection = () => {
             <div className="space-y-6">
               {cap.renderIcon()}
 
-              <h3 className="font-sans font-black text-xl tracking-tight uppercase text-foreground">
+              <h3 className="font-sans font-black text-xl tracking-tight uppercase sweep-text">
                 {cap.title}
               </h3>
 
