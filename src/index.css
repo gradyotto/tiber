@@ -14,8 +14,8 @@
     --popover: 0 0% 5%;
     --popover-foreground: 0 0% 93%;
 
-    /* Safety Orange - Primary */
-    --primary: 22 100% 50%;
+    /* Navy Blue - Primary */
+    --primary: 218 85% 55%;
     --primary-foreground: 0 0% 0%;
 
     --secondary: 0 0% 10%;
@@ -24,7 +24,7 @@
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 22 100% 50%;
+    --accent: 218 85% 55%;
     --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84% 60%;
@@ -33,25 +33,25 @@
     /* Ghost Grey borders */
     --border: 240 4% 16%;
     --input: 240 4% 16%;
-    --ring: 22 100% 50%;
+    --ring: 218 85% 55%;
 
     --radius: 0px;
 
     /* Custom Tiber tokens */
     --void: 0 0% 3%;
-    --safety: 22 100% 50%;
+    --safety: 218 85% 55%;
     --ghost: 240 4% 16%;
     --titanium: 0 0% 93%;
 
     /* Sidebar - keeping for compatibility */
     --sidebar-background: 0 0% 5%;
     --sidebar-foreground: 0 0% 93%;
-    --sidebar-primary: 22 100% 50%;
+    --sidebar-primary: 218 85% 55%;
     --sidebar-primary-foreground: 0 0% 0%;
     --sidebar-accent: 0 0% 10%;
     --sidebar-accent-foreground: 0 0% 93%;
     --sidebar-border: 240 4% 16%;
-    --sidebar-ring: 22 100% 50%;
+    --sidebar-ring: 218 85% 55%;
   }
 }
 
