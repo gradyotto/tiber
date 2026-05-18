@@ -53,7 +53,7 @@ const Quote = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6 border-b border-ghost">
         <div className="max-w-4xl mx-auto">
-          <span className="font-mono text-xs text-safety uppercase tracking-wider">
+          <span className="font-mono text-xs text-flag-red uppercase tracking-wider">
             // GET A QUOTE
           </span>
           <h1 className="font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase mt-4 leading-[0.9]">
@@ -73,7 +73,7 @@ const Quote = () => {
           {/* Drop Zone */}
           <div
             className={`border-2 border-dashed transition-colors ${
-              dragActive ? "border-safety bg-safety/5" : "border-ghost"
+              dragActive ? "border-flag-red bg-flag-red/5" : "border-ghost"
             } p-12 text-center`}
             onDragEnter={handleDrag}
             onDragLeave={handleDrag}
@@ -122,7 +122,7 @@ const Quote = () => {
                     className="flex items-center justify-between px-4 py-3 hover:bg-ghost/20 transition-colors"
                   >
                     <div className="flex items-center gap-3">
-                      <FileText className="w-4 h-4 text-safety" />
+                      <FileText className="w-4 h-4 text-flag-red" />
                       <span className="font-mono text-sm text-foreground">
                         {file.name}
                       </span>
@@ -149,7 +149,7 @@ const Quote = () => {
               disabled={files.length === 0}
               className={`w-full border px-8 py-5 transition-all ${
                 files.length > 0
-                  ? "border-safety bg-safety text-void hover:bg-safety/90 cursor-pointer"
+                  ? "border-flag-red bg-flag-red text-cream hover:bg-flag-red/90 cursor-pointer"
                   : "border-ghost bg-ghost/20 text-muted-foreground cursor-not-allowed"
               }`}
             >
@@ -167,7 +167,7 @@ const Quote = () => {
           {/* Info Grid */}
           <div className="mt-16 grid md:grid-cols-3 gap-4">
             <div className="border border-ghost p-6">
-              <span className="font-mono text-2xl font-bold text-safety">01</span>
+              <span className="font-mono text-2xl font-bold text-flag-red">01</span>
               <h3 className="font-sans font-black text-sm uppercase mt-2 text-foreground">
                 UPLOAD
               </h3>
@@ -176,7 +176,7 @@ const Quote = () => {
               </p>
             </div>
             <div className="border border-ghost p-6">
-              <span className="font-mono text-2xl font-bold text-safety">02</span>
+              <span className="font-mono text-2xl font-bold text-flag-red">02</span>
               <h3 className="font-sans font-black text-sm uppercase mt-2 text-foreground">
                 ANALYZE
               </h3>
@@ -185,7 +185,7 @@ const Quote = () => {
               </p>
             </div>
             <div className="border border-ghost p-6">
-              <span className="font-mono text-2xl font-bold text-safety">03</span>
+              <span className="font-mono text-2xl font-bold text-flag-red">03</span>
               <h3 className="font-sans font-black text-sm uppercase mt-2 text-foreground">
                 QUOTE
               </h3>
