@@ -13,9 +13,15 @@ const HeroSection = () => {
     window.scrollTo(0, 0);
     setScrolled(false);
     setScrollLocked(true);
-    document.body.style.overflow = 'hidden';
     window.dispatchEvent(new CustomEvent('heroScrolled', { detail: { scrolled: false } }));
   }, [location.key]);
+
+  // Safety net: always restore body scroll when this component unmounts
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
