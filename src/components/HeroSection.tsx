@@ -70,6 +70,7 @@ const HeroSection = () => {
         window.removeEventListener('wheel', handleWheel);
         window.removeEventListener('touchstart', handleTouchStart);
         window.removeEventListener('touchend', handleTouchEnd);
+        document.body.style.overflow = '';
       };
     }
 
