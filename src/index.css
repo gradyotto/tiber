@@ -5,7 +5,7 @@
 @layer base {
   :root {
     /* Neo-Industrial Dark Theme - Tiber */
-    --background: 221 73% 6%;
+    --background: 221 60% 11%;
     --foreground: 0 0% 93%;
 
     --card: 221 60% 5%;
@@ -38,7 +38,7 @@
     --radius: 0px;
 
     /* Custom Tiber tokens */
-    --void: 221 73% 6%;
+    --void: 221 60% 11%;
     --safety: 350 85% 42%;
     --ghost: 221 25% 18%;
     --titanium: 0 0% 93%;
