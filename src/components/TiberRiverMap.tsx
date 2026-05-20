@@ -40,33 +40,10 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
            Q 140 520, 100 570
            Q 60 620, -20 600"
         stroke="white"
-        strokeWidth="4"
+        strokeWidth="5"
         fill="none"
         strokeLinecap="round"
-        opacity="0.7"
-      />
-
-      {/* Tributary rivers */}
-      <path
-        d="M 800 150 Q 760 170, 710 180"
-        stroke="white"
-        strokeWidth="1.5"
-        fill="none"
-        opacity="0.2"
-      />
-      <path
-        d="M 750 320 Q 700 330, 660 310"
-        stroke="white"
-        strokeWidth="1.5"
-        fill="none"
-        opacity="0.2"
-      />
-      <path
-        d="M 400 600 Q 350 580, 300 560"
-        stroke="white"
-        strokeWidth="1.5"
-        fill="none"
-        opacity="0.2"
+        opacity="1"
       />
 
       {/* Phoenix marker - Desktop */}
