@@ -25,26 +25,32 @@ const HeroSection = () => {
 
           <div className="relative z-10 w-full flex flex-col items-center text-center space-y-8 md:space-y-12 pt-4 md:pt-8">
             {/* TIBER logo + wordmark */}
-            <div className="flex items-center justify-center gap-2 md:gap-4">
+            <div className="flex items-center justify-center gap-3 md:gap-6">
               <img
                 src={tiberLogo}
                 alt="Tiber Logo"
-                className="w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain"
+                width="256"
+                height="256"
+                loading="eager"
+                decoding="sync"
+                // @ts-expect-error fetchpriority is valid HTML
+                fetchpriority="high"
+                className="w-28 h-28 md:w-44 md:h-44 lg:w-56 lg:h-56 object-contain"
               />
-              <span className="font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tight text-foreground">
+              <span className="font-sans font-black text-6xl md:text-8xl lg:text-9xl tracking-tight text-foreground">
                 TIBER
               </span>
             </div>
 
             {/* Headline */}
             <h1 className="space-y-1">
-              <span className="block font-sans font-black text-3xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none text-foreground">
+              <span className="block font-sans font-black text-2xl md:text-4xl lg:text-5xl tracking-tighter uppercase leading-none text-foreground">
                 CRITICAL PARTS
               </span>
-              <span className="block font-sans font-black text-3xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none text-foreground">
+              <span className="block font-sans font-black text-2xl md:text-4xl lg:text-5xl tracking-tighter uppercase leading-none text-foreground">
                 FOR THE AMERICAN
               </span>
-              <span className="block font-sans font-black text-3xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-none text-foreground">
+              <span className="block font-sans font-black text-2xl md:text-4xl lg:text-5xl tracking-tighter uppercase leading-none text-foreground">
                 INDUSTRIAL BASE
               </span>
             </h1>
