@@ -103,9 +103,9 @@ const Roadmap = () => {
                     <p className="font-mono text-xs text-muted-foreground leading-relaxed">
                       {phase.description}
                     </p>
+                  </div>
                 </div>
               </Reveal>
-              </div>
             ))}
             <div className="border-t border-ghost" />
           </div>
