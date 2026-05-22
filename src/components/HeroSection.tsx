@@ -32,7 +32,7 @@ const HeroSection = () => {
       <div className="h-full min-h-[calc(70vh-3.5rem)] md:min-h-[calc(90vh-3.5rem)]">
         <div className="relative flex flex-col items-center p-6 md:p-8 lg:p-12 h-full min-h-[calc(70vh-3.5rem)] md:min-h-[calc(90vh-3.5rem)] overflow-hidden">
           {/* Tiber River Map Background */}
-          <div className="absolute inset-1 opacity-80 animate-fade-in">
+          <div className="absolute inset-0 opacity-80 animate-fade-in">
             <TiberRiverMap className="w-full h-full" />
           </div>
 
@@ -76,10 +76,11 @@ const HeroSection = () => {
                   const translate =
                     offset === 0 ? 0 : offset === total - 1 ? -110 : 110;
                   const isCurrent = offset === 0;
+                  const isIndustrial = phrase === "INDUSTRIAL BASE";
                   return (
                     <span
                       key={phrase}
-                      className="absolute top-0 left-1/2 -translate-x-1/2 whitespace-nowrap transition-all duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
+                      className={`absolute top-0 left-1/2 -translate-x-1/2 whitespace-nowrap transition-all duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${isIndustrial ? "text-primary" : "text-foreground"}`}
                       style={{
                         transform: `translate(-50%, ${translate}%)`,
                         opacity: isCurrent ? 1 : 0,
