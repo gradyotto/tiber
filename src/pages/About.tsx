@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EmailCaptureForm from "@/components/EmailCaptureForm";
+import Reveal from "@/components/Reveal";
 
 const About = () => {
   return (
@@ -17,16 +18,16 @@ const About = () => {
         <span className="corner-marker top-20 right-6">+</span>
         
         <div className="max-w-4xl mx-auto">
-          <span className="font-mono text-xs text-primary uppercase tracking-wider opacity-0 animate-fade-up">
+          <Reveal as="span" className="font-mono text-xs text-primary uppercase tracking-wider block">
             &gt; ABOUT TIBER
-          </span>
+          </Reveal>
           <h1 className="mt-4">
-            <span className="block font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase leading-[0.9] opacity-0 animate-fade-up animate-delay-100">
+            <Reveal as="span" delay={100} className="block font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase leading-[0.9]">
               REBUILDING THE
-            </span>
-            <span className="block font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase leading-[0.9] opacity-0 animate-fade-up animate-delay-200">
+            </Reveal>
+            <Reveal as="span" delay={200} className="block font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase leading-[0.9]">
               INDUSTRIAL BASE
-            </span>
+            </Reveal>
           </h1>
         </div>
       </section>
