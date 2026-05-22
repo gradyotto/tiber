@@ -42,7 +42,7 @@ const About = () => {
             <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
               AMERICAN DYNAMISM
             </h2>
-          </div>
+          </Reveal>
           <div className="space-y-6">
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
               <span className="text-primary text-slate-50">Tiber</span> was founded with a singular mission: to rebuild and{" "}
@@ -71,7 +71,7 @@ const About = () => {
             <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
               BORN FROM NECESSITY
             </h2>
-          </div>
+          </Reveal>
           <div className="space-y-6">
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
               America's manufacturing capacity has been in decline for decades. Defense
@@ -101,7 +101,7 @@ const About = () => {
             <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
               DEFENSE-GRADE<br />PRECISION
             </h2>
-          </div>
+          </Reveal>
           <div className="space-y-6">
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
               We specialize in <span className="text-primary text-slate-50">precision 3+2 CNC machining</span> of mission-critical metals: 
