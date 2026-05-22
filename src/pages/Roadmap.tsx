@@ -65,22 +65,19 @@ const Roadmap = () => {
         <div className="max-w-4xl mx-auto">
 
           {/* Boot lines */}
-          <div className="font-mono text-xs space-y-1.5 mb-12 opacity-0 animate-fade-up animate-delay-300" style={{ animationFillMode: "forwards" }}>
+          <Reveal delay={300} className="font-mono text-xs space-y-1.5 mb-12">
             <p className="text-muted-foreground opacity-50">// TIBER MFG SYSTEMS v1.0 // PHOENIX, AZ</p>
             <p className="text-muted-foreground opacity-50">// MANUFACTURING SEQUENCE INITIALIZED</p>
             <p className="text-primary opacity-70">// 3 PHASES DETECTED // 1 LOADING // 2 PENDING</p>
-          </div>
+          </Reveal>
 
           {/* Phase list */}
           <div>
             {phases.map((phase, index) => (
-              <div
+              <Reveal
                 key={phase.id}
-                className="border-t border-ghost opacity-0 animate-fade-up"
-                style={{
-                  animationDelay: `${450 + index * 150}ms`,
-                  animationFillMode: "forwards",
-                }}
+                delay={450 + index * 150}
+                className="border-t border-ghost"
               >
                 <div className={`py-8 transition-opacity ${!phase.active ? "opacity-40" : ""}`}>
                   {/* Header row */}
@@ -106,8 +103,8 @@ const Roadmap = () => {
                     <p className="font-mono text-xs text-muted-foreground leading-relaxed">
                       {phase.description}
                     </p>
-                  </div>
                 </div>
+              </Reveal>
               </div>
             ))}
             <div className="border-t border-ghost" />
