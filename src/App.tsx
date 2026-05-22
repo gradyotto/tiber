@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Roadmap from "./pages/Roadmap";
 import Quote from "./pages/Quote";
 import NotFound from "./pages/NotFound";
+import Blueprint from "./pages/Blueprint";
 
 const queryClient = new QueryClient();
 
