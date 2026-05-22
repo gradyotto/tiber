@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EmailCaptureForm from "@/components/EmailCaptureForm";
+import Reveal from "@/components/Reveal";
 
 const phases = [
   {
@@ -39,19 +40,23 @@ const Roadmap = () => {
         <span className="corner-marker top-20 left-6">+</span>
         <span className="corner-marker top-20 right-6">+</span>
         <div className="max-w-4xl mx-auto">
-          <p className="font-mono text-xs text-primary text-slate-50 tracking-widest mb-4 opacity-0 animate-fade-up">
+          <Reveal as="p" className="font-mono text-xs text-primary text-slate-50 tracking-widest mb-4">
             // MANUFACTURING EVOLUTION
-          </p>
-          <h1
-            className="font-sans font-black text-4xl md:text-6xl tracking-tight uppercase leading-none opacity-0 animate-fade-up animate-delay-100"
+          </Reveal>
+          <Reveal
+            as="h1"
+            delay={100}
+            className="font-sans font-black text-4xl md:text-6xl tracking-tight uppercase leading-none"
           >
             THE <span className="text-primary text-slate-50">ROAD</span> AHEAD
-          </h1>
-          <p
-            className="font-mono text-sm text-muted-foreground mt-6 max-w-xl opacity-0 animate-fade-up animate-delay-200"
+          </Reveal>
+          <Reveal
+            as="p"
+            delay={200}
+            className="font-mono text-sm text-muted-foreground mt-6 max-w-xl"
           >
             From precision machining to fully autonomous production. Follow the sequence.
-          </p>
+          </Reveal>
         </div>
       </section>
 
