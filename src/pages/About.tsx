@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EmailCaptureForm from "@/components/EmailCaptureForm";
+import Reveal from "@/components/Reveal";
 
 const About = () => {
   return (
@@ -17,16 +18,16 @@ const About = () => {
         <span className="corner-marker top-20 right-6">+</span>
         
         <div className="max-w-4xl mx-auto">
-          <span className="font-mono text-xs text-primary uppercase tracking-wider opacity-0 animate-fade-up">
+          <Reveal as="span" className="font-mono text-xs text-primary uppercase tracking-wider block">
             &gt; ABOUT TIBER
-          </span>
+          </Reveal>
           <h1 className="mt-4">
-            <span className="block font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase leading-[0.9] opacity-0 animate-fade-up animate-delay-100">
+            <Reveal as="span" delay={100} className="block font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase leading-[0.9]">
               REBUILDING THE
-            </span>
-            <span className="block font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase leading-[0.9] opacity-0 animate-fade-up animate-delay-200">
+            </Reveal>
+            <Reveal as="span" delay={200} className="block font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-tighter text-foreground uppercase leading-[0.9]">
               INDUSTRIAL BASE
-            </span>
+            </Reveal>
           </h1>
         </div>
       </section>
@@ -34,14 +35,14 @@ const About = () => {
       {/* Mission Section */}
       <section className="py-16 px-6 border-b border-ghost">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-          <div className="opacity-0 animate-fade-up animate-delay-300">
+          <Reveal delay={300}>
             <span className="font-mono text-xs text-primary uppercase tracking-wider">
               &gt; 01 — MISSION
             </span>
             <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
               AMERICAN DYNAMISM
             </h2>
-          </div>
+          </Reveal>
           <div className="space-y-6">
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
               <span className="text-primary text-slate-50">Tiber</span> was founded with a singular mission: to rebuild and{" "}
@@ -63,14 +64,14 @@ const About = () => {
       {/* Origin Section */}
       <section className="py-16 px-6 border-b border-ghost">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-          <div className="opacity-0 animate-fade-up animate-delay-300">
+          <Reveal delay={300}>
             <span className="font-mono text-xs text-primary uppercase tracking-wider">
               &gt; 02 — ORIGIN
             </span>
             <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
               BORN FROM NECESSITY
             </h2>
-          </div>
+          </Reveal>
           <div className="space-y-6">
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
               America's manufacturing capacity has been in decline for decades. Defense
@@ -93,14 +94,14 @@ const About = () => {
       {/* Capabilities Section */}
       <section className="py-16 px-6 border-b border-ghost">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-          <div className="opacity-0 animate-fade-up animate-delay-300">
+          <Reveal delay={300}>
             <span className="font-mono text-xs text-primary uppercase tracking-wider">
               &gt; 03 — CAPABILITIES
             </span>
             <h2 className="font-sans font-black text-2xl md:text-3xl tracking-tight text-foreground uppercase mt-4">
               DEFENSE-GRADE<br />PRECISION
             </h2>
-          </div>
+          </Reveal>
           <div className="space-y-6">
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
               We specialize in <span className="text-primary text-slate-50">precision 3+2 CNC machining</span> of mission-critical metals: 
