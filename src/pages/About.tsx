@@ -35,7 +35,7 @@ const About = () => {
       {/* Mission Section */}
       <section className="py-16 px-6 border-b border-ghost">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-          <div className="opacity-0 animate-fade-up animate-delay-300">
+          <Reveal delay={300}>
             <span className="font-mono text-xs text-primary uppercase tracking-wider">
               &gt; 01 — MISSION
             </span>
@@ -64,7 +64,7 @@ const About = () => {
       {/* Origin Section */}
       <section className="py-16 px-6 border-b border-ghost">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-          <div className="opacity-0 animate-fade-up animate-delay-300">
+          <Reveal delay={300}>
             <span className="font-mono text-xs text-primary uppercase tracking-wider">
               &gt; 02 — ORIGIN
             </span>
@@ -94,7 +94,7 @@ const About = () => {
       {/* Capabilities Section */}
       <section className="py-16 px-6 border-b border-ghost">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-          <div className="opacity-0 animate-fade-up animate-delay-300">
+          <Reveal delay={300}>
             <span className="font-mono text-xs text-primary uppercase tracking-wider">
               &gt; 03 — CAPABILITIES
             </span>
