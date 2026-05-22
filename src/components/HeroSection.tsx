@@ -12,18 +12,14 @@ const ROTATING_PHRASES = [
 
 const HeroSection = () => {
   const [phraseIndex, setPhraseIndex] = useState(0);
-  const [animating, setAnimating] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setAnimating(true);
-      setTimeout(() => {
-        setPhraseIndex((i) => (i + 1) % ROTATING_PHRASES.length);
-        setAnimating(false);
-      }, 400);
-    }, 2800);
+      setPhraseIndex((i) => (i + 1) % ROTATING_PHRASES.length);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
+
 
   return (
     <section className="min-h-[70vh] md:min-h-[90vh] pt-14 relative">
@@ -73,16 +69,29 @@ const HeroSection = () => {
               <span className="block font-sans font-black text-2xl md:text-4xl lg:text-5xl tracking-tighter uppercase leading-none text-foreground">
                 FOR THE AMERICAN
               </span>
-              <span
-                key={phraseIndex}
-                className={`block font-sans font-black text-2xl md:text-4xl lg:text-5xl tracking-tighter uppercase leading-none text-foreground transition-all duration-400 ${
-                  animating
-                    ? "opacity-0 -translate-y-2 blur-sm"
-                    : "opacity-100 translate-y-0 blur-0 animate-fade-in"
-                }`}
-              >
-                {ROTATING_PHRASES[phraseIndex]}
+              <span className="block font-sans font-black text-2xl md:text-4xl lg:text-5xl tracking-tighter uppercase leading-none text-foreground overflow-hidden relative h-[1em]">
+                {ROTATING_PHRASES.map((phrase, i) => {
+                  const total = ROTATING_PHRASES.length;
+                  const offset = (i - phraseIndex + total) % total;
+                  // Current = 0, next = 1 (below), previous = -1 (above, but shown as total-1)
+                  const translate =
+                    offset === 0 ? 0 : offset === total - 1 ? -100 : 100;
+                  return (
+                    <span
+                      key={phrase}
+                      className="absolute inset-0 flex items-center justify-center transition-transform duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]"
+                      style={{
+                        transform: `translateY(${translate}%)`,
+                        opacity: offset === 0 ? 1 : 0.001,
+                      }}
+                      aria-hidden={offset !== 0}
+                    >
+                      {phrase}
+                    </span>
+                  );
+                })}
               </span>
+
             </h1>
 
             {/* Subtext */}
