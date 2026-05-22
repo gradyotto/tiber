@@ -10,11 +10,6 @@ const HeroSection = () => {
       <span className="corner-marker bottom-6 left-6">+</span>
       <span className="corner-marker bottom-6 right-6">+</span>
 
-      {/* Coordinate markers - fixed position */}
-      <div className="absolute top-24 left-8 font-mono text-xs text-muted-foreground opacity-70 z-10">
-        <div>33.4484° N</div>
-        <div>112.0740° W</div>
-      </div>
 
       <div className="h-full min-h-[calc(70vh-3.5rem)] md:min-h-[calc(90vh-3.5rem)]">
         <div className="relative flex flex-col items-center p-6 md:p-8 lg:p-12 h-full min-h-[calc(70vh-3.5rem)] md:min-h-[calc(90vh-3.5rem)] overflow-hidden">
@@ -23,7 +18,7 @@ const HeroSection = () => {
             <TiberRiverMap className="w-full h-full" />
           </div>
 
-          <div className="relative z-10 w-full flex flex-col items-center text-center space-y-8 md:space-y-12 pt-4 md:pt-8">
+          <div className="relative z-10 w-full flex flex-col items-center text-center space-y-8 md:space-y-12 pt-0 md:pt-2">
             {/* TIBER logo + wordmark */}
             <div className="flex items-center justify-center gap-3 md:gap-6">
               <img
