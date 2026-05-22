@@ -19,7 +19,7 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
             fill="none"
             stroke="hsl(var(--ghost))"
             strokeWidth="0.5"
-            opacity="0.3"
+            opacity="0.6"
           />
         </pattern>
       </defs>

@@ -32,7 +32,7 @@ const HeroSection = () => {
       <div className="h-full min-h-[calc(70vh-3.5rem)] md:min-h-[calc(90vh-3.5rem)]">
         <div className="relative flex flex-col items-center p-6 md:p-8 lg:p-12 h-full min-h-[calc(70vh-3.5rem)] md:min-h-[calc(90vh-3.5rem)] overflow-hidden">
           {/* Tiber River Map Background */}
-          <div className="absolute inset-0 opacity-70 animate-fade-in">
+          <div className="absolute inset-1 opacity-80 animate-fade-in">
             <TiberRiverMap className="w-full h-full" />
           </div>
 
