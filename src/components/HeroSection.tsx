@@ -12,18 +12,14 @@ const ROTATING_PHRASES = [
 
 const HeroSection = () => {
   const [phraseIndex, setPhraseIndex] = useState(0);
-  const [animating, setAnimating] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setAnimating(true);
-      setTimeout(() => {
-        setPhraseIndex((i) => (i + 1) % ROTATING_PHRASES.length);
-        setAnimating(false);
-      }, 400);
-    }, 2800);
+      setPhraseIndex((i) => (i + 1) % ROTATING_PHRASES.length);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
+
 
   return (
     <section className="min-h-[70vh] md:min-h-[90vh] pt-14 relative">
