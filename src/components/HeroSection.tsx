@@ -69,7 +69,7 @@ const HeroSection = () => {
               <span className="block font-sans font-black text-2xl md:text-4xl lg:text-5xl tracking-tighter uppercase leading-none text-foreground">
                 FOR THE AMERICAN
               </span>
-              <span className="block font-sans font-black text-2xl md:text-4xl lg:text-5xl tracking-tighter uppercase leading-none text-foreground overflow-hidden relative h-[1em]">
+              <span className="block font-sans font-black text-2xl md:text-4xl lg:text-5xl tracking-tighter uppercase leading-none text-foreground relative h-[1em] [clip-path:inset(0_-100vw)]">
                 {ROTATING_PHRASES.map((phrase, i) => {
                   const total = ROTATING_PHRASES.length;
                   const offset = (i - phraseIndex + total) % total;
@@ -79,9 +79,9 @@ const HeroSection = () => {
                   return (
                     <span
                       key={phrase}
-                      className="absolute inset-0 flex items-center justify-center whitespace-nowrap transition-all duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
+                      className="absolute top-0 left-1/2 -translate-x-1/2 whitespace-nowrap transition-all duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
                       style={{
-                        transform: `translateY(${translate}%)`,
+                        transform: `translate(-50%, ${translate}%)`,
                         opacity: isCurrent ? 1 : 0,
                       }}
                       aria-hidden={!isCurrent}
@@ -91,6 +91,7 @@ const HeroSection = () => {
                   );
                 })}
               </span>
+
 
 
             </h1>
