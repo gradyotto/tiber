@@ -73,24 +73,25 @@ const HeroSection = () => {
                 {ROTATING_PHRASES.map((phrase, i) => {
                   const total = ROTATING_PHRASES.length;
                   const offset = (i - phraseIndex + total) % total;
-                  // Current = 0, next = 1 (below), previous = -1 (above, but shown as total-1)
                   const translate =
-                    offset === 0 ? 0 : offset === total - 1 ? -100 : 100;
+                    offset === 0 ? 0 : offset === total - 1 ? -110 : 110;
+                  const isCurrent = offset === 0;
                   return (
                     <span
                       key={phrase}
-                      className="absolute inset-0 flex items-center justify-center transition-transform duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]"
+                      className="absolute inset-0 flex items-center justify-center whitespace-nowrap transition-all duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
                       style={{
                         transform: `translateY(${translate}%)`,
-                        opacity: offset === 0 ? 1 : 0.001,
+                        opacity: isCurrent ? 1 : 0,
                       }}
-                      aria-hidden={offset !== 0}
+                      aria-hidden={!isCurrent}
                     >
                       {phrase}
                     </span>
                   );
                 })}
               </span>
+
 
             </h1>
 
