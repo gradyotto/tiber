@@ -1,8 +1,26 @@
+import { useEffect, useRef, useState } from "react";
+
 interface TiberRiverMapProps {
   className?: string;
 }
 
+const SESSION_KEY = "tiber-river-animated";
+
 const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
+  const pathRef = useRef<SVGPathElement>(null);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+  const [length, setLength] = useState(0);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const alreadyAnimated = sessionStorage.getItem(SESSION_KEY);
+    if (!alreadyAnimated && pathRef.current) {
+      setLength(pathRef.current.getTotalLength());
+      setShouldAnimate(true);
+      sessionStorage.setItem(SESSION_KEY, "1");
+    }
+  }, []);
+
   return (
     <svg
       viewBox="0 0 800 600"
@@ -27,6 +45,7 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
 
       {/* Tiber River - More winding path starting from outside view */}
       <path
+        ref={pathRef}
         d="M 900 -60
            Q 850 -20, 800 30
            Q 750 80, 720 120
@@ -44,10 +63,22 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
         fill="none"
         strokeLinecap="round"
         opacity="1"
+        style={
+          shouldAnimate && length
+            ? {
+                strokeDasharray: length,
+                strokeDashoffset: length,
+                animation: "river-draw 2.8s cubic-bezier(0.65, 0, 0.35, 1) forwards",
+              }
+            : undefined
+        }
       />
 
-      {/* No Phoenix marker */}
-
+      <style>{`
+        @keyframes river-draw {
+          to { stroke-dashoffset: 0; }
+        }
+      `}</style>
     </svg>
   );
 };
