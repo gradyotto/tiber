@@ -4,20 +4,13 @@ interface TiberRiverMapProps {
   className?: string;
 }
 
-const SESSION_KEY = "tiber-river-animated";
-
 const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
   const pathRef = useRef<SVGPathElement>(null);
-  const [shouldAnimate, setShouldAnimate] = useState(false);
-  const [length, setLength] = useState(0);
+  const [length, setLength] = useState(1);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    const alreadyAnimated = sessionStorage.getItem(SESSION_KEY);
-    if (!alreadyAnimated && pathRef.current) {
+    if (pathRef.current) {
       setLength(pathRef.current.getTotalLength());
-      setShouldAnimate(true);
-      sessionStorage.setItem(SESSION_KEY, "1");
     }
   }, []);
 
