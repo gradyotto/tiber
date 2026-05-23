@@ -57,7 +57,7 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
         strokeLinecap="round"
         opacity="1"
         style={
-          shouldAnimate && length
+          length > 1
             ? {
                 strokeDasharray: length,
                 strokeDashoffset: length,
