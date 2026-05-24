@@ -63,8 +63,8 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     background-image:
-      linear-gradient(to right, hsl(var(--ghost) / 0.12) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--ghost) / 0.12) 1px, transparent 1px);
+      linear-gradient(to right, hsl(var(--ghost) / 0.2) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--ghost) / 0.2) 1px, transparent 1px);
     background-size: 80px 80px;
   }
 
