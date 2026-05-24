@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EmailCaptureForm from "@/components/EmailCaptureForm";
 import Reveal from "@/components/Reveal";
-import TweetMarquee from "@/components/TweetMarquee";
 
 const About = () => {
   return (
@@ -91,16 +90,6 @@ const About = () => {
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto mt-16">
-          <Reveal>
-            <span className="font-mono text-xs text-primary uppercase tracking-wider block mb-6">
-              &gt; VOICES — REINDUSTRIALIZE
-            </span>
-          </Reveal>
-        </div>
-        <Reveal>
-          <TweetMarquee />
-        </Reveal>
       </section>
 
       {/* Capabilities Section */}

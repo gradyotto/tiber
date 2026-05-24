@@ -71,7 +71,7 @@ const Navbar = () => {
             location.pathname === '/roadmap' ? 'text-safety' : 'text-muted-foreground hover:text-foreground'
           }`}
         >
-          DOWNSTREAM
+          CURRENT
         </Link>
       </div>
     </nav>
