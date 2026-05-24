@@ -125,6 +125,18 @@
 .animate-delay-600 { animation-delay: 600ms; }
 .animate-delay-700 { animation-delay: 700ms; }
 
+/* Endless marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 50s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
 /* Hover glow effect for cards */
 .card-hover {
   @apply transition-all duration-300;
