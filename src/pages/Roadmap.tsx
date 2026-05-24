@@ -12,22 +12,6 @@ const phases = [
     label: "LOADING",
     active: true,
   },
-  {
-    id: "02",
-    title: "INDUSTRIAL ADDITIVE MANUFACTURING",
-    description:
-      "Defense-grade 3D printing with carbon fiber composites and high-performance polymers.",
-    label: "2027",
-    active: false,
-  },
-  {
-    id: "03",
-    title: "AUTONOMOUS FACTORY",
-    description:
-      "Lights-out manufacturing with AI-driven quality control and logistics.",
-    label: "2028",
-    active: false,
-  },
 ];
 
 const Roadmap = () => {
@@ -48,14 +32,7 @@ const Roadmap = () => {
             delay={100}
             className="font-sans font-black text-4xl md:text-6xl tracking-tight uppercase leading-none"
           >
-            THE <span className="text-primary text-slate-50">ROAD</span> AHEAD
-          </Reveal>
-          <Reveal
-            as="p"
-            delay={200}
-            className="font-mono text-sm text-muted-foreground mt-6 max-w-xl"
-          >
-            From precision machining to fully autonomous production. Follow the sequence.
+            WHAT'S <span className="text-primary text-slate-50">DOWNSTREAM</span>
           </Reveal>
         </div>
       </section>
@@ -63,14 +40,6 @@ const Roadmap = () => {
       {/* Terminal body */}
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
-
-          {/* Boot lines */}
-          <Reveal delay={300} className="font-mono text-xs space-y-1.5 mb-12">
-            <p className="text-muted-foreground opacity-50">// TIBER MFG SYSTEMS v1.0 // PHOENIX, AZ</p>
-            <p className="text-muted-foreground opacity-50">// MANUFACTURING SEQUENCE INITIALIZED</p>
-            <p className="text-primary opacity-70">// 3 PHASES DETECTED // 1 LOADING // 2 PENDING</p>
-          </Reveal>
-
           {/* Phase list */}
           <div>
             {phases.map((phase, index) => (
