@@ -22,19 +22,7 @@ const TiberRiverMap = ({ className = "" }: TiberRiverMapProps) => {
       className={className}
       preserveAspectRatio="xMidYMid slice"
     >
-      {/* Grid lines for technical feel */}
-      <defs>
-        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-          <path
-            d="M 40 0 L 0 0 0 40"
-            fill="none"
-            stroke="hsl(var(--ghost))"
-            strokeWidth="0.5"
-            opacity="0.6"
-          />
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#grid)" />
+      {/* Grid removed — page-level body grid shows through for perfect alignment */}
 
       {/* Tiber River - More winding path starting from outside view */}
       <path
