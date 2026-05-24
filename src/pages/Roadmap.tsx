@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EmailCaptureForm from "@/components/EmailCaptureForm";
 import Reveal from "@/components/Reveal";
+import TweetMarquee from "@/components/TweetMarquee";
 
 const phases = [
   {
@@ -85,6 +86,20 @@ const Roadmap = () => {
             // END OF SEQUENCE
           </p>
         </div>
+      </section>
+
+      {/* Voices Section */}
+      <section className="py-16 px-6 border-b border-ghost">
+        <div className="max-w-4xl mx-auto">
+          <Reveal>
+            <span className="font-mono text-xs text-primary uppercase tracking-wider block mb-6">
+              &gt; VOICES — REINDUSTRIALIZE
+            </span>
+          </Reveal>
+        </div>
+        <Reveal>
+          <TweetMarquee />
+        </Reveal>
       </section>
 
       <EmailCaptureForm />
