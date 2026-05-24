@@ -17,6 +17,7 @@ const phases = [
 const Roadmap = () => {
   return (
     <div className="min-h-screen text-foreground">
+      <div className="noise-overlay" />
       <Navbar />
 
       {/* Hero */}
