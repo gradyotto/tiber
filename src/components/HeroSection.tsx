@@ -36,7 +36,7 @@ const HeroSection = () => {
             <TiberRiverMap className="w-full h-full" />
           </div>
 
-          <div className="relative z-10 w-full flex flex-col items-center text-center space-y-8 md:space-y-12 pt-0 md:pt-2">
+          <div className="relative z-10 w-full flex flex-col items-center text-center space-y-4 md:space-y-6 pt-0 md:pt-2">
             {/* TIBER logo + wordmark */}
             <div
               className="flex items-center justify-center gap-3 md:gap-6 animate-fade-in"
@@ -60,7 +60,7 @@ const HeroSection = () => {
 
             {/* Headline */}
             <h1
-              className="space-y-1 animate-fade-in"
+              className="space-y-0 animate-fade-in"
               style={{ animationDelay: "200ms", animationFillMode: "both" }}
             >
               <span className="block font-sans font-black text-2xl md:text-4xl lg:text-5xl tracking-tighter uppercase leading-none text-foreground">
