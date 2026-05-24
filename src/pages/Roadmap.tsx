@@ -16,7 +16,7 @@ const phases = [
 
 const Roadmap = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen text-foreground">
       <Navbar />
 
       {/* Hero */}
